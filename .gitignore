@@ -21,7 +21,7 @@ pom.xml.asc
 .calva/
 .idea/
 *~
-
+list_audio.*
 
 .calva/output-window/output.calva-repl
 
