@@ -1,0 +1,43 @@
+body {
+    padding: 0 5%;
+}
+
+table {
+    margin: auto;
+}
+
+td,
+th {
+    width: 7%;
+    border: thin solid silver;
+    text-align: center;
+}
+
+td:hover {
+    background-color: silver;
+}
+
+th {
+    background-color: silver;
+}
+
+.entry {
+    font-size: 3em;
+}
+
+#bug {
+    width: 1em;
+    height: 1em;
+}
+
+#footer {
+    margin-top: 2em;
+    border-top: thin solid gray;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#footer p {
+    margin: 0;
+    padding: 0.25em;
+}
