@@ -2,18 +2,48 @@
   <head>
     <meta name="generator"
     content="HTML Tidy for Java (vers. 2009-12-01), see jtidy.sourceforge.net" />
-    <meta charset="UTF-8" />
-    <link type="text/css" href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" content="" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+ type="text/javascript">
+    </script>
+<script src="scripts/muharni.js" type="text/javascript">
+    </script>
     <title>Muharni table</title>
   </head>
-  <body>
+  <body id="body">
+    <div id="popup" onmouseout="hidePopup();"
+    style="display: none; border: thin solid gray; width: 10%">
+      <p id="character"
+      style="text-align: center; margin: 0; font-size: 4em;">?</p>
+      <table id="controls"
+      summary="Controls for audio playback and recording">
+        <tr>
+          <th>Tutor</th>
+          <td id="play-tutor">
+            <button onclick="playTutorSound();">►</button>
+          </td>
+        </tr>
+        <tr>
+          <th>You</th>
+          <td id="play-student">
+            <button onclick="playStudentSound();">►</button>
+          </td>
+          <td id="record-stop">
+            <button onclick="recordStudentSound();">⏺</button>
+          </td>
+        </tr>
+      </table>
+    </div>
     <h1>Muharni table</h1>
     <button
     onclick="var l = document.getElementById('long'); var s = document.getElementById('short'); if (l.style.display == 'none') { l.style.display = 'block'; s.style.display = 'none'; } else { l.style.display = 'none'; s.style.display = 'block'; }">Toggle
     short/long</button>
     <div id="long" style="display: block;">
       <h2>Long forms</h2>
-      <table>
+      <table class="character-table"
+      summary="Table of Punjabi characters from which to select sound recordings">
         <tr>
           <th></th>
           <th>Muktā</th>
@@ -75,29 +105,41 @@
           onclick="new Audio('audio/ltrlong01_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/01B.mp3').play();">ਅ</td>
+          onclick="showPopup( '0', '0', 'ਅ', 'audio/01B.mp3')">
+          ਅ</td>
           <td class="entry"
-          onclick="new Audio('audio/01C.mp3').play();">ਆ</td>
+          onclick="showPopup( '0', '1', 'ਆ', 'audio/01C.mp3')">
+          ਆ</td>
           <td class="entry"
-          onclick="new Audio('audio/01D.mp3').play();">ਇ</td>
+          onclick="showPopup( '0', '2', 'ਇ', 'audio/01D.mp3')">
+          ਇ</td>
           <td class="entry"
-          onclick="new Audio('audio/01E.mp3').play();">ਈ</td>
+          onclick="showPopup( '0', '3', 'ਈ', 'audio/01E.mp3')">
+          ਈ</td>
           <td class="entry"
-          onclick="new Audio('audio/01F.mp3').play();">ਉ</td>
+          onclick="showPopup( '0', '4', 'ਉ', 'audio/01F.mp3')">
+          ਉ</td>
           <td class="entry"
-          onclick="new Audio('audio/01G.mp3').play();">ਊ</td>
+          onclick="showPopup( '0', '5', 'ਊ', 'audio/01G.mp3')">
+          ਊ</td>
           <td class="entry"
-          onclick="new Audio('audio/01H.mp3').play();">ਏ</td>
+          onclick="showPopup( '0', '6', 'ਏ', 'audio/01H.mp3')">
+          ਏ</td>
           <td class="entry"
-          onclick="new Audio('audio/01I.mp3').play();">ਐ</td>
+          onclick="showPopup( '0', '7', 'ਐ', 'audio/01I.mp3')">
+          ਐ</td>
           <td class="entry"
-          onclick="new Audio('audio/01J.mp3').play();">ਓ</td>
+          onclick="showPopup( '0', '8', 'ਓ', 'audio/01J.mp3')">
+          ਓ</td>
           <td class="entry"
-          onclick="new Audio('audio/01K.mp3').play();">ਔ</td>
+          onclick="showPopup( '0', '9', 'ਔ', 'audio/01K.mp3')">
+          ਔ</td>
           <td class="entry"
-          onclick="new Audio('audio/01L.mp3').play();">ਅੰ</td>
+          onclick="showPopup( '0', '10', 'ਅੰ', 'audio/01L.mp3')">
+          ਅੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/01M.mp3').play();">ਆਂ</td>
+          onclick="showPopup( '0', '11', 'ਆਂ', 'audio/01M.mp3')">
+          ਆਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong01_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -107,29 +149,41 @@
           onclick="new Audio('audio/ltrlong02_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/02B.mp3').play();">ਸ</td>
+          onclick="showPopup( '1', '0', 'ਸ', 'audio/02B.mp3')">
+          ਸ</td>
           <td class="entry"
-          onclick="new Audio('audio/02C.mp3').play();">ਸਾ</td>
+          onclick="showPopup( '1', '1', 'ਸਾ', 'audio/02C.mp3')">
+          ਸਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/02D.mp3').play();">ਸਿ</td>
+          onclick="showPopup( '1', '2', 'ਸਿ', 'audio/02D.mp3')">
+          ਸਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/02E.mp3').play();">ਸੀ</td>
+          onclick="showPopup( '1', '3', 'ਸੀ', 'audio/02E.mp3')">
+          ਸੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/02F.mp3').play();">ਸੁ</td>
+          onclick="showPopup( '1', '4', 'ਸੁ', 'audio/02F.mp3')">
+          ਸੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/02G.mp3').play();">ਸੂ</td>
+          onclick="showPopup( '1', '5', 'ਸੂ', 'audio/02G.mp3')">
+          ਸੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/02H.mp3').play();">ਸੇ</td>
+          onclick="showPopup( '1', '6', 'ਸੇ', 'audio/02H.mp3')">
+          ਸੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/02I.mp3').play();">ਸੈ</td>
+          onclick="showPopup( '1', '7', 'ਸੈ', 'audio/02I.mp3')">
+          ਸੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/02J.mp3').play();">ਸੋ</td>
+          onclick="showPopup( '1', '8', 'ਸੋ', 'audio/02J.mp3')">
+          ਸੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/02K.mp3').play();">ਸੌ</td>
+          onclick="showPopup( '1', '9', 'ਸੌ', 'audio/02K.mp3')">
+          ਸੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/02L.mp3').play();">ਸੰ</td>
+          onclick="showPopup( '1', '10', 'ਸੰ', 'audio/02L.mp3')">
+          ਸੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/02M.mp3').play();">ਸਾਂ</td>
+          onclick="showPopup( '1', '11', 'ਸਾਂ', 'audio/02M.mp3')">
+          ਸਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong02_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -139,29 +193,41 @@
           onclick="new Audio('audio/ltrlong03_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/03B.mp3').play();">ਹ</td>
+          onclick="showPopup( '2', '0', 'ਹ', 'audio/03B.mp3')">
+          ਹ</td>
           <td class="entry"
-          onclick="new Audio('audio/03C.mp3').play();">ਹਾ</td>
+          onclick="showPopup( '2', '1', 'ਹਾ', 'audio/03C.mp3')">
+          ਹਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/03D.mp3').play();">ਹਿ</td>
+          onclick="showPopup( '2', '2', 'ਹਿ', 'audio/03D.mp3')">
+          ਹਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/03E.mp3').play();">ਹੀ</td>
+          onclick="showPopup( '2', '3', 'ਹੀ', 'audio/03E.mp3')">
+          ਹੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/03F.mp3').play();">ਹੁ</td>
+          onclick="showPopup( '2', '4', 'ਹੁ', 'audio/03F.mp3')">
+          ਹੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/03G.mp3').play();">ਹੂ</td>
+          onclick="showPopup( '2', '5', 'ਹੂ', 'audio/03G.mp3')">
+          ਹੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/03H.mp3').play();">ਹੇ</td>
+          onclick="showPopup( '2', '6', 'ਹੇ', 'audio/03H.mp3')">
+          ਹੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/03I.mp3').play();">ਹੈ</td>
+          onclick="showPopup( '2', '7', 'ਹੈ', 'audio/03I.mp3')">
+          ਹੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/03J.mp3').play();">ਹੋ</td>
+          onclick="showPopup( '2', '8', 'ਹੋ', 'audio/03J.mp3')">
+          ਹੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/03K.mp3').play();">ਹੌ</td>
+          onclick="showPopup( '2', '9', 'ਹੌ', 'audio/03K.mp3')">
+          ਹੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/03L.mp3').play();">ਹੰ</td>
+          onclick="showPopup( '2', '10', 'ਹੰ', 'audio/03L.mp3')">
+          ਹੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/03M.mp3').play();">ਹਾਂ</td>
+          onclick="showPopup( '2', '11', 'ਹਾਂ', 'audio/03M.mp3')">
+          ਹਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong03_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -171,29 +237,41 @@
           onclick="new Audio('audio/ltrlong04_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/04B.mp3').play();">ਕ</td>
+          onclick="showPopup( '3', '0', 'ਕ', 'audio/04B.mp3')">
+          ਕ</td>
           <td class="entry"
-          onclick="new Audio('audio/04C.mp3').play();">ਕਾ</td>
+          onclick="showPopup( '3', '1', 'ਕਾ', 'audio/04C.mp3')">
+          ਕਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/04D.mp3').play();">ਕਿ</td>
+          onclick="showPopup( '3', '2', 'ਕਿ', 'audio/04D.mp3')">
+          ਕਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/04E.mp3').play();">ਕੀ</td>
+          onclick="showPopup( '3', '3', 'ਕੀ', 'audio/04E.mp3')">
+          ਕੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/04F.mp3').play();">ਕੁ</td>
+          onclick="showPopup( '3', '4', 'ਕੁ', 'audio/04F.mp3')">
+          ਕੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/04G.mp3').play();">ਕੂ</td>
+          onclick="showPopup( '3', '5', 'ਕੂ', 'audio/04G.mp3')">
+          ਕੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/04H.mp3').play();">ਕੇ</td>
+          onclick="showPopup( '3', '6', 'ਕੇ', 'audio/04H.mp3')">
+          ਕੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/04I.mp3').play();">ਕੈ</td>
+          onclick="showPopup( '3', '7', 'ਕੈ', 'audio/04I.mp3')">
+          ਕੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/04J.mp3').play();">ਕੋ</td>
+          onclick="showPopup( '3', '8', 'ਕੋ', 'audio/04J.mp3')">
+          ਕੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/04K.mp3').play();">ਕੌ</td>
+          onclick="showPopup( '3', '9', 'ਕੌ', 'audio/04K.mp3')">
+          ਕੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/04L.mp3').play();">ਕੰ</td>
+          onclick="showPopup( '3', '10', 'ਕੰ', 'audio/04L.mp3')">
+          ਕੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/04M.mp3').play();">ਕਾਂ</td>
+          onclick="showPopup( '3', '11', 'ਕਾਂ', 'audio/04M.mp3')">
+          ਕਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong04_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -203,29 +281,41 @@
           onclick="new Audio('audio/ltrlong05_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/05B.mp3').play();">ਖ</td>
+          onclick="showPopup( '4', '0', 'ਖ', 'audio/05B.mp3')">
+          ਖ</td>
           <td class="entry"
-          onclick="new Audio('audio/05C.mp3').play();">ਖਾ</td>
+          onclick="showPopup( '4', '1', 'ਖਾ', 'audio/05C.mp3')">
+          ਖਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/05D.mp3').play();">ਖਿ</td>
+          onclick="showPopup( '4', '2', 'ਖਿ', 'audio/05D.mp3')">
+          ਖਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/05E.mp3').play();">ਖੀ</td>
+          onclick="showPopup( '4', '3', 'ਖੀ', 'audio/05E.mp3')">
+          ਖੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/05F.mp3').play();">ਖੁ</td>
+          onclick="showPopup( '4', '4', 'ਖੁ', 'audio/05F.mp3')">
+          ਖੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/05G.mp3').play();">ਖੂ</td>
+          onclick="showPopup( '4', '5', 'ਖੂ', 'audio/05G.mp3')">
+          ਖੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/05H.mp3').play();">ਖੇ</td>
+          onclick="showPopup( '4', '6', 'ਖੇ', 'audio/05H.mp3')">
+          ਖੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/05I.mp3').play();">ਖੈ</td>
+          onclick="showPopup( '4', '7', 'ਖੈ', 'audio/05I.mp3')">
+          ਖੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/05J.mp3').play();">ਖੋ</td>
+          onclick="showPopup( '4', '8', 'ਖੋ', 'audio/05J.mp3')">
+          ਖੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/05K.mp3').play();">ਖੌ</td>
+          onclick="showPopup( '4', '9', 'ਖੌ', 'audio/05K.mp3')">
+          ਖੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/05L.mp3').play();">ਖੰ</td>
+          onclick="showPopup( '4', '10', 'ਖੰ', 'audio/05L.mp3')">
+          ਖੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/05M.mp3').play();">ਖਾਂ</td>
+          onclick="showPopup( '4', '11', 'ਖਾਂ', 'audio/05M.mp3')">
+          ਖਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong05_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -235,29 +325,41 @@
           onclick="new Audio('audio/ltrlong06_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/06B.mp3').play();">ਗ</td>
+          onclick="showPopup( '5', '0', 'ਗ', 'audio/06B.mp3')">
+          ਗ</td>
           <td class="entry"
-          onclick="new Audio('audio/06C.mp3').play();">ਗਾ</td>
+          onclick="showPopup( '5', '1', 'ਗਾ', 'audio/06C.mp3')">
+          ਗਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/06D.mp3').play();">ਗਿ</td>
+          onclick="showPopup( '5', '2', 'ਗਿ', 'audio/06D.mp3')">
+          ਗਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/06E.mp3').play();">ਗੀ</td>
+          onclick="showPopup( '5', '3', 'ਗੀ', 'audio/06E.mp3')">
+          ਗੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/06F.mp3').play();">ਗੁ</td>
+          onclick="showPopup( '5', '4', 'ਗੁ', 'audio/06F.mp3')">
+          ਗੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/06G.mp3').play();">ਗੂ</td>
+          onclick="showPopup( '5', '5', 'ਗੂ', 'audio/06G.mp3')">
+          ਗੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/06H.mp3').play();">ਗੇ</td>
+          onclick="showPopup( '5', '6', 'ਗੇ', 'audio/06H.mp3')">
+          ਗੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/06I.mp3').play();">ਗੈ</td>
+          onclick="showPopup( '5', '7', 'ਗੈ', 'audio/06I.mp3')">
+          ਗੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/06J.mp3').play();">ਗੋ</td>
+          onclick="showPopup( '5', '8', 'ਗੋ', 'audio/06J.mp3')">
+          ਗੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/06K.mp3').play();">ਗੌ</td>
+          onclick="showPopup( '5', '9', 'ਗੌ', 'audio/06K.mp3')">
+          ਗੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/06L.mp3').play();">ਗੰ</td>
+          onclick="showPopup( '5', '10', 'ਗੰ', 'audio/06L.mp3')">
+          ਗੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/06M.mp3').play();">ਗਾਂ</td>
+          onclick="showPopup( '5', '11', 'ਗਾਂ', 'audio/06M.mp3')">
+          ਗਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong06_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -267,29 +369,41 @@
           onclick="new Audio('audio/ltrlong07_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/07B.mp3').play();">ਘ</td>
+          onclick="showPopup( '6', '0', 'ਘ', 'audio/07B.mp3')">
+          ਘ</td>
           <td class="entry"
-          onclick="new Audio('audio/07C.mp3').play();">ਘਾ</td>
+          onclick="showPopup( '6', '1', 'ਘਾ', 'audio/07C.mp3')">
+          ਘਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/07D.mp3').play();">ਘਿ</td>
+          onclick="showPopup( '6', '2', 'ਘਿ', 'audio/07D.mp3')">
+          ਘਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/07E.mp3').play();">ਘੀ</td>
+          onclick="showPopup( '6', '3', 'ਘੀ', 'audio/07E.mp3')">
+          ਘੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/07F.mp3').play();">ਘੁ</td>
+          onclick="showPopup( '6', '4', 'ਘੁ', 'audio/07F.mp3')">
+          ਘੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/07G.mp3').play();">ਘੂ</td>
+          onclick="showPopup( '6', '5', 'ਘੂ', 'audio/07G.mp3')">
+          ਘੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/07H.mp3').play();">ਘੇ</td>
+          onclick="showPopup( '6', '6', 'ਘੇ', 'audio/07H.mp3')">
+          ਘੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/07I.mp3').play();">ਘੈ</td>
+          onclick="showPopup( '6', '7', 'ਘੈ', 'audio/07I.mp3')">
+          ਘੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/07J.mp3').play();">ਘੋ</td>
+          onclick="showPopup( '6', '8', 'ਘੋ', 'audio/07J.mp3')">
+          ਘੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/07K.mp3').play();">ਘੌ</td>
+          onclick="showPopup( '6', '9', 'ਘੌ', 'audio/07K.mp3')">
+          ਘੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/07L.mp3').play();">ਘੰ</td>
+          onclick="showPopup( '6', '10', 'ਘੰ', 'audio/07L.mp3')">
+          ਘੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/07M.mp3').play();">ਘਾਂ</td>
+          onclick="showPopup( '6', '11', 'ਘਾਂ', 'audio/07M.mp3')">
+          ਘਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong07_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -299,29 +413,41 @@
           onclick="new Audio('audio/ltrlong08_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/08B.mp3').play();">ਙ</td>
+          onclick="showPopup( '7', '0', 'ਙ', 'audio/08B.mp3')">
+          ਙ</td>
           <td class="entry"
-          onclick="new Audio('audio/08C.mp3').play();">ਙਾ</td>
+          onclick="showPopup( '7', '1', 'ਙਾ', 'audio/08C.mp3')">
+          ਙਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/08D.mp3').play();">ਙਿ</td>
+          onclick="showPopup( '7', '2', 'ਙਿ', 'audio/08D.mp3')">
+          ਙਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/08E.mp3').play();">ਙੀ</td>
+          onclick="showPopup( '7', '3', 'ਙੀ', 'audio/08E.mp3')">
+          ਙੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/08F.mp3').play();">ਙੁ</td>
+          onclick="showPopup( '7', '4', 'ਙੁ', 'audio/08F.mp3')">
+          ਙੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/08G.mp3').play();">ਙੂ</td>
+          onclick="showPopup( '7', '5', 'ਙੂ', 'audio/08G.mp3')">
+          ਙੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/08H.mp3').play();">ਙੇ</td>
+          onclick="showPopup( '7', '6', 'ਙੇ', 'audio/08H.mp3')">
+          ਙੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/08I.mp3').play();">ਙੈ</td>
+          onclick="showPopup( '7', '7', 'ਙੈ', 'audio/08I.mp3')">
+          ਙੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/08J.mp3').play();">ਙੋ</td>
+          onclick="showPopup( '7', '8', 'ਙੋ', 'audio/08J.mp3')">
+          ਙੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/08K.mp3').play();">ਙੌ</td>
+          onclick="showPopup( '7', '9', 'ਙੌ', 'audio/08K.mp3')">
+          ਙੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/08L.mp3').play();">ਙੰ</td>
+          onclick="showPopup( '7', '10', 'ਙੰ', 'audio/08L.mp3')">
+          ਙੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/08M.mp3').play();">ਙਾਂ</td>
+          onclick="showPopup( '7', '11', 'ਙਾਂ', 'audio/08M.mp3')">
+          ਙਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong08_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -331,29 +457,41 @@
           onclick="new Audio('audio/ltrlong09_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/09B.mp3').play();">ਚ</td>
+          onclick="showPopup( '8', '0', 'ਚ', 'audio/09B.mp3')">
+          ਚ</td>
           <td class="entry"
-          onclick="new Audio('audio/09C.mp3').play();">ਚਾ</td>
+          onclick="showPopup( '8', '1', 'ਚਾ', 'audio/09C.mp3')">
+          ਚਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/09D.mp3').play();">ਚਿ</td>
+          onclick="showPopup( '8', '2', 'ਚਿ', 'audio/09D.mp3')">
+          ਚਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/09E.mp3').play();">ਚੀ</td>
+          onclick="showPopup( '8', '3', 'ਚੀ', 'audio/09E.mp3')">
+          ਚੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/09F.mp3').play();">ਚੁ</td>
+          onclick="showPopup( '8', '4', 'ਚੁ', 'audio/09F.mp3')">
+          ਚੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/09G.mp3').play();">ਚੂ</td>
+          onclick="showPopup( '8', '5', 'ਚੂ', 'audio/09G.mp3')">
+          ਚੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/09H.mp3').play();">ਚੇ</td>
+          onclick="showPopup( '8', '6', 'ਚੇ', 'audio/09H.mp3')">
+          ਚੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/09I.mp3').play();">ਚੈ</td>
+          onclick="showPopup( '8', '7', 'ਚੈ', 'audio/09I.mp3')">
+          ਚੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/09J.mp3').play();">ਚੋ</td>
+          onclick="showPopup( '8', '8', 'ਚੋ', 'audio/09J.mp3')">
+          ਚੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/09K.mp3').play();">ਚੌ</td>
+          onclick="showPopup( '8', '9', 'ਚੌ', 'audio/09K.mp3')">
+          ਚੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/09L.mp3').play();">ਚੰ</td>
+          onclick="showPopup( '8', '10', 'ਚੰ', 'audio/09L.mp3')">
+          ਚੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/09M.mp3').play();">ਚਾਂ</td>
+          onclick="showPopup( '8', '11', 'ਚਾਂ', 'audio/09M.mp3')">
+          ਚਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong09_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -363,29 +501,41 @@
           onclick="new Audio('audio/ltrlong10_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/10B.mp3').play();">ਛ</td>
+          onclick="showPopup( '9', '0', 'ਛ', 'audio/10B.mp3')">
+          ਛ</td>
           <td class="entry"
-          onclick="new Audio('audio/10C.mp3').play();">ਛਾ</td>
+          onclick="showPopup( '9', '1', 'ਛਾ', 'audio/10C.mp3')">
+          ਛਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/10D.mp3').play();">ਛਿ</td>
+          onclick="showPopup( '9', '2', 'ਛਿ', 'audio/10D.mp3')">
+          ਛਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/10E.mp3').play();">ਛੀ</td>
+          onclick="showPopup( '9', '3', 'ਛੀ', 'audio/10E.mp3')">
+          ਛੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/10F.mp3').play();">ਛੁ</td>
+          onclick="showPopup( '9', '4', 'ਛੁ', 'audio/10F.mp3')">
+          ਛੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/10G.mp3').play();">ਛੂ</td>
+          onclick="showPopup( '9', '5', 'ਛੂ', 'audio/10G.mp3')">
+          ਛੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/10H.mp3').play();">ਛੇ</td>
+          onclick="showPopup( '9', '6', 'ਛੇ', 'audio/10H.mp3')">
+          ਛੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/10I.mp3').play();">ਛੈ</td>
+          onclick="showPopup( '9', '7', 'ਛੈ', 'audio/10I.mp3')">
+          ਛੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/10J.mp3').play();">ਛੋ</td>
+          onclick="showPopup( '9', '8', 'ਛੋ', 'audio/10J.mp3')">
+          ਛੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/10K.mp3').play();">ਛੌ</td>
+          onclick="showPopup( '9', '9', 'ਛੌ', 'audio/10K.mp3')">
+          ਛੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/10L.mp3').play();">ਛੰ</td>
+          onclick="showPopup( '9', '10', 'ਛੰ', 'audio/10L.mp3')">
+          ਛੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/10M.mp3').play();">ਛਾਂ</td>
+          onclick="showPopup( '9', '11', 'ਛਾਂ', 'audio/10M.mp3')">
+          ਛਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong10_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -395,29 +545,41 @@
           onclick="new Audio('audio/ltrlong11_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/11B.mp3').play();">ਜ</td>
+          onclick="showPopup( '10', '0', 'ਜ', 'audio/11B.mp3')">
+          ਜ</td>
           <td class="entry"
-          onclick="new Audio('audio/11C.mp3').play();">ਜਾ</td>
+          onclick="showPopup( '10', '1', 'ਜਾ', 'audio/11C.mp3')">
+          ਜਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/11D.mp3').play();">ਜਿ</td>
+          onclick="showPopup( '10', '2', 'ਜਿ', 'audio/11D.mp3')">
+          ਜਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/11E.mp3').play();">ਜੀ</td>
+          onclick="showPopup( '10', '3', 'ਜੀ', 'audio/11E.mp3')">
+          ਜੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/11F.mp3').play();">ਜੁ</td>
+          onclick="showPopup( '10', '4', 'ਜੁ', 'audio/11F.mp3')">
+          ਜੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/11G.mp3').play();">ਜੂ</td>
+          onclick="showPopup( '10', '5', 'ਜੂ', 'audio/11G.mp3')">
+          ਜੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/11H.mp3').play();">ਜੇ</td>
+          onclick="showPopup( '10', '6', 'ਜੇ', 'audio/11H.mp3')">
+          ਜੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/11I.mp3').play();">ਜੈ</td>
+          onclick="showPopup( '10', '7', 'ਜੈ', 'audio/11I.mp3')">
+          ਜੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/11J.mp3').play();">ਜੋ</td>
+          onclick="showPopup( '10', '8', 'ਜੋ', 'audio/11J.mp3')">
+          ਜੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/11K.mp3').play();">ਜੌ</td>
+          onclick="showPopup( '10', '9', 'ਜੌ', 'audio/11K.mp3')">
+          ਜੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/11L.mp3').play();">ਜੰ</td>
+          onclick="showPopup( '10', '10', 'ਜੰ', 'audio/11L.mp3')">
+          ਜੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/11M.mp3').play();">ਜਾਂ</td>
+          onclick="showPopup( '10', '11', 'ਜਾਂ', 'audio/11M.mp3')">
+          ਜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong11_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -427,29 +589,41 @@
           onclick="new Audio('audio/ltrlong12_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/12B.mp3').play();">ਝ</td>
+          onclick="showPopup( '11', '0', 'ਝ', 'audio/12B.mp3')">
+          ਝ</td>
           <td class="entry"
-          onclick="new Audio('audio/12C.mp3').play();">ਝਾ</td>
+          onclick="showPopup( '11', '1', 'ਝਾ', 'audio/12C.mp3')">
+          ਝਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/12D.mp3').play();">ਝਿ</td>
+          onclick="showPopup( '11', '2', 'ਝਿ', 'audio/12D.mp3')">
+          ਝਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/12E.mp3').play();">ਝੀ</td>
+          onclick="showPopup( '11', '3', 'ਝੀ', 'audio/12E.mp3')">
+          ਝੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/12F.mp3').play();">ਝੁ</td>
+          onclick="showPopup( '11', '4', 'ਝੁ', 'audio/12F.mp3')">
+          ਝੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/12G.mp3').play();">ਝੂ</td>
+          onclick="showPopup( '11', '5', 'ਝੂ', 'audio/12G.mp3')">
+          ਝੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/12H.mp3').play();">ਝੇ</td>
+          onclick="showPopup( '11', '6', 'ਝੇ', 'audio/12H.mp3')">
+          ਝੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/12I.mp3').play();">ਝੈ</td>
+          onclick="showPopup( '11', '7', 'ਝੈ', 'audio/12I.mp3')">
+          ਝੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/12J.mp3').play();">ਝੋ</td>
+          onclick="showPopup( '11', '8', 'ਝੋ', 'audio/12J.mp3')">
+          ਝੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/12K.mp3').play();">ਝੌ</td>
+          onclick="showPopup( '11', '9', 'ਝੌ', 'audio/12K.mp3')">
+          ਝੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/12L.mp3').play();">ਝੰ</td>
+          onclick="showPopup( '11', '10', 'ਝੰ', 'audio/12L.mp3')">
+          ਝੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/12M.mp3').play();">ਝਾਂ</td>
+          onclick="showPopup( '11', '11', 'ਝਾਂ', 'audio/12M.mp3')">
+          ਝਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong12_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -459,29 +633,41 @@
           onclick="new Audio('audio/ltrlong13_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/13B.mp3').play();">ਞ</td>
+          onclick="showPopup( '12', '0', 'ਞ', 'audio/13B.mp3')">
+          ਞ</td>
           <td class="entry"
-          onclick="new Audio('audio/13C.mp3').play();">ਞਾ</td>
+          onclick="showPopup( '12', '1', 'ਞਾ', 'audio/13C.mp3')">
+          ਞਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/13D.mp3').play();">ਞਿ</td>
+          onclick="showPopup( '12', '2', 'ਞਿ', 'audio/13D.mp3')">
+          ਞਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/13E.mp3').play();">ਞੀ</td>
+          onclick="showPopup( '12', '3', 'ਞੀ', 'audio/13E.mp3')">
+          ਞੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/13F.mp3').play();">ਞੁ</td>
+          onclick="showPopup( '12', '4', 'ਞੁ', 'audio/13F.mp3')">
+          ਞੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/13G.mp3').play();">ਞੂ</td>
+          onclick="showPopup( '12', '5', 'ਞੂ', 'audio/13G.mp3')">
+          ਞੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/13H.mp3').play();">ਞੇ</td>
+          onclick="showPopup( '12', '6', 'ਞੇ', 'audio/13H.mp3')">
+          ਞੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/13I.mp3').play();">ਞੈ</td>
+          onclick="showPopup( '12', '7', 'ਞੈ', 'audio/13I.mp3')">
+          ਞੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/13J.mp3').play();">ਞੋ</td>
+          onclick="showPopup( '12', '8', 'ਞੋ', 'audio/13J.mp3')">
+          ਞੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/13K.mp3').play();">ਞੌ</td>
+          onclick="showPopup( '12', '9', 'ਞੌ', 'audio/13K.mp3')">
+          ਞੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/13L.mp3').play();">ਞੰ</td>
+          onclick="showPopup( '12', '10', 'ਞੰ', 'audio/13L.mp3')">
+          ਞੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/13M.mp3').play();">ਞਾਂ</td>
+          onclick="showPopup( '12', '11', 'ਞਾਂ', 'audio/13M.mp3')">
+          ਞਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong13_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -491,29 +677,41 @@
           onclick="new Audio('audio/ltrlong14_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/14B.mp3').play();">ਟ</td>
+          onclick="showPopup( '13', '0', 'ਟ', 'audio/14B.mp3')">
+          ਟ</td>
           <td class="entry"
-          onclick="new Audio('audio/14C.mp3').play();">ਟਾ</td>
+          onclick="showPopup( '13', '1', 'ਟਾ', 'audio/14C.mp3')">
+          ਟਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/14D.mp3').play();">ਟਿ</td>
+          onclick="showPopup( '13', '2', 'ਟਿ', 'audio/14D.mp3')">
+          ਟਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/14E.mp3').play();">ਟੀ</td>
+          onclick="showPopup( '13', '3', 'ਟੀ', 'audio/14E.mp3')">
+          ਟੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/14F.mp3').play();">ਟੁ</td>
+          onclick="showPopup( '13', '4', 'ਟੁ', 'audio/14F.mp3')">
+          ਟੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/14G.mp3').play();">ਟੂ</td>
+          onclick="showPopup( '13', '5', 'ਟੂ', 'audio/14G.mp3')">
+          ਟੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/14H.mp3').play();">ਟੇ</td>
+          onclick="showPopup( '13', '6', 'ਟੇ', 'audio/14H.mp3')">
+          ਟੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/14I.mp3').play();">ਟੈ</td>
+          onclick="showPopup( '13', '7', 'ਟੈ', 'audio/14I.mp3')">
+          ਟੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/14J.mp3').play();">ਟੋ</td>
+          onclick="showPopup( '13', '8', 'ਟੋ', 'audio/14J.mp3')">
+          ਟੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/14K.mp3').play();">ਟੌ</td>
+          onclick="showPopup( '13', '9', 'ਟੌ', 'audio/14K.mp3')">
+          ਟੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/14L.mp3').play();">ਟੰ</td>
+          onclick="showPopup( '13', '10', 'ਟੰ', 'audio/14L.mp3')">
+          ਟੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/14M.mp3').play();">ਟਾਂ</td>
+          onclick="showPopup( '13', '11', 'ਟਾਂ', 'audio/14M.mp3')">
+          ਟਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong14_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -523,29 +721,41 @@
           onclick="new Audio('audio/ltrlong15_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/15B.mp3').play();">ਠ</td>
+          onclick="showPopup( '14', '0', 'ਠ', 'audio/15B.mp3')">
+          ਠ</td>
           <td class="entry"
-          onclick="new Audio('audio/15C.mp3').play();">ਠਾ</td>
+          onclick="showPopup( '14', '1', 'ਠਾ', 'audio/15C.mp3')">
+          ਠਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/15D.mp3').play();">ਠਿ</td>
+          onclick="showPopup( '14', '2', 'ਠਿ', 'audio/15D.mp3')">
+          ਠਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/15E.mp3').play();">ਠੀ</td>
+          onclick="showPopup( '14', '3', 'ਠੀ', 'audio/15E.mp3')">
+          ਠੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/15F.mp3').play();">ਠੁ</td>
+          onclick="showPopup( '14', '4', 'ਠੁ', 'audio/15F.mp3')">
+          ਠੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/15G.mp3').play();">ਠੂ</td>
+          onclick="showPopup( '14', '5', 'ਠੂ', 'audio/15G.mp3')">
+          ਠੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/15H.mp3').play();">ਠੇ</td>
+          onclick="showPopup( '14', '6', 'ਠੇ', 'audio/15H.mp3')">
+          ਠੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/15I.mp3').play();">ਠੈ</td>
+          onclick="showPopup( '14', '7', 'ਠੈ', 'audio/15I.mp3')">
+          ਠੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/15J.mp3').play();">ਠੋ</td>
+          onclick="showPopup( '14', '8', 'ਠੋ', 'audio/15J.mp3')">
+          ਠੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/15K.mp3').play();">ਠੌ</td>
+          onclick="showPopup( '14', '9', 'ਠੌ', 'audio/15K.mp3')">
+          ਠੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/15L.mp3').play();">ਠੰ</td>
+          onclick="showPopup( '14', '10', 'ਠੰ', 'audio/15L.mp3')">
+          ਠੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/15M.mp3').play();">ਠਾਂ</td>
+          onclick="showPopup( '14', '11', 'ਠਾਂ', 'audio/15M.mp3')">
+          ਠਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong15_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -555,29 +765,41 @@
           onclick="new Audio('audio/ltrlong16_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/16B.mp3').play();">ਡ</td>
+          onclick="showPopup( '15', '0', 'ਡ', 'audio/16B.mp3')">
+          ਡ</td>
           <td class="entry"
-          onclick="new Audio('audio/16C.mp3').play();">ਡਾ</td>
+          onclick="showPopup( '15', '1', 'ਡਾ', 'audio/16C.mp3')">
+          ਡਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/16D.mp3').play();">ਡਿ</td>
+          onclick="showPopup( '15', '2', 'ਡਿ', 'audio/16D.mp3')">
+          ਡਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/16E.mp3').play();">ਡੀ</td>
+          onclick="showPopup( '15', '3', 'ਡੀ', 'audio/16E.mp3')">
+          ਡੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/16F.mp3').play();">ਡੁ</td>
+          onclick="showPopup( '15', '4', 'ਡੁ', 'audio/16F.mp3')">
+          ਡੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/16G.mp3').play();">ਡੂ</td>
+          onclick="showPopup( '15', '5', 'ਡੂ', 'audio/16G.mp3')">
+          ਡੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/16H.mp3').play();">ਡੇ</td>
+          onclick="showPopup( '15', '6', 'ਡੇ', 'audio/16H.mp3')">
+          ਡੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/16I.mp3').play();">ਡੈ</td>
+          onclick="showPopup( '15', '7', 'ਡੈ', 'audio/16I.mp3')">
+          ਡੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/16J.mp3').play();">ਡੋ</td>
+          onclick="showPopup( '15', '8', 'ਡੋ', 'audio/16J.mp3')">
+          ਡੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/16K.mp3').play();">ਡੌ</td>
+          onclick="showPopup( '15', '9', 'ਡੌ', 'audio/16K.mp3')">
+          ਡੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/16L.mp3').play();">ਡੰ</td>
+          onclick="showPopup( '15', '10', 'ਡੰ', 'audio/16L.mp3')">
+          ਡੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/16M.mp3').play();">ਡਾਂ</td>
+          onclick="showPopup( '15', '11', 'ਡਾਂ', 'audio/16M.mp3')">
+          ਡਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong16_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -587,29 +809,41 @@
           onclick="new Audio('audio/ltrlong17_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/17B.mp3').play();">ਢ</td>
+          onclick="showPopup( '16', '0', 'ਢ', 'audio/17B.mp3')">
+          ਢ</td>
           <td class="entry"
-          onclick="new Audio('audio/17C.mp3').play();">ਢਾ</td>
+          onclick="showPopup( '16', '1', 'ਢਾ', 'audio/17C.mp3')">
+          ਢਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/17D.mp3').play();">ਢਿ</td>
+          onclick="showPopup( '16', '2', 'ਢਿ', 'audio/17D.mp3')">
+          ਢਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/17E.mp3').play();">ਢੀ</td>
+          onclick="showPopup( '16', '3', 'ਢੀ', 'audio/17E.mp3')">
+          ਢੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/17F.mp3').play();">ਢੁ</td>
+          onclick="showPopup( '16', '4', 'ਢੁ', 'audio/17F.mp3')">
+          ਢੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/17G.mp3').play();">ਢੂ</td>
+          onclick="showPopup( '16', '5', 'ਢੂ', 'audio/17G.mp3')">
+          ਢੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/17H.mp3').play();">ਢੇ</td>
+          onclick="showPopup( '16', '6', 'ਢੇ', 'audio/17H.mp3')">
+          ਢੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/17I.mp3').play();">ਢੈ</td>
+          onclick="showPopup( '16', '7', 'ਢੈ', 'audio/17I.mp3')">
+          ਢੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/17J.mp3').play();">ਢੋ</td>
+          onclick="showPopup( '16', '8', 'ਢੋ', 'audio/17J.mp3')">
+          ਢੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/17K.mp3').play();">ਢੌ</td>
+          onclick="showPopup( '16', '9', 'ਢੌ', 'audio/17K.mp3')">
+          ਢੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/17L.mp3').play();">ਢੰ</td>
+          onclick="showPopup( '16', '10', 'ਢੰ', 'audio/17L.mp3')">
+          ਢੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/17M.mp3').play();">ਢਾਂ</td>
+          onclick="showPopup( '16', '11', 'ਢਾਂ', 'audio/17M.mp3')">
+          ਢਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong17_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -619,29 +853,41 @@
           onclick="new Audio('audio/ltrlong18_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/18B.mp3').play();">ਣ</td>
+          onclick="showPopup( '17', '0', 'ਣ', 'audio/18B.mp3')">
+          ਣ</td>
           <td class="entry"
-          onclick="new Audio('audio/18C.mp3').play();">ਣਾ</td>
+          onclick="showPopup( '17', '1', 'ਣਾ', 'audio/18C.mp3')">
+          ਣਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/18D.mp3').play();">ਣਿ</td>
+          onclick="showPopup( '17', '2', 'ਣਿ', 'audio/18D.mp3')">
+          ਣਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/18E.mp3').play();">ਣੀ</td>
+          onclick="showPopup( '17', '3', 'ਣੀ', 'audio/18E.mp3')">
+          ਣੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/18F.mp3').play();">ਣੁ</td>
+          onclick="showPopup( '17', '4', 'ਣੁ', 'audio/18F.mp3')">
+          ਣੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/18G.mp3').play();">ਣੂ</td>
+          onclick="showPopup( '17', '5', 'ਣੂ', 'audio/18G.mp3')">
+          ਣੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/18H.mp3').play();">ਣੇ</td>
+          onclick="showPopup( '17', '6', 'ਣੇ', 'audio/18H.mp3')">
+          ਣੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/18I.mp3').play();">ਣੈ</td>
+          onclick="showPopup( '17', '7', 'ਣੈ', 'audio/18I.mp3')">
+          ਣੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/18J.mp3').play();">ਣੋ</td>
+          onclick="showPopup( '17', '8', 'ਣੋ', 'audio/18J.mp3')">
+          ਣੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/18K.mp3').play();">ਣੌ</td>
+          onclick="showPopup( '17', '9', 'ਣੌ', 'audio/18K.mp3')">
+          ਣੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/18L.mp3').play();">ਣੰ</td>
+          onclick="showPopup( '17', '10', 'ਣੰ', 'audio/18L.mp3')">
+          ਣੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/18M.mp3').play();">ਣਾਂ</td>
+          onclick="showPopup( '17', '11', 'ਣਾਂ', 'audio/18M.mp3')">
+          ਣਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong18_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -651,29 +897,41 @@
           onclick="new Audio('audio/ltrlong19_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/19B.mp3').play();">ਤ</td>
+          onclick="showPopup( '18', '0', 'ਤ', 'audio/19B.mp3')">
+          ਤ</td>
           <td class="entry"
-          onclick="new Audio('audio/19C.mp3').play();">ਤਾ</td>
+          onclick="showPopup( '18', '1', 'ਤਾ', 'audio/19C.mp3')">
+          ਤਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/19D.mp3').play();">ਤਿ</td>
+          onclick="showPopup( '18', '2', 'ਤਿ', 'audio/19D.mp3')">
+          ਤਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/19E.mp3').play();">ਤੀ</td>
+          onclick="showPopup( '18', '3', 'ਤੀ', 'audio/19E.mp3')">
+          ਤੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/19F.mp3').play();">ਤੁ</td>
+          onclick="showPopup( '18', '4', 'ਤੁ', 'audio/19F.mp3')">
+          ਤੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/19G.mp3').play();">ਤੂ</td>
+          onclick="showPopup( '18', '5', 'ਤੂ', 'audio/19G.mp3')">
+          ਤੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/19H.mp3').play();">ਤੇ</td>
+          onclick="showPopup( '18', '6', 'ਤੇ', 'audio/19H.mp3')">
+          ਤੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/19I.mp3').play();">ਤੈ</td>
+          onclick="showPopup( '18', '7', 'ਤੈ', 'audio/19I.mp3')">
+          ਤੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/19J.mp3').play();">ਤੋ</td>
+          onclick="showPopup( '18', '8', 'ਤੋ', 'audio/19J.mp3')">
+          ਤੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/19K.mp3').play();">ਤੌ</td>
+          onclick="showPopup( '18', '9', 'ਤੌ', 'audio/19K.mp3')">
+          ਤੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/19L.mp3').play();">ਤੰ</td>
+          onclick="showPopup( '18', '10', 'ਤੰ', 'audio/19L.mp3')">
+          ਤੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/19M.mp3').play();">ਤਾਂ</td>
+          onclick="showPopup( '18', '11', 'ਤਾਂ', 'audio/19M.mp3')">
+          ਤਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong19_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -683,29 +941,41 @@
           onclick="new Audio('audio/ltrlong20_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/20B.mp3').play();">ਥ</td>
+          onclick="showPopup( '19', '0', 'ਥ', 'audio/20B.mp3')">
+          ਥ</td>
           <td class="entry"
-          onclick="new Audio('audio/20C.mp3').play();">ਥਾ</td>
+          onclick="showPopup( '19', '1', 'ਥਾ', 'audio/20C.mp3')">
+          ਥਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/20D.mp3').play();">ਥਿ</td>
+          onclick="showPopup( '19', '2', 'ਥਿ', 'audio/20D.mp3')">
+          ਥਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/20E.mp3').play();">ਥੀ</td>
+          onclick="showPopup( '19', '3', 'ਥੀ', 'audio/20E.mp3')">
+          ਥੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/20F.mp3').play();">ਥੁ</td>
+          onclick="showPopup( '19', '4', 'ਥੁ', 'audio/20F.mp3')">
+          ਥੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/20G.mp3').play();">ਥੂ</td>
+          onclick="showPopup( '19', '5', 'ਥੂ', 'audio/20G.mp3')">
+          ਥੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/20H.mp3').play();">ਥੇ</td>
+          onclick="showPopup( '19', '6', 'ਥੇ', 'audio/20H.mp3')">
+          ਥੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/20I.mp3').play();">ਥੈ</td>
+          onclick="showPopup( '19', '7', 'ਥੈ', 'audio/20I.mp3')">
+          ਥੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/20J.mp3').play();">ਥੋ</td>
+          onclick="showPopup( '19', '8', 'ਥੋ', 'audio/20J.mp3')">
+          ਥੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/20K.mp3').play();">ਥੌ</td>
+          onclick="showPopup( '19', '9', 'ਥੌ', 'audio/20K.mp3')">
+          ਥੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/20L.mp3').play();">ਥੰ</td>
+          onclick="showPopup( '19', '10', 'ਥੰ', 'audio/20L.mp3')">
+          ਥੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/20M.mp3').play();">ਥਾਂ</td>
+          onclick="showPopup( '19', '11', 'ਥਾਂ', 'audio/20M.mp3')">
+          ਥਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong20_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -715,29 +985,41 @@
           onclick="new Audio('audio/ltrlong21_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/21B.mp3').play();">ਦ</td>
+          onclick="showPopup( '20', '0', 'ਦ', 'audio/21B.mp3')">
+          ਦ</td>
           <td class="entry"
-          onclick="new Audio('audio/21C.mp3').play();">ਦਾ</td>
+          onclick="showPopup( '20', '1', 'ਦਾ', 'audio/21C.mp3')">
+          ਦਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/21D.mp3').play();">ਦਿ</td>
+          onclick="showPopup( '20', '2', 'ਦਿ', 'audio/21D.mp3')">
+          ਦਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/21E.mp3').play();">ਦੀ</td>
+          onclick="showPopup( '20', '3', 'ਦੀ', 'audio/21E.mp3')">
+          ਦੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/21F.mp3').play();">ਦੁ</td>
+          onclick="showPopup( '20', '4', 'ਦੁ', 'audio/21F.mp3')">
+          ਦੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/21G.mp3').play();">ਦੂ</td>
+          onclick="showPopup( '20', '5', 'ਦੂ', 'audio/21G.mp3')">
+          ਦੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/21H.mp3').play();">ਦੇ</td>
+          onclick="showPopup( '20', '6', 'ਦੇ', 'audio/21H.mp3')">
+          ਦੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/21I.mp3').play();">ਦੈ</td>
+          onclick="showPopup( '20', '7', 'ਦੈ', 'audio/21I.mp3')">
+          ਦੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/21J.mp3').play();">ਦੋ</td>
+          onclick="showPopup( '20', '8', 'ਦੋ', 'audio/21J.mp3')">
+          ਦੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/21K.mp3').play();">ਦੌ</td>
+          onclick="showPopup( '20', '9', 'ਦੌ', 'audio/21K.mp3')">
+          ਦੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/21L.mp3').play();">ਦੰ</td>
+          onclick="showPopup( '20', '10', 'ਦੰ', 'audio/21L.mp3')">
+          ਦੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/21M.mp3').play();">ਦਾਂ</td>
+          onclick="showPopup( '20', '11', 'ਦਾਂ', 'audio/21M.mp3')">
+          ਦਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong21_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -747,29 +1029,41 @@
           onclick="new Audio('audio/ltrlong22_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/22B.mp3').play();">ਧ</td>
+          onclick="showPopup( '21', '0', 'ਧ', 'audio/22B.mp3')">
+          ਧ</td>
           <td class="entry"
-          onclick="new Audio('audio/22C.mp3').play();">ਧਾ</td>
+          onclick="showPopup( '21', '1', 'ਧਾ', 'audio/22C.mp3')">
+          ਧਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/22D.mp3').play();">ਧਿ</td>
+          onclick="showPopup( '21', '2', 'ਧਿ', 'audio/22D.mp3')">
+          ਧਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/22E.mp3').play();">ਧੀ</td>
+          onclick="showPopup( '21', '3', 'ਧੀ', 'audio/22E.mp3')">
+          ਧੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/22F.mp3').play();">ਧੁ</td>
+          onclick="showPopup( '21', '4', 'ਧੁ', 'audio/22F.mp3')">
+          ਧੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/22G.mp3').play();">ਧੂ</td>
+          onclick="showPopup( '21', '5', 'ਧੂ', 'audio/22G.mp3')">
+          ਧੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/22H.mp3').play();">ਧੇ</td>
+          onclick="showPopup( '21', '6', 'ਧੇ', 'audio/22H.mp3')">
+          ਧੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/22I.mp3').play();">ਧੈ</td>
+          onclick="showPopup( '21', '7', 'ਧੈ', 'audio/22I.mp3')">
+          ਧੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/22J.mp3').play();">ਧੋ</td>
+          onclick="showPopup( '21', '8', 'ਧੋ', 'audio/22J.mp3')">
+          ਧੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/22K.mp3').play();">ਧੌ</td>
+          onclick="showPopup( '21', '9', 'ਧੌ', 'audio/22K.mp3')">
+          ਧੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/22L.mp3').play();">ਧੰ</td>
+          onclick="showPopup( '21', '10', 'ਧੰ', 'audio/22L.mp3')">
+          ਧੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/22M.mp3').play();">ਧਾਂ</td>
+          onclick="showPopup( '21', '11', 'ਧਾਂ', 'audio/22M.mp3')">
+          ਧਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong22_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -779,29 +1073,41 @@
           onclick="new Audio('audio/ltrlong23_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/23B.mp3').play();">ਨ</td>
+          onclick="showPopup( '22', '0', 'ਨ', 'audio/23B.mp3')">
+          ਨ</td>
           <td class="entry"
-          onclick="new Audio('audio/23C.mp3').play();">ਨਾ</td>
+          onclick="showPopup( '22', '1', 'ਨਾ', 'audio/23C.mp3')">
+          ਨਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/23D.mp3').play();">ਨਿ</td>
+          onclick="showPopup( '22', '2', 'ਨਿ', 'audio/23D.mp3')">
+          ਨਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/23E.mp3').play();">ਨੀ</td>
+          onclick="showPopup( '22', '3', 'ਨੀ', 'audio/23E.mp3')">
+          ਨੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/23F.mp3').play();">ਨੁ</td>
+          onclick="showPopup( '22', '4', 'ਨੁ', 'audio/23F.mp3')">
+          ਨੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/23G.mp3').play();">ਨੂ</td>
+          onclick="showPopup( '22', '5', 'ਨੂ', 'audio/23G.mp3')">
+          ਨੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/23H.mp3').play();">ਨੇ</td>
+          onclick="showPopup( '22', '6', 'ਨੇ', 'audio/23H.mp3')">
+          ਨੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/23I.mp3').play();">ਨੈ</td>
+          onclick="showPopup( '22', '7', 'ਨੈ', 'audio/23I.mp3')">
+          ਨੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/23J.mp3').play();">ਨੋ</td>
+          onclick="showPopup( '22', '8', 'ਨੋ', 'audio/23J.mp3')">
+          ਨੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/23K.mp3').play();">ਨੌ</td>
+          onclick="showPopup( '22', '9', 'ਨੌ', 'audio/23K.mp3')">
+          ਨੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/23L.mp3').play();">ਨੰ</td>
+          onclick="showPopup( '22', '10', 'ਨੰ', 'audio/23L.mp3')">
+          ਨੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/23M.mp3').play();">ਨਾਂ</td>
+          onclick="showPopup( '22', '11', 'ਨਾਂ', 'audio/23M.mp3')">
+          ਨਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong23_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -811,29 +1117,41 @@
           onclick="new Audio('audio/ltrlong24_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/24B.mp3').play();">ਪ</td>
+          onclick="showPopup( '23', '0', 'ਪ', 'audio/24B.mp3')">
+          ਪ</td>
           <td class="entry"
-          onclick="new Audio('audio/24C.mp3').play();">ਪਾ</td>
+          onclick="showPopup( '23', '1', 'ਪਾ', 'audio/24C.mp3')">
+          ਪਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/24D.mp3').play();">ਪਿ</td>
+          onclick="showPopup( '23', '2', 'ਪਿ', 'audio/24D.mp3')">
+          ਪਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/24E.mp3').play();">ਪੀ</td>
+          onclick="showPopup( '23', '3', 'ਪੀ', 'audio/24E.mp3')">
+          ਪੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/24F.mp3').play();">ਪੁ</td>
+          onclick="showPopup( '23', '4', 'ਪੁ', 'audio/24F.mp3')">
+          ਪੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/24G.mp3').play();">ਪੂ</td>
+          onclick="showPopup( '23', '5', 'ਪੂ', 'audio/24G.mp3')">
+          ਪੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/24H.mp3').play();">ਪੇ</td>
+          onclick="showPopup( '23', '6', 'ਪੇ', 'audio/24H.mp3')">
+          ਪੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/24I.mp3').play();">ਪੈ</td>
+          onclick="showPopup( '23', '7', 'ਪੈ', 'audio/24I.mp3')">
+          ਪੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/24J.mp3').play();">ਪੋ</td>
+          onclick="showPopup( '23', '8', 'ਪੋ', 'audio/24J.mp3')">
+          ਪੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/24K.mp3').play();">ਪੌ</td>
+          onclick="showPopup( '23', '9', 'ਪੌ', 'audio/24K.mp3')">
+          ਪੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/24L.mp3').play();">ਪੰ</td>
+          onclick="showPopup( '23', '10', 'ਪੰ', 'audio/24L.mp3')">
+          ਪੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/24M.mp3').play();">ਪਾਂ</td>
+          onclick="showPopup( '23', '11', 'ਪਾਂ', 'audio/24M.mp3')">
+          ਪਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong24_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -843,29 +1161,41 @@
           onclick="new Audio('audio/ltrlong25_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/25B.mp3').play();">ਫ</td>
+          onclick="showPopup( '24', '0', 'ਫ', 'audio/25B.mp3')">
+          ਫ</td>
           <td class="entry"
-          onclick="new Audio('audio/25C.mp3').play();">ਫਾ</td>
+          onclick="showPopup( '24', '1', 'ਫਾ', 'audio/25C.mp3')">
+          ਫਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/25D.mp3').play();">ਫਿ</td>
+          onclick="showPopup( '24', '2', 'ਫਿ', 'audio/25D.mp3')">
+          ਫਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/25E.mp3').play();">ਫੀ</td>
+          onclick="showPopup( '24', '3', 'ਫੀ', 'audio/25E.mp3')">
+          ਫੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/25F.mp3').play();">ਫੁ</td>
+          onclick="showPopup( '24', '4', 'ਫੁ', 'audio/25F.mp3')">
+          ਫੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/25G.mp3').play();">ਫੂ</td>
+          onclick="showPopup( '24', '5', 'ਫੂ', 'audio/25G.mp3')">
+          ਫੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/25H.mp3').play();">ਫੇ</td>
+          onclick="showPopup( '24', '6', 'ਫੇ', 'audio/25H.mp3')">
+          ਫੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/25I.mp3').play();">ਫੈ</td>
+          onclick="showPopup( '24', '7', 'ਫੈ', 'audio/25I.mp3')">
+          ਫੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/25J.mp3').play();">ਫੋ</td>
+          onclick="showPopup( '24', '8', 'ਫੋ', 'audio/25J.mp3')">
+          ਫੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/25K.mp3').play();">ਫੌ</td>
+          onclick="showPopup( '24', '9', 'ਫੌ', 'audio/25K.mp3')">
+          ਫੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/25L.mp3').play();">ਫੰ</td>
+          onclick="showPopup( '24', '10', 'ਫੰ', 'audio/25L.mp3')">
+          ਫੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/25M.mp3').play();">ਫਾਂ</td>
+          onclick="showPopup( '24', '11', 'ਫਾਂ', 'audio/25M.mp3')">
+          ਫਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong25_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -875,29 +1205,41 @@
           onclick="new Audio('audio/ltrlong26_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/26B.mp3').play();">ਬ</td>
+          onclick="showPopup( '25', '0', 'ਬ', 'audio/26B.mp3')">
+          ਬ</td>
           <td class="entry"
-          onclick="new Audio('audio/26C.mp3').play();">ਬਾ</td>
+          onclick="showPopup( '25', '1', 'ਬਾ', 'audio/26C.mp3')">
+          ਬਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/26D.mp3').play();">ਬਿ</td>
+          onclick="showPopup( '25', '2', 'ਬਿ', 'audio/26D.mp3')">
+          ਬਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/26E.mp3').play();">ਬੀ</td>
+          onclick="showPopup( '25', '3', 'ਬੀ', 'audio/26E.mp3')">
+          ਬੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/26F.mp3').play();">ਬੁ</td>
+          onclick="showPopup( '25', '4', 'ਬੁ', 'audio/26F.mp3')">
+          ਬੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/26G.mp3').play();">ਬੂ</td>
+          onclick="showPopup( '25', '5', 'ਬੂ', 'audio/26G.mp3')">
+          ਬੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/26H.mp3').play();">ਬੇ</td>
+          onclick="showPopup( '25', '6', 'ਬੇ', 'audio/26H.mp3')">
+          ਬੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/26I.mp3').play();">ਬੈ</td>
+          onclick="showPopup( '25', '7', 'ਬੈ', 'audio/26I.mp3')">
+          ਬੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/26J.mp3').play();">ਬੋ</td>
+          onclick="showPopup( '25', '8', 'ਬੋ', 'audio/26J.mp3')">
+          ਬੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/26K.mp3').play();">ਬੌ</td>
+          onclick="showPopup( '25', '9', 'ਬੌ', 'audio/26K.mp3')">
+          ਬੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/26L.mp3').play();">ਬੰ</td>
+          onclick="showPopup( '25', '10', 'ਬੰ', 'audio/26L.mp3')">
+          ਬੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/26M.mp3').play();">ਬਾਂ</td>
+          onclick="showPopup( '25', '11', 'ਬਾਂ', 'audio/26M.mp3')">
+          ਬਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong26_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -907,29 +1249,41 @@
           onclick="new Audio('audio/ltrlong27_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/27B.mp3').play();">ਭ</td>
+          onclick="showPopup( '26', '0', 'ਭ', 'audio/27B.mp3')">
+          ਭ</td>
           <td class="entry"
-          onclick="new Audio('audio/27C.mp3').play();">ਭਾ</td>
+          onclick="showPopup( '26', '1', 'ਭਾ', 'audio/27C.mp3')">
+          ਭਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/27D.mp3').play();">ਭਿ</td>
+          onclick="showPopup( '26', '2', 'ਭਿ', 'audio/27D.mp3')">
+          ਭਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/27E.mp3').play();">ਭੀ</td>
+          onclick="showPopup( '26', '3', 'ਭੀ', 'audio/27E.mp3')">
+          ਭੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/27F.mp3').play();">ਭੁ</td>
+          onclick="showPopup( '26', '4', 'ਭੁ', 'audio/27F.mp3')">
+          ਭੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/27G.mp3').play();">ਭੂ</td>
+          onclick="showPopup( '26', '5', 'ਭੂ', 'audio/27G.mp3')">
+          ਭੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/27H.mp3').play();">ਭੇ</td>
+          onclick="showPopup( '26', '6', 'ਭੇ', 'audio/27H.mp3')">
+          ਭੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/27I.mp3').play();">ਭੈ</td>
+          onclick="showPopup( '26', '7', 'ਭੈ', 'audio/27I.mp3')">
+          ਭੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/27J.mp3').play();">ਭੋ</td>
+          onclick="showPopup( '26', '8', 'ਭੋ', 'audio/27J.mp3')">
+          ਭੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/27K.mp3').play();">ਭੌ</td>
+          onclick="showPopup( '26', '9', 'ਭੌ', 'audio/27K.mp3')">
+          ਭੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/27L.mp3').play();">ਭੰ</td>
+          onclick="showPopup( '26', '10', 'ਭੰ', 'audio/27L.mp3')">
+          ਭੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/27M.mp3').play();">ਭਾਂ</td>
+          onclick="showPopup( '26', '11', 'ਭਾਂ', 'audio/27M.mp3')">
+          ਭਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong27_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -939,29 +1293,41 @@
           onclick="new Audio('audio/ltrlong28_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/28B.mp3').play();">ਮ</td>
+          onclick="showPopup( '27', '0', 'ਮ', 'audio/28B.mp3')">
+          ਮ</td>
           <td class="entry"
-          onclick="new Audio('audio/28C.mp3').play();">ਮਾ</td>
+          onclick="showPopup( '27', '1', 'ਮਾ', 'audio/28C.mp3')">
+          ਮਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/28D.mp3').play();">ਮਿ</td>
+          onclick="showPopup( '27', '2', 'ਮਿ', 'audio/28D.mp3')">
+          ਮਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/28E.mp3').play();">ਮੀ</td>
+          onclick="showPopup( '27', '3', 'ਮੀ', 'audio/28E.mp3')">
+          ਮੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/28F.mp3').play();">ਮੁ</td>
+          onclick="showPopup( '27', '4', 'ਮੁ', 'audio/28F.mp3')">
+          ਮੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/28G.mp3').play();">ਮੂ</td>
+          onclick="showPopup( '27', '5', 'ਮੂ', 'audio/28G.mp3')">
+          ਮੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/28H.mp3').play();">ਮੇ</td>
+          onclick="showPopup( '27', '6', 'ਮੇ', 'audio/28H.mp3')">
+          ਮੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/28I.mp3').play();">ਮੈ</td>
+          onclick="showPopup( '27', '7', 'ਮੈ', 'audio/28I.mp3')">
+          ਮੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/28J.mp3').play();">ਮੋ</td>
+          onclick="showPopup( '27', '8', 'ਮੋ', 'audio/28J.mp3')">
+          ਮੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/28K.mp3').play();">ਮੌ</td>
+          onclick="showPopup( '27', '9', 'ਮੌ', 'audio/28K.mp3')">
+          ਮੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/28L.mp3').play();">ਮੰ</td>
+          onclick="showPopup( '27', '10', 'ਮੰ', 'audio/28L.mp3')">
+          ਮੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/28M.mp3').play();">ਮਾਂ</td>
+          onclick="showPopup( '27', '11', 'ਮਾਂ', 'audio/28M.mp3')">
+          ਮਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong28_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -971,29 +1337,41 @@
           onclick="new Audio('audio/ltrlong29_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/29B.mp3').play();">ਯ</td>
+          onclick="showPopup( '28', '0', 'ਯ', 'audio/29B.mp3')">
+          ਯ</td>
           <td class="entry"
-          onclick="new Audio('audio/29C.mp3').play();">ਯਾ</td>
+          onclick="showPopup( '28', '1', 'ਯਾ', 'audio/29C.mp3')">
+          ਯਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/29D.mp3').play();">ਯਿ</td>
+          onclick="showPopup( '28', '2', 'ਯਿ', 'audio/29D.mp3')">
+          ਯਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/29E.mp3').play();">ਯੀ</td>
+          onclick="showPopup( '28', '3', 'ਯੀ', 'audio/29E.mp3')">
+          ਯੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/29F.mp3').play();">ਯੁ</td>
+          onclick="showPopup( '28', '4', 'ਯੁ', 'audio/29F.mp3')">
+          ਯੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/29G.mp3').play();">ਯੂ</td>
+          onclick="showPopup( '28', '5', 'ਯੂ', 'audio/29G.mp3')">
+          ਯੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/29H.mp3').play();">ਯੇ</td>
+          onclick="showPopup( '28', '6', 'ਯੇ', 'audio/29H.mp3')">
+          ਯੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/29I.mp3').play();">ਯੈ</td>
+          onclick="showPopup( '28', '7', 'ਯੈ', 'audio/29I.mp3')">
+          ਯੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/29J.mp3').play();">ਯੋ</td>
+          onclick="showPopup( '28', '8', 'ਯੋ', 'audio/29J.mp3')">
+          ਯੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/29K.mp3').play();">ਯੌ</td>
+          onclick="showPopup( '28', '9', 'ਯੌ', 'audio/29K.mp3')">
+          ਯੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/29L.mp3').play();">ਯੰ</td>
+          onclick="showPopup( '28', '10', 'ਯੰ', 'audio/29L.mp3')">
+          ਯੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/29M.mp3').play();">ਯਾਂ</td>
+          onclick="showPopup( '28', '11', 'ਯਾਂ', 'audio/29M.mp3')">
+          ਯਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong29_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1003,29 +1381,41 @@
           onclick="new Audio('audio/ltrlong30_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/30B.mp3').play();">ਰ</td>
+          onclick="showPopup( '29', '0', 'ਰ', 'audio/30B.mp3')">
+          ਰ</td>
           <td class="entry"
-          onclick="new Audio('audio/30C.mp3').play();">ਰਾ</td>
+          onclick="showPopup( '29', '1', 'ਰਾ', 'audio/30C.mp3')">
+          ਰਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/30D.mp3').play();">ਰਿ</td>
+          onclick="showPopup( '29', '2', 'ਰਿ', 'audio/30D.mp3')">
+          ਰਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/30E.mp3').play();">ਰੀ</td>
+          onclick="showPopup( '29', '3', 'ਰੀ', 'audio/30E.mp3')">
+          ਰੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/30F.mp3').play();">ਰੁ</td>
+          onclick="showPopup( '29', '4', 'ਰੁ', 'audio/30F.mp3')">
+          ਰੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/30G.mp3').play();">ਰੂ</td>
+          onclick="showPopup( '29', '5', 'ਰੂ', 'audio/30G.mp3')">
+          ਰੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/30H.mp3').play();">ਰੇ</td>
+          onclick="showPopup( '29', '6', 'ਰੇ', 'audio/30H.mp3')">
+          ਰੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/30I.mp3').play();">ਰੈ</td>
+          onclick="showPopup( '29', '7', 'ਰੈ', 'audio/30I.mp3')">
+          ਰੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/30J.mp3').play();">ਰੋ</td>
+          onclick="showPopup( '29', '8', 'ਰੋ', 'audio/30J.mp3')">
+          ਰੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/30K.mp3').play();">ਰੌ</td>
+          onclick="showPopup( '29', '9', 'ਰੌ', 'audio/30K.mp3')">
+          ਰੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/30L.mp3').play();">ਰੰ</td>
+          onclick="showPopup( '29', '10', 'ਰੰ', 'audio/30L.mp3')">
+          ਰੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/30M.mp3').play();">ਰਾਂ</td>
+          onclick="showPopup( '29', '11', 'ਰਾਂ', 'audio/30M.mp3')">
+          ਰਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong30_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1035,29 +1425,41 @@
           onclick="new Audio('audio/ltrlong31_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/31B.mp3').play();">ਲ</td>
+          onclick="showPopup( '30', '0', 'ਲ', 'audio/31B.mp3')">
+          ਲ</td>
           <td class="entry"
-          onclick="new Audio('audio/31C.mp3').play();">ਲਾ</td>
+          onclick="showPopup( '30', '1', 'ਲਾ', 'audio/31C.mp3')">
+          ਲਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/31D.mp3').play();">ਲਿ</td>
+          onclick="showPopup( '30', '2', 'ਲਿ', 'audio/31D.mp3')">
+          ਲਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/31E.mp3').play();">ਲੀ</td>
+          onclick="showPopup( '30', '3', 'ਲੀ', 'audio/31E.mp3')">
+          ਲੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/31F.mp3').play();">ਲੁ</td>
+          onclick="showPopup( '30', '4', 'ਲੁ', 'audio/31F.mp3')">
+          ਲੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/31G.mp3').play();">ਲੂ</td>
+          onclick="showPopup( '30', '5', 'ਲੂ', 'audio/31G.mp3')">
+          ਲੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/31H.mp3').play();">ਲੇ</td>
+          onclick="showPopup( '30', '6', 'ਲੇ', 'audio/31H.mp3')">
+          ਲੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/31I.mp3').play();">ਲੈ</td>
+          onclick="showPopup( '30', '7', 'ਲੈ', 'audio/31I.mp3')">
+          ਲੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/31J.mp3').play();">ਲੋ</td>
+          onclick="showPopup( '30', '8', 'ਲੋ', 'audio/31J.mp3')">
+          ਲੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/31K.mp3').play();">ਲੌ</td>
+          onclick="showPopup( '30', '9', 'ਲੌ', 'audio/31K.mp3')">
+          ਲੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/31L.mp3').play();">ਲੰ</td>
+          onclick="showPopup( '30', '10', 'ਲੰ', 'audio/31L.mp3')">
+          ਲੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/31M.mp3').play();">ਲਾਂ</td>
+          onclick="showPopup( '30', '11', 'ਲਾਂ', 'audio/31M.mp3')">
+          ਲਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong31_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1067,29 +1469,41 @@
           onclick="new Audio('audio/ltrlong32_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/32B.mp3').play();">ਵ</td>
+          onclick="showPopup( '31', '0', 'ਵ', 'audio/32B.mp3')">
+          ਵ</td>
           <td class="entry"
-          onclick="new Audio('audio/32C.mp3').play();">ਵਾ</td>
+          onclick="showPopup( '31', '1', 'ਵਾ', 'audio/32C.mp3')">
+          ਵਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/32D.mp3').play();">ਵਿ</td>
+          onclick="showPopup( '31', '2', 'ਵਿ', 'audio/32D.mp3')">
+          ਵਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/32E.mp3').play();">ਵੀ</td>
+          onclick="showPopup( '31', '3', 'ਵੀ', 'audio/32E.mp3')">
+          ਵੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/32F.mp3').play();">ਵੁ</td>
+          onclick="showPopup( '31', '4', 'ਵੁ', 'audio/32F.mp3')">
+          ਵੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/32G.mp3').play();">ਵੂ</td>
+          onclick="showPopup( '31', '5', 'ਵੂ', 'audio/32G.mp3')">
+          ਵੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/32H.mp3').play();">ਵੇ</td>
+          onclick="showPopup( '31', '6', 'ਵੇ', 'audio/32H.mp3')">
+          ਵੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/32I.mp3').play();">ਵੈ</td>
+          onclick="showPopup( '31', '7', 'ਵੈ', 'audio/32I.mp3')">
+          ਵੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/32J.mp3').play();">ਵੋ</td>
+          onclick="showPopup( '31', '8', 'ਵੋ', 'audio/32J.mp3')">
+          ਵੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/32K.mp3').play();">ਵੌ</td>
+          onclick="showPopup( '31', '9', 'ਵੌ', 'audio/32K.mp3')">
+          ਵੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/32L.mp3').play();">ਵੰ</td>
+          onclick="showPopup( '31', '10', 'ਵੰ', 'audio/32L.mp3')">
+          ਵੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/32M.mp3').play();">ਵਾਂ</td>
+          onclick="showPopup( '31', '11', 'ਵਾਂ', 'audio/32M.mp3')">
+          ਵਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong32_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1099,29 +1513,41 @@
           onclick="new Audio('audio/ltrlong33_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/33B.mp3').play();">ੜ</td>
+          onclick="showPopup( '32', '0', 'ੜ', 'audio/33B.mp3')">
+          ੜ</td>
           <td class="entry"
-          onclick="new Audio('audio/33C.mp3').play();">ੜਾ</td>
+          onclick="showPopup( '32', '1', 'ੜਾ', 'audio/33C.mp3')">
+          ੜਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/33D.mp3').play();">ੜਿ</td>
+          onclick="showPopup( '32', '2', 'ੜਿ', 'audio/33D.mp3')">
+          ੜਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/33E.mp3').play();">ੜੀ</td>
+          onclick="showPopup( '32', '3', 'ੜੀ', 'audio/33E.mp3')">
+          ੜੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/33F.mp3').play();">ੜੁ</td>
+          onclick="showPopup( '32', '4', 'ੜੁ', 'audio/33F.mp3')">
+          ੜੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/33G.mp3').play();">ੜੂ</td>
+          onclick="showPopup( '32', '5', 'ੜੂ', 'audio/33G.mp3')">
+          ੜੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/33H.mp3').play();">ੜੇ</td>
+          onclick="showPopup( '32', '6', 'ੜੇ', 'audio/33H.mp3')">
+          ੜੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/33I.mp3').play();">ੜੈ</td>
+          onclick="showPopup( '32', '7', 'ੜੈ', 'audio/33I.mp3')">
+          ੜੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/33J.mp3').play();">ੜੋ</td>
+          onclick="showPopup( '32', '8', 'ੜੋ', 'audio/33J.mp3')">
+          ੜੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/33K.mp3').play();">ੜੌ</td>
+          onclick="showPopup( '32', '9', 'ੜੌ', 'audio/33K.mp3')">
+          ੜੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/33L.mp3').play();">ੜੰ</td>
+          onclick="showPopup( '32', '10', 'ੜੰ', 'audio/33L.mp3')">
+          ੜੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/33M.mp3').play();">ੜਾਂ</td>
+          onclick="showPopup( '32', '11', 'ੜਾਂ', 'audio/33M.mp3')">
+          ੜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong33_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1131,29 +1557,41 @@
           onclick="new Audio('audio/ltrlong34_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/34B.mp3').play();">ਸ਼</td>
+          onclick="showPopup( '33', '0', 'ਸ਼', 'audio/34B.mp3')">
+          ਸ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/34C.mp3').play();">ਸ਼ਾ</td>
+          onclick="showPopup( '33', '1', 'ਸ਼ਾ', 'audio/34C.mp3')">
+          ਸ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/34D.mp3').play();">ਸ਼ਿ</td>
+          onclick="showPopup( '33', '2', 'ਸ਼ਿ', 'audio/34D.mp3')">
+          ਸ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/34E.mp3').play();">ਸ਼ੀ</td>
+          onclick="showPopup( '33', '3', 'ਸ਼ੀ', 'audio/34E.mp3')">
+          ਸ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/34F.mp3').play();">ਸ਼ੁ</td>
+          onclick="showPopup( '33', '4', 'ਸ਼ੁ', 'audio/34F.mp3')">
+          ਸ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/34G.mp3').play();">ਸ਼ੂ</td>
+          onclick="showPopup( '33', '5', 'ਸ਼ੂ', 'audio/34G.mp3')">
+          ਸ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/34H.mp3').play();">ਸ਼ੇ</td>
+          onclick="showPopup( '33', '6', 'ਸ਼ੇ', 'audio/34H.mp3')">
+          ਸ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/34I.mp3').play();">ਸ਼ੈ</td>
+          onclick="showPopup( '33', '7', 'ਸ਼ੈ', 'audio/34I.mp3')">
+          ਸ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/34J.mp3').play();">ਸ਼ੋ</td>
+          onclick="showPopup( '33', '8', 'ਸ਼ੋ', 'audio/34J.mp3')">
+          ਸ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/34K.mp3').play();">ਸ਼ੌ</td>
+          onclick="showPopup( '33', '9', 'ਸ਼ੌ', 'audio/34K.mp3')">
+          ਸ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/34L.mp3').play();">ਸ਼ੰ</td>
+          onclick="showPopup( '33', '10', 'ਸ਼ੰ', 'audio/34L.mp3')">
+          ਸ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/34M.mp3').play();">ਸ਼ਾਂ</td>
+          onclick="showPopup( '33', '11', 'ਸ਼ਾਂ', 'audio/34M.mp3')">
+          ਸ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong34_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1163,29 +1601,40 @@
           onclick="new Audio('audio/ltrlong35_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/35B.mp3').play();">ਖ਼</td>
+          onclick="showPopup( '34', '0', 'ਖ਼', 'audio/35B.mp3')">
+          ਖ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/35C.mp3').play();">ਖ਼ਾ</td>
+          onclick="showPopup( '34', '1', 'ਖ਼ਾ', 'audio/35C.mp3')">
+          ਖ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/35D.mp3').play();">ਖ਼ਿ</td>
+          onclick="showPopup( '34', '2', 'ਖ਼ਿ', 'audio/35D.mp3')">
+          ਖ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/35E.mp3').play();">ਖ਼ੀ</td>
+          onclick="showPopup( '34', '3', 'ਖ਼ੀ', 'audio/35E.mp3')">
+          ਖ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/35F.mp3').play();">ਖ਼ੁ</td>
+          onclick="showPopup( '34', '4', 'ਖ਼ੁ', 'audio/35F.mp3')">
+          ਖ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/35G.mp3').play();">ਖ਼ੂ</td>
+          onclick="showPopup( '34', '5', 'ਖ਼ੂ', 'audio/35G.mp3')">
+          ਖ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/35H.mp3').play();">ਖ਼ੇ</td>
+          onclick="showPopup( '34', '6', 'ਖ਼ੇ', 'audio/35H.mp3')">
+          ਖ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/35I.mp3').play();">ਖ਼ੈ</td>
+          onclick="showPopup( '34', '7', 'ਖ਼ੈ', 'audio/35I.mp3')">
+          ਖ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/35J.mp3').play();">ਖ਼ੋ</td>
+          onclick="showPopup( '34', '8', 'ਖ਼ੋ', 'audio/35J.mp3')">
+          ਖ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/35K.mp3').play();">ਖ਼ੌ</td>
+          onclick="showPopup( '34', '9', 'ਖ਼ੌ', 'audio/35K.mp3')">
+          ਖ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/35L.mp3').play();">ਖ਼ੰ</td>
+          onclick="showPopup( '34', '10', 'ਖ਼ੰ', 'audio/35L.mp3')">
+          ਖ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/35M.mp3').play();">ਖ਼ਾਂ</td>
+          onclick="showPopup( '34', '11', 'ਖ਼ਾਂ', 'audio/35M.mp3')">ਖ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong35_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1195,29 +1644,40 @@
           onclick="new Audio('audio/ltrlong36_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/36B.mp3').play();">ਗ਼</td>
+          onclick="showPopup( '35', '0', 'ਗ਼', 'audio/36B.mp3')">
+          ਗ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/36C.mp3').play();">ਗ਼ਾ</td>
+          onclick="showPopup( '35', '1', 'ਗ਼ਾ', 'audio/36C.mp3')">
+          ਗ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/36D.mp3').play();">ਗ਼ਿ</td>
+          onclick="showPopup( '35', '2', 'ਗ਼ਿ', 'audio/36D.mp3')">
+          ਗ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/36E.mp3').play();">ਗ਼ੀ</td>
+          onclick="showPopup( '35', '3', 'ਗ਼ੀ', 'audio/36E.mp3')">
+          ਗ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/36F.mp3').play();">ਗ਼ੁ</td>
+          onclick="showPopup( '35', '4', 'ਗ਼ੁ', 'audio/36F.mp3')">
+          ਗ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/36G.mp3').play();">ਗ਼ੂ</td>
+          onclick="showPopup( '35', '5', 'ਗ਼ੂ', 'audio/36G.mp3')">
+          ਗ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/36H.mp3').play();">ਗ਼ੇ</td>
+          onclick="showPopup( '35', '6', 'ਗ਼ੇ', 'audio/36H.mp3')">
+          ਗ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/36I.mp3').play();">ਗ਼ੈ</td>
+          onclick="showPopup( '35', '7', 'ਗ਼ੈ', 'audio/36I.mp3')">
+          ਗ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/36J.mp3').play();">ਗ਼ੋ</td>
+          onclick="showPopup( '35', '8', 'ਗ਼ੋ', 'audio/36J.mp3')">
+          ਗ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/36K.mp3').play();">ਗ਼ੌ</td>
+          onclick="showPopup( '35', '9', 'ਗ਼ੌ', 'audio/36K.mp3')">
+          ਗ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/36L.mp3').play();">ਗ਼ੰ</td>
+          onclick="showPopup( '35', '10', 'ਗ਼ੰ', 'audio/36L.mp3')">
+          ਗ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/36M.mp3').play();">ਗ਼ਾਂ</td>
+          onclick="showPopup( '35', '11', 'ਗ਼ਾਂ', 'audio/36M.mp3')">ਗ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong36_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1227,29 +1687,41 @@
           onclick="new Audio('audio/ltrlong37_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/37B.mp3').play();">ਜ਼</td>
+          onclick="showPopup( '36', '0', 'ਜ਼', 'audio/37B.mp3')">
+          ਜ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/37C.mp3').play();">ਜ਼ਾ</td>
+          onclick="showPopup( '36', '1', 'ਜ਼ਾ', 'audio/37C.mp3')">
+          ਜ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/37D.mp3').play();">ਜ਼ਿ</td>
+          onclick="showPopup( '36', '2', 'ਜ਼ਿ', 'audio/37D.mp3')">
+          ਜ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/37E.mp3').play();">ਜ਼ੀ</td>
+          onclick="showPopup( '36', '3', 'ਜ਼ੀ', 'audio/37E.mp3')">
+          ਜ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/37F.mp3').play();">ਜ਼ੁ</td>
+          onclick="showPopup( '36', '4', 'ਜ਼ੁ', 'audio/37F.mp3')">
+          ਜ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/37G.mp3').play();">ਜ਼ੂ</td>
+          onclick="showPopup( '36', '5', 'ਜ਼ੂ', 'audio/37G.mp3')">
+          ਜ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/37H.mp3').play();">ਜ਼ੇ</td>
+          onclick="showPopup( '36', '6', 'ਜ਼ੇ', 'audio/37H.mp3')">
+          ਜ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/37I.mp3').play();">ਜ਼ੈ</td>
+          onclick="showPopup( '36', '7', 'ਜ਼ੈ', 'audio/37I.mp3')">
+          ਜ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/37J.mp3').play();">ਜ਼ੋ</td>
+          onclick="showPopup( '36', '8', 'ਜ਼ੋ', 'audio/37J.mp3')">
+          ਜ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/37K.mp3').play();">ਜ਼ੌ</td>
+          onclick="showPopup( '36', '9', 'ਜ਼ੌ', 'audio/37K.mp3')">
+          ਜ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/37L.mp3').play();">ਜ਼ੰ</td>
+          onclick="showPopup( '36', '10', 'ਜ਼ੰ', 'audio/37L.mp3')">
+          ਜ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/37M.mp3').play();">ਜ਼ਾਂ</td>
+          onclick="showPopup( '36', '11', 'ਜ਼ਾਂ', 'audio/37M.mp3')">
+          ਜ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong37_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1259,29 +1731,40 @@
           onclick="new Audio('audio/ltrlong38_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/38B.mp3').play();">ਫ਼</td>
+          onclick="showPopup( '37', '0', 'ਫ਼', 'audio/38B.mp3')">
+          ਫ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/38C.mp3').play();">ਫ਼ਾ</td>
+          onclick="showPopup( '37', '1', 'ਫ਼ਾ', 'audio/38C.mp3')">
+          ਫ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/38D.mp3').play();">ਫ਼ਿ</td>
+          onclick="showPopup( '37', '2', 'ਫ਼ਿ', 'audio/38D.mp3')">
+          ਫ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/38E.mp3').play();">ਫ਼ੀ</td>
+          onclick="showPopup( '37', '3', 'ਫ਼ੀ', 'audio/38E.mp3')">
+          ਫ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/38F.mp3').play();">ਫ਼ੁ</td>
+          onclick="showPopup( '37', '4', 'ਫ਼ੁ', 'audio/38F.mp3')">
+          ਫ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/38G.mp3').play();">ਫ਼ੂ</td>
+          onclick="showPopup( '37', '5', 'ਫ਼ੂ', 'audio/38G.mp3')">
+          ਫ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/38H.mp3').play();">ਫ਼ੇ</td>
+          onclick="showPopup( '37', '6', 'ਫ਼ੇ', 'audio/38H.mp3')">
+          ਫ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/38I.mp3').play();">ਫ਼ੈ</td>
+          onclick="showPopup( '37', '7', 'ਫ਼ੈ', 'audio/38I.mp3')">
+          ਫ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/38J.mp3').play();">ਫ਼ੋ</td>
+          onclick="showPopup( '37', '8', 'ਫ਼ੋ', 'audio/38J.mp3')">
+          ਫ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/38K.mp3').play();">ਫ਼ੌ</td>
+          onclick="showPopup( '37', '9', 'ਫ਼ੌ', 'audio/38K.mp3')">
+          ਫ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/38L.mp3').play();">ਫ਼ੰ</td>
+          onclick="showPopup( '37', '10', 'ਫ਼ੰ', 'audio/38L.mp3')">
+          ਫ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/38M.mp3').play();">ਫ਼ਾਂ</td>
+          onclick="showPopup( '37', '11', 'ਫ਼ਾਂ', 'audio/38M.mp3')">ਫ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong38_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1291,29 +1774,40 @@
           onclick="new Audio('audio/ltrlong39_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/39B.mp3').play();">ਲ਼</td>
+          onclick="showPopup( '38', '0', 'ਲ਼', 'audio/39B.mp3')">
+          ਲ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/39C.mp3').play();">ਲ਼ਾ</td>
+          onclick="showPopup( '38', '1', 'ਲ਼ਾ', 'audio/39C.mp3')">
+          ਲ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/39D.mp3').play();">ਲ਼ਿ</td>
+          onclick="showPopup( '38', '2', 'ਲ਼ਿ', 'audio/39D.mp3')">
+          ਲ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/39E.mp3').play();">ਲ਼ੀ</td>
+          onclick="showPopup( '38', '3', 'ਲ਼ੀ', 'audio/39E.mp3')">
+          ਲ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/39F.mp3').play();">ਲ਼ੁ</td>
+          onclick="showPopup( '38', '4', 'ਲ਼ੁ', 'audio/39F.mp3')">
+          ਲ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/39G.mp3').play();">ਲ਼ੂ</td>
+          onclick="showPopup( '38', '5', 'ਲ਼ੂ', 'audio/39G.mp3')">
+          ਲ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/39H.mp3').play();">ਲ਼ੇ</td>
+          onclick="showPopup( '38', '6', 'ਲ਼ੇ', 'audio/39H.mp3')">
+          ਲ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/39I.mp3').play();">ਲ਼ੈ</td>
+          onclick="showPopup( '38', '7', 'ਲ਼ੈ', 'audio/39I.mp3')">
+          ਲ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/39J.mp3').play();">ਲ਼ੋ</td>
+          onclick="showPopup( '38', '8', 'ਲ਼ੋ', 'audio/39J.mp3')">
+          ਲ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/39K.mp3').play();">ਲ਼ੌ</td>
+          onclick="showPopup( '38', '9', 'ਲ਼ੌ', 'audio/39K.mp3')">
+          ਲ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/39L.mp3').play();">ਲ਼ੰ</td>
+          onclick="showPopup( '38', '10', 'ਲ਼ੰ', 'audio/39L.mp3')">
+          ਲ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/39M.mp3').play();">ਲ਼ਾਂ</td>
+          onclick="showPopup( '38', '11', 'ਲ਼ਾਂ', 'audio/39M.mp3')">ਲ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong39_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1362,7 +1856,8 @@
     </div>
     <div id="short" style="display: none;">
       <h2>Short forms</h2>
-      <table>
+      <table class="character-table"
+      summary="Table of Punjabi characters from which to select sound recordings">
         <tr>
           <th></th>
           <th>Muktā</th>
@@ -1424,29 +1919,41 @@
           onclick="new Audio('audio/ltrshort01_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/01b.mp3').play();">ਅ</td>
+          onclick="showPopup( '40', '0', 'ਅ', 'audio/01b.mp3')">
+          ਅ</td>
           <td class="entry"
-          onclick="new Audio('audio/01c.mp3').play();">ਆ</td>
+          onclick="showPopup( '40', '1', 'ਆ', 'audio/01c.mp3')">
+          ਆ</td>
           <td class="entry"
-          onclick="new Audio('audio/01d.mp3').play();">ਇ</td>
+          onclick="showPopup( '40', '2', 'ਇ', 'audio/01d.mp3')">
+          ਇ</td>
           <td class="entry"
-          onclick="new Audio('audio/01e.mp3').play();">ਈ</td>
+          onclick="showPopup( '40', '3', 'ਈ', 'audio/01e.mp3')">
+          ਈ</td>
           <td class="entry"
-          onclick="new Audio('audio/01f.mp3').play();">ਉ</td>
+          onclick="showPopup( '40', '4', 'ਉ', 'audio/01f.mp3')">
+          ਉ</td>
           <td class="entry"
-          onclick="new Audio('audio/01g.mp3').play();">ਊ</td>
+          onclick="showPopup( '40', '5', 'ਊ', 'audio/01g.mp3')">
+          ਊ</td>
           <td class="entry"
-          onclick="new Audio('audio/01h.mp3').play();">ਏ</td>
+          onclick="showPopup( '40', '6', 'ਏ', 'audio/01h.mp3')">
+          ਏ</td>
           <td class="entry"
-          onclick="new Audio('audio/01i.mp3').play();">ਐ</td>
+          onclick="showPopup( '40', '7', 'ਐ', 'audio/01i.mp3')">
+          ਐ</td>
           <td class="entry"
-          onclick="new Audio('audio/01j.mp3').play();">ਓ</td>
+          onclick="showPopup( '40', '8', 'ਓ', 'audio/01j.mp3')">
+          ਓ</td>
           <td class="entry"
-          onclick="new Audio('audio/01k.mp3').play();">ਔ</td>
+          onclick="showPopup( '40', '9', 'ਔ', 'audio/01k.mp3')">
+          ਔ</td>
           <td class="entry"
-          onclick="new Audio('audio/01l.mp3').play();">ਅੰ</td>
+          onclick="showPopup( '40', '10', 'ਅੰ', 'audio/01l.mp3')">
+          ਅੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/01m.mp3').play();">ਆਂ</td>
+          onclick="showPopup( '40', '11', 'ਆਂ', 'audio/01m.mp3')">
+          ਆਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort01_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1456,29 +1963,41 @@
           onclick="new Audio('audio/ltrshort02_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/02b.mp3').play();">ਸ</td>
+          onclick="showPopup( '41', '0', 'ਸ', 'audio/02b.mp3')">
+          ਸ</td>
           <td class="entry"
-          onclick="new Audio('audio/02c.mp3').play();">ਸਾ</td>
+          onclick="showPopup( '41', '1', 'ਸਾ', 'audio/02c.mp3')">
+          ਸਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/02d.mp3').play();">ਸਿ</td>
+          onclick="showPopup( '41', '2', 'ਸਿ', 'audio/02d.mp3')">
+          ਸਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/02e.mp3').play();">ਸੀ</td>
+          onclick="showPopup( '41', '3', 'ਸੀ', 'audio/02e.mp3')">
+          ਸੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/02f.mp3').play();">ਸੁ</td>
+          onclick="showPopup( '41', '4', 'ਸੁ', 'audio/02f.mp3')">
+          ਸੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/02g.mp3').play();">ਸੂ</td>
+          onclick="showPopup( '41', '5', 'ਸੂ', 'audio/02g.mp3')">
+          ਸੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/02h.mp3').play();">ਸੇ</td>
+          onclick="showPopup( '41', '6', 'ਸੇ', 'audio/02h.mp3')">
+          ਸੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/02i.mp3').play();">ਸੈ</td>
+          onclick="showPopup( '41', '7', 'ਸੈ', 'audio/02i.mp3')">
+          ਸੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/02j.mp3').play();">ਸੋ</td>
+          onclick="showPopup( '41', '8', 'ਸੋ', 'audio/02j.mp3')">
+          ਸੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/02k.mp3').play();">ਸੌ</td>
+          onclick="showPopup( '41', '9', 'ਸੌ', 'audio/02k.mp3')">
+          ਸੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/02l.mp3').play();">ਸੰ</td>
+          onclick="showPopup( '41', '10', 'ਸੰ', 'audio/02l.mp3')">
+          ਸੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/02m.mp3').play();">ਸਾਂ</td>
+          onclick="showPopup( '41', '11', 'ਸਾਂ', 'audio/02m.mp3')">
+          ਸਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort02_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1488,29 +2007,41 @@
           onclick="new Audio('audio/ltrshort03_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/03b.mp3').play();">ਹ</td>
+          onclick="showPopup( '42', '0', 'ਹ', 'audio/03b.mp3')">
+          ਹ</td>
           <td class="entry"
-          onclick="new Audio('audio/03c.mp3').play();">ਹਾ</td>
+          onclick="showPopup( '42', '1', 'ਹਾ', 'audio/03c.mp3')">
+          ਹਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/03d.mp3').play();">ਹਿ</td>
+          onclick="showPopup( '42', '2', 'ਹਿ', 'audio/03d.mp3')">
+          ਹਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/03e.mp3').play();">ਹੀ</td>
+          onclick="showPopup( '42', '3', 'ਹੀ', 'audio/03e.mp3')">
+          ਹੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/03f.mp3').play();">ਹੁ</td>
+          onclick="showPopup( '42', '4', 'ਹੁ', 'audio/03f.mp3')">
+          ਹੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/03g.mp3').play();">ਹੂ</td>
+          onclick="showPopup( '42', '5', 'ਹੂ', 'audio/03g.mp3')">
+          ਹੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/03h.mp3').play();">ਹੇ</td>
+          onclick="showPopup( '42', '6', 'ਹੇ', 'audio/03h.mp3')">
+          ਹੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/03i.mp3').play();">ਹੈ</td>
+          onclick="showPopup( '42', '7', 'ਹੈ', 'audio/03i.mp3')">
+          ਹੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/03j.mp3').play();">ਹੋ</td>
+          onclick="showPopup( '42', '8', 'ਹੋ', 'audio/03j.mp3')">
+          ਹੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/03k.mp3').play();">ਹੌ</td>
+          onclick="showPopup( '42', '9', 'ਹੌ', 'audio/03k.mp3')">
+          ਹੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/03l.mp3').play();">ਹੰ</td>
+          onclick="showPopup( '42', '10', 'ਹੰ', 'audio/03l.mp3')">
+          ਹੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/03m.mp3').play();">ਹਾਂ</td>
+          onclick="showPopup( '42', '11', 'ਹਾਂ', 'audio/03m.mp3')">
+          ਹਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort03_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1520,29 +2051,41 @@
           onclick="new Audio('audio/ltrshort04_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/04b.mp3').play();">ਕ</td>
+          onclick="showPopup( '43', '0', 'ਕ', 'audio/04b.mp3')">
+          ਕ</td>
           <td class="entry"
-          onclick="new Audio('audio/04c.mp3').play();">ਕਾ</td>
+          onclick="showPopup( '43', '1', 'ਕਾ', 'audio/04c.mp3')">
+          ਕਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/04d.mp3').play();">ਕਿ</td>
+          onclick="showPopup( '43', '2', 'ਕਿ', 'audio/04d.mp3')">
+          ਕਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/04e.mp3').play();">ਕੀ</td>
+          onclick="showPopup( '43', '3', 'ਕੀ', 'audio/04e.mp3')">
+          ਕੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/04f.mp3').play();">ਕੁ</td>
+          onclick="showPopup( '43', '4', 'ਕੁ', 'audio/04f.mp3')">
+          ਕੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/04g.mp3').play();">ਕੂ</td>
+          onclick="showPopup( '43', '5', 'ਕੂ', 'audio/04g.mp3')">
+          ਕੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/04h.mp3').play();">ਕੇ</td>
+          onclick="showPopup( '43', '6', 'ਕੇ', 'audio/04h.mp3')">
+          ਕੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/04i.mp3').play();">ਕੈ</td>
+          onclick="showPopup( '43', '7', 'ਕੈ', 'audio/04i.mp3')">
+          ਕੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/04j.mp3').play();">ਕੋ</td>
+          onclick="showPopup( '43', '8', 'ਕੋ', 'audio/04j.mp3')">
+          ਕੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/04k.mp3').play();">ਕੌ</td>
+          onclick="showPopup( '43', '9', 'ਕੌ', 'audio/04k.mp3')">
+          ਕੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/04l.mp3').play();">ਕੰ</td>
+          onclick="showPopup( '43', '10', 'ਕੰ', 'audio/04l.mp3')">
+          ਕੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/04m.mp3').play();">ਕਾਂ</td>
+          onclick="showPopup( '43', '11', 'ਕਾਂ', 'audio/04m.mp3')">
+          ਕਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort04_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1552,29 +2095,41 @@
           onclick="new Audio('audio/ltrshort05_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/05b.mp3').play();">ਖ</td>
+          onclick="showPopup( '44', '0', 'ਖ', 'audio/05b.mp3')">
+          ਖ</td>
           <td class="entry"
-          onclick="new Audio('audio/05c.mp3').play();">ਖਾ</td>
+          onclick="showPopup( '44', '1', 'ਖਾ', 'audio/05c.mp3')">
+          ਖਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/05d.mp3').play();">ਖਿ</td>
+          onclick="showPopup( '44', '2', 'ਖਿ', 'audio/05d.mp3')">
+          ਖਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/05e.mp3').play();">ਖੀ</td>
+          onclick="showPopup( '44', '3', 'ਖੀ', 'audio/05e.mp3')">
+          ਖੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/05f.mp3').play();">ਖੁ</td>
+          onclick="showPopup( '44', '4', 'ਖੁ', 'audio/05f.mp3')">
+          ਖੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/05g.mp3').play();">ਖੂ</td>
+          onclick="showPopup( '44', '5', 'ਖੂ', 'audio/05g.mp3')">
+          ਖੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/05h.mp3').play();">ਖੇ</td>
+          onclick="showPopup( '44', '6', 'ਖੇ', 'audio/05h.mp3')">
+          ਖੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/05i.mp3').play();">ਖੈ</td>
+          onclick="showPopup( '44', '7', 'ਖੈ', 'audio/05i.mp3')">
+          ਖੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/05j.mp3').play();">ਖੋ</td>
+          onclick="showPopup( '44', '8', 'ਖੋ', 'audio/05j.mp3')">
+          ਖੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/05k.mp3').play();">ਖੌ</td>
+          onclick="showPopup( '44', '9', 'ਖੌ', 'audio/05k.mp3')">
+          ਖੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/05l.mp3').play();">ਖੰ</td>
+          onclick="showPopup( '44', '10', 'ਖੰ', 'audio/05l.mp3')">
+          ਖੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/05m.mp3').play();">ਖਾਂ</td>
+          onclick="showPopup( '44', '11', 'ਖਾਂ', 'audio/05m.mp3')">
+          ਖਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort05_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1584,29 +2139,41 @@
           onclick="new Audio('audio/ltrshort06_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/06b.mp3').play();">ਗ</td>
+          onclick="showPopup( '45', '0', 'ਗ', 'audio/06b.mp3')">
+          ਗ</td>
           <td class="entry"
-          onclick="new Audio('audio/06c.mp3').play();">ਗਾ</td>
+          onclick="showPopup( '45', '1', 'ਗਾ', 'audio/06c.mp3')">
+          ਗਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/06d.mp3').play();">ਗਿ</td>
+          onclick="showPopup( '45', '2', 'ਗਿ', 'audio/06d.mp3')">
+          ਗਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/06e.mp3').play();">ਗੀ</td>
+          onclick="showPopup( '45', '3', 'ਗੀ', 'audio/06e.mp3')">
+          ਗੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/06f.mp3').play();">ਗੁ</td>
+          onclick="showPopup( '45', '4', 'ਗੁ', 'audio/06f.mp3')">
+          ਗੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/06g.mp3').play();">ਗੂ</td>
+          onclick="showPopup( '45', '5', 'ਗੂ', 'audio/06g.mp3')">
+          ਗੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/06h.mp3').play();">ਗੇ</td>
+          onclick="showPopup( '45', '6', 'ਗੇ', 'audio/06h.mp3')">
+          ਗੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/06i.mp3').play();">ਗੈ</td>
+          onclick="showPopup( '45', '7', 'ਗੈ', 'audio/06i.mp3')">
+          ਗੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/06j.mp3').play();">ਗੋ</td>
+          onclick="showPopup( '45', '8', 'ਗੋ', 'audio/06j.mp3')">
+          ਗੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/06k.mp3').play();">ਗੌ</td>
+          onclick="showPopup( '45', '9', 'ਗੌ', 'audio/06k.mp3')">
+          ਗੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/06l.mp3').play();">ਗੰ</td>
+          onclick="showPopup( '45', '10', 'ਗੰ', 'audio/06l.mp3')">
+          ਗੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/06m.mp3').play();">ਗਾਂ</td>
+          onclick="showPopup( '45', '11', 'ਗਾਂ', 'audio/06m.mp3')">
+          ਗਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort06_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1616,29 +2183,41 @@
           onclick="new Audio('audio/ltrshort07_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/07b.mp3').play();">ਘ</td>
+          onclick="showPopup( '46', '0', 'ਘ', 'audio/07b.mp3')">
+          ਘ</td>
           <td class="entry"
-          onclick="new Audio('audio/07c.mp3').play();">ਘਾ</td>
+          onclick="showPopup( '46', '1', 'ਘਾ', 'audio/07c.mp3')">
+          ਘਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/07d.mp3').play();">ਘਿ</td>
+          onclick="showPopup( '46', '2', 'ਘਿ', 'audio/07d.mp3')">
+          ਘਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/07e.mp3').play();">ਘੀ</td>
+          onclick="showPopup( '46', '3', 'ਘੀ', 'audio/07e.mp3')">
+          ਘੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/07f.mp3').play();">ਘੁ</td>
+          onclick="showPopup( '46', '4', 'ਘੁ', 'audio/07f.mp3')">
+          ਘੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/07g.mp3').play();">ਘੂ</td>
+          onclick="showPopup( '46', '5', 'ਘੂ', 'audio/07g.mp3')">
+          ਘੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/07h.mp3').play();">ਘੇ</td>
+          onclick="showPopup( '46', '6', 'ਘੇ', 'audio/07h.mp3')">
+          ਘੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/07i.mp3').play();">ਘੈ</td>
+          onclick="showPopup( '46', '7', 'ਘੈ', 'audio/07i.mp3')">
+          ਘੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/07j.mp3').play();">ਘੋ</td>
+          onclick="showPopup( '46', '8', 'ਘੋ', 'audio/07j.mp3')">
+          ਘੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/07k.mp3').play();">ਘੌ</td>
+          onclick="showPopup( '46', '9', 'ਘੌ', 'audio/07k.mp3')">
+          ਘੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/07l.mp3').play();">ਘੰ</td>
+          onclick="showPopup( '46', '10', 'ਘੰ', 'audio/07l.mp3')">
+          ਘੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/07m.mp3').play();">ਘਾਂ</td>
+          onclick="showPopup( '46', '11', 'ਘਾਂ', 'audio/07m.mp3')">
+          ਘਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort07_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1648,29 +2227,41 @@
           onclick="new Audio('audio/ltrshort08_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/08b.mp3').play();">ਙ</td>
+          onclick="showPopup( '47', '0', 'ਙ', 'audio/08b.mp3')">
+          ਙ</td>
           <td class="entry"
-          onclick="new Audio('audio/08c.mp3').play();">ਙਾ</td>
+          onclick="showPopup( '47', '1', 'ਙਾ', 'audio/08c.mp3')">
+          ਙਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/08d.mp3').play();">ਙਿ</td>
+          onclick="showPopup( '47', '2', 'ਙਿ', 'audio/08d.mp3')">
+          ਙਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/08e.mp3').play();">ਙੀ</td>
+          onclick="showPopup( '47', '3', 'ਙੀ', 'audio/08e.mp3')">
+          ਙੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/08f.mp3').play();">ਙੁ</td>
+          onclick="showPopup( '47', '4', 'ਙੁ', 'audio/08f.mp3')">
+          ਙੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/08g.mp3').play();">ਙੂ</td>
+          onclick="showPopup( '47', '5', 'ਙੂ', 'audio/08g.mp3')">
+          ਙੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/08h.mp3').play();">ਙੇ</td>
+          onclick="showPopup( '47', '6', 'ਙੇ', 'audio/08h.mp3')">
+          ਙੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/08i.mp3').play();">ਙੈ</td>
+          onclick="showPopup( '47', '7', 'ਙੈ', 'audio/08i.mp3')">
+          ਙੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/08j.mp3').play();">ਙੋ</td>
+          onclick="showPopup( '47', '8', 'ਙੋ', 'audio/08j.mp3')">
+          ਙੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/08k.mp3').play();">ਙੌ</td>
+          onclick="showPopup( '47', '9', 'ਙੌ', 'audio/08k.mp3')">
+          ਙੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/08l.mp3').play();">ਙੰ</td>
+          onclick="showPopup( '47', '10', 'ਙੰ', 'audio/08l.mp3')">
+          ਙੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/08m.mp3').play();">ਙਾਂ</td>
+          onclick="showPopup( '47', '11', 'ਙਾਂ', 'audio/08m.mp3')">
+          ਙਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort08_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1680,29 +2271,41 @@
           onclick="new Audio('audio/ltrshort09_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/09b.mp3').play();">ਚ</td>
+          onclick="showPopup( '48', '0', 'ਚ', 'audio/09b.mp3')">
+          ਚ</td>
           <td class="entry"
-          onclick="new Audio('audio/09c.mp3').play();">ਚਾ</td>
+          onclick="showPopup( '48', '1', 'ਚਾ', 'audio/09c.mp3')">
+          ਚਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/09d.mp3').play();">ਚਿ</td>
+          onclick="showPopup( '48', '2', 'ਚਿ', 'audio/09d.mp3')">
+          ਚਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/09e.mp3').play();">ਚੀ</td>
+          onclick="showPopup( '48', '3', 'ਚੀ', 'audio/09e.mp3')">
+          ਚੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/09f.mp3').play();">ਚੁ</td>
+          onclick="showPopup( '48', '4', 'ਚੁ', 'audio/09f.mp3')">
+          ਚੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/09g.mp3').play();">ਚੂ</td>
+          onclick="showPopup( '48', '5', 'ਚੂ', 'audio/09g.mp3')">
+          ਚੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/09h.mp3').play();">ਚੇ</td>
+          onclick="showPopup( '48', '6', 'ਚੇ', 'audio/09h.mp3')">
+          ਚੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/09i.mp3').play();">ਚੈ</td>
+          onclick="showPopup( '48', '7', 'ਚੈ', 'audio/09i.mp3')">
+          ਚੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/09j.mp3').play();">ਚੋ</td>
+          onclick="showPopup( '48', '8', 'ਚੋ', 'audio/09j.mp3')">
+          ਚੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/09k.mp3').play();">ਚੌ</td>
+          onclick="showPopup( '48', '9', 'ਚੌ', 'audio/09k.mp3')">
+          ਚੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/09l.mp3').play();">ਚੰ</td>
+          onclick="showPopup( '48', '10', 'ਚੰ', 'audio/09l.mp3')">
+          ਚੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/09m.mp3').play();">ਚਾਂ</td>
+          onclick="showPopup( '48', '11', 'ਚਾਂ', 'audio/09m.mp3')">
+          ਚਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort09_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1712,29 +2315,41 @@
           onclick="new Audio('audio/ltrshort10_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/10b.mp3').play();">ਛ</td>
+          onclick="showPopup( '49', '0', 'ਛ', 'audio/10b.mp3')">
+          ਛ</td>
           <td class="entry"
-          onclick="new Audio('audio/10c.mp3').play();">ਛਾ</td>
+          onclick="showPopup( '49', '1', 'ਛਾ', 'audio/10c.mp3')">
+          ਛਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/10d.mp3').play();">ਛਿ</td>
+          onclick="showPopup( '49', '2', 'ਛਿ', 'audio/10d.mp3')">
+          ਛਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/10e.mp3').play();">ਛੀ</td>
+          onclick="showPopup( '49', '3', 'ਛੀ', 'audio/10e.mp3')">
+          ਛੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/10f.mp3').play();">ਛੁ</td>
+          onclick="showPopup( '49', '4', 'ਛੁ', 'audio/10f.mp3')">
+          ਛੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/10g.mp3').play();">ਛੂ</td>
+          onclick="showPopup( '49', '5', 'ਛੂ', 'audio/10g.mp3')">
+          ਛੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/10h.mp3').play();">ਛੇ</td>
+          onclick="showPopup( '49', '6', 'ਛੇ', 'audio/10h.mp3')">
+          ਛੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/10i.mp3').play();">ਛੈ</td>
+          onclick="showPopup( '49', '7', 'ਛੈ', 'audio/10i.mp3')">
+          ਛੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/10j.mp3').play();">ਛੋ</td>
+          onclick="showPopup( '49', '8', 'ਛੋ', 'audio/10j.mp3')">
+          ਛੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/10k.mp3').play();">ਛੌ</td>
+          onclick="showPopup( '49', '9', 'ਛੌ', 'audio/10k.mp3')">
+          ਛੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/10l.mp3').play();">ਛੰ</td>
+          onclick="showPopup( '49', '10', 'ਛੰ', 'audio/10l.mp3')">
+          ਛੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/10m.mp3').play();">ਛਾਂ</td>
+          onclick="showPopup( '49', '11', 'ਛਾਂ', 'audio/10m.mp3')">
+          ਛਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort10_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1744,29 +2359,41 @@
           onclick="new Audio('audio/ltrshort11_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/11b.mp3').play();">ਜ</td>
+          onclick="showPopup( '50', '0', 'ਜ', 'audio/11b.mp3')">
+          ਜ</td>
           <td class="entry"
-          onclick="new Audio('audio/11c.mp3').play();">ਜਾ</td>
+          onclick="showPopup( '50', '1', 'ਜਾ', 'audio/11c.mp3')">
+          ਜਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/11d.mp3').play();">ਜਿ</td>
+          onclick="showPopup( '50', '2', 'ਜਿ', 'audio/11d.mp3')">
+          ਜਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/11e.mp3').play();">ਜੀ</td>
+          onclick="showPopup( '50', '3', 'ਜੀ', 'audio/11e.mp3')">
+          ਜੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/11f.mp3').play();">ਜੁ</td>
+          onclick="showPopup( '50', '4', 'ਜੁ', 'audio/11f.mp3')">
+          ਜੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/11g.mp3').play();">ਜੂ</td>
+          onclick="showPopup( '50', '5', 'ਜੂ', 'audio/11g.mp3')">
+          ਜੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/11h.mp3').play();">ਜੇ</td>
+          onclick="showPopup( '50', '6', 'ਜੇ', 'audio/11h.mp3')">
+          ਜੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/11i.mp3').play();">ਜੈ</td>
+          onclick="showPopup( '50', '7', 'ਜੈ', 'audio/11i.mp3')">
+          ਜੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/11j.mp3').play();">ਜੋ</td>
+          onclick="showPopup( '50', '8', 'ਜੋ', 'audio/11j.mp3')">
+          ਜੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/11k.mp3').play();">ਜੌ</td>
+          onclick="showPopup( '50', '9', 'ਜੌ', 'audio/11k.mp3')">
+          ਜੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/11l.mp3').play();">ਜੰ</td>
+          onclick="showPopup( '50', '10', 'ਜੰ', 'audio/11l.mp3')">
+          ਜੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/11m.mp3').play();">ਜਾਂ</td>
+          onclick="showPopup( '50', '11', 'ਜਾਂ', 'audio/11m.mp3')">
+          ਜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort11_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1776,29 +2403,41 @@
           onclick="new Audio('audio/ltrshort12_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/12b.mp3').play();">ਝ</td>
+          onclick="showPopup( '51', '0', 'ਝ', 'audio/12b.mp3')">
+          ਝ</td>
           <td class="entry"
-          onclick="new Audio('audio/12c.mp3').play();">ਝਾ</td>
+          onclick="showPopup( '51', '1', 'ਝਾ', 'audio/12c.mp3')">
+          ਝਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/12d.mp3').play();">ਝਿ</td>
+          onclick="showPopup( '51', '2', 'ਝਿ', 'audio/12d.mp3')">
+          ਝਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/12e.mp3').play();">ਝੀ</td>
+          onclick="showPopup( '51', '3', 'ਝੀ', 'audio/12e.mp3')">
+          ਝੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/12f.mp3').play();">ਝੁ</td>
+          onclick="showPopup( '51', '4', 'ਝੁ', 'audio/12f.mp3')">
+          ਝੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/12g.mp3').play();">ਝੂ</td>
+          onclick="showPopup( '51', '5', 'ਝੂ', 'audio/12g.mp3')">
+          ਝੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/12h.mp3').play();">ਝੇ</td>
+          onclick="showPopup( '51', '6', 'ਝੇ', 'audio/12h.mp3')">
+          ਝੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/12i.mp3').play();">ਝੈ</td>
+          onclick="showPopup( '51', '7', 'ਝੈ', 'audio/12i.mp3')">
+          ਝੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/12j.mp3').play();">ਝੋ</td>
+          onclick="showPopup( '51', '8', 'ਝੋ', 'audio/12j.mp3')">
+          ਝੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/12k.mp3').play();">ਝੌ</td>
+          onclick="showPopup( '51', '9', 'ਝੌ', 'audio/12k.mp3')">
+          ਝੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/12l.mp3').play();">ਝੰ</td>
+          onclick="showPopup( '51', '10', 'ਝੰ', 'audio/12l.mp3')">
+          ਝੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/12m.mp3').play();">ਝਾਂ</td>
+          onclick="showPopup( '51', '11', 'ਝਾਂ', 'audio/12m.mp3')">
+          ਝਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort12_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1808,29 +2447,41 @@
           onclick="new Audio('audio/ltrshort13_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/13b.mp3').play();">ਞ</td>
+          onclick="showPopup( '52', '0', 'ਞ', 'audio/13b.mp3')">
+          ਞ</td>
           <td class="entry"
-          onclick="new Audio('audio/13c.mp3').play();">ਞਾ</td>
+          onclick="showPopup( '52', '1', 'ਞਾ', 'audio/13c.mp3')">
+          ਞਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/13d.mp3').play();">ਞਿ</td>
+          onclick="showPopup( '52', '2', 'ਞਿ', 'audio/13d.mp3')">
+          ਞਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/13e.mp3').play();">ਞੀ</td>
+          onclick="showPopup( '52', '3', 'ਞੀ', 'audio/13e.mp3')">
+          ਞੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/13f.mp3').play();">ਞੁ</td>
+          onclick="showPopup( '52', '4', 'ਞੁ', 'audio/13f.mp3')">
+          ਞੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/13g.mp3').play();">ਞੂ</td>
+          onclick="showPopup( '52', '5', 'ਞੂ', 'audio/13g.mp3')">
+          ਞੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/13h.mp3').play();">ਞੇ</td>
+          onclick="showPopup( '52', '6', 'ਞੇ', 'audio/13h.mp3')">
+          ਞੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/13i.mp3').play();">ਞੈ</td>
+          onclick="showPopup( '52', '7', 'ਞੈ', 'audio/13i.mp3')">
+          ਞੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/13j.mp3').play();">ਞੋ</td>
+          onclick="showPopup( '52', '8', 'ਞੋ', 'audio/13j.mp3')">
+          ਞੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/13k.mp3').play();">ਞੌ</td>
+          onclick="showPopup( '52', '9', 'ਞੌ', 'audio/13k.mp3')">
+          ਞੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/13l.mp3').play();">ਞੰ</td>
+          onclick="showPopup( '52', '10', 'ਞੰ', 'audio/13l.mp3')">
+          ਞੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/13m.mp3').play();">ਞਾਂ</td>
+          onclick="showPopup( '52', '11', 'ਞਾਂ', 'audio/13m.mp3')">
+          ਞਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort13_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1840,29 +2491,41 @@
           onclick="new Audio('audio/ltrshort14_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/14b.mp3').play();">ਟ</td>
+          onclick="showPopup( '53', '0', 'ਟ', 'audio/14b.mp3')">
+          ਟ</td>
           <td class="entry"
-          onclick="new Audio('audio/14c.mp3').play();">ਟਾ</td>
+          onclick="showPopup( '53', '1', 'ਟਾ', 'audio/14c.mp3')">
+          ਟਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/14d.mp3').play();">ਟਿ</td>
+          onclick="showPopup( '53', '2', 'ਟਿ', 'audio/14d.mp3')">
+          ਟਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/14e.mp3').play();">ਟੀ</td>
+          onclick="showPopup( '53', '3', 'ਟੀ', 'audio/14e.mp3')">
+          ਟੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/14f.mp3').play();">ਟੁ</td>
+          onclick="showPopup( '53', '4', 'ਟੁ', 'audio/14f.mp3')">
+          ਟੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/14g.mp3').play();">ਟੂ</td>
+          onclick="showPopup( '53', '5', 'ਟੂ', 'audio/14g.mp3')">
+          ਟੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/14h.mp3').play();">ਟੇ</td>
+          onclick="showPopup( '53', '6', 'ਟੇ', 'audio/14h.mp3')">
+          ਟੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/14i.mp3').play();">ਟੈ</td>
+          onclick="showPopup( '53', '7', 'ਟੈ', 'audio/14i.mp3')">
+          ਟੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/14j.mp3').play();">ਟੋ</td>
+          onclick="showPopup( '53', '8', 'ਟੋ', 'audio/14j.mp3')">
+          ਟੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/14k.mp3').play();">ਟੌ</td>
+          onclick="showPopup( '53', '9', 'ਟੌ', 'audio/14k.mp3')">
+          ਟੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/14l.mp3').play();">ਟੰ</td>
+          onclick="showPopup( '53', '10', 'ਟੰ', 'audio/14l.mp3')">
+          ਟੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/14m.mp3').play();">ਟਾਂ</td>
+          onclick="showPopup( '53', '11', 'ਟਾਂ', 'audio/14m.mp3')">
+          ਟਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort14_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1872,29 +2535,41 @@
           onclick="new Audio('audio/ltrshort15_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/15b.mp3').play();">ਠ</td>
+          onclick="showPopup( '54', '0', 'ਠ', 'audio/15b.mp3')">
+          ਠ</td>
           <td class="entry"
-          onclick="new Audio('audio/15c.mp3').play();">ਠਾ</td>
+          onclick="showPopup( '54', '1', 'ਠਾ', 'audio/15c.mp3')">
+          ਠਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/15d.mp3').play();">ਠਿ</td>
+          onclick="showPopup( '54', '2', 'ਠਿ', 'audio/15d.mp3')">
+          ਠਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/15e.mp3').play();">ਠੀ</td>
+          onclick="showPopup( '54', '3', 'ਠੀ', 'audio/15e.mp3')">
+          ਠੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/15f.mp3').play();">ਠੁ</td>
+          onclick="showPopup( '54', '4', 'ਠੁ', 'audio/15f.mp3')">
+          ਠੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/15g.mp3').play();">ਠੂ</td>
+          onclick="showPopup( '54', '5', 'ਠੂ', 'audio/15g.mp3')">
+          ਠੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/15h.mp3').play();">ਠੇ</td>
+          onclick="showPopup( '54', '6', 'ਠੇ', 'audio/15h.mp3')">
+          ਠੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/15i.mp3').play();">ਠੈ</td>
+          onclick="showPopup( '54', '7', 'ਠੈ', 'audio/15i.mp3')">
+          ਠੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/15j.mp3').play();">ਠੋ</td>
+          onclick="showPopup( '54', '8', 'ਠੋ', 'audio/15j.mp3')">
+          ਠੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/15k.mp3').play();">ਠੌ</td>
+          onclick="showPopup( '54', '9', 'ਠੌ', 'audio/15k.mp3')">
+          ਠੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/15l.mp3').play();">ਠੰ</td>
+          onclick="showPopup( '54', '10', 'ਠੰ', 'audio/15l.mp3')">
+          ਠੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/15m.mp3').play();">ਠਾਂ</td>
+          onclick="showPopup( '54', '11', 'ਠਾਂ', 'audio/15m.mp3')">
+          ਠਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort15_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1904,29 +2579,41 @@
           onclick="new Audio('audio/ltrshort16_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/16b.mp3').play();">ਡ</td>
+          onclick="showPopup( '55', '0', 'ਡ', 'audio/16b.mp3')">
+          ਡ</td>
           <td class="entry"
-          onclick="new Audio('audio/16c.mp3').play();">ਡਾ</td>
+          onclick="showPopup( '55', '1', 'ਡਾ', 'audio/16c.mp3')">
+          ਡਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/16d.mp3').play();">ਡਿ</td>
+          onclick="showPopup( '55', '2', 'ਡਿ', 'audio/16d.mp3')">
+          ਡਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/16e.mp3').play();">ਡੀ</td>
+          onclick="showPopup( '55', '3', 'ਡੀ', 'audio/16e.mp3')">
+          ਡੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/16f.mp3').play();">ਡੁ</td>
+          onclick="showPopup( '55', '4', 'ਡੁ', 'audio/16f.mp3')">
+          ਡੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/16g.mp3').play();">ਡੂ</td>
+          onclick="showPopup( '55', '5', 'ਡੂ', 'audio/16g.mp3')">
+          ਡੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/16h.mp3').play();">ਡੇ</td>
+          onclick="showPopup( '55', '6', 'ਡੇ', 'audio/16h.mp3')">
+          ਡੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/16i.mp3').play();">ਡੈ</td>
+          onclick="showPopup( '55', '7', 'ਡੈ', 'audio/16i.mp3')">
+          ਡੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/16j.mp3').play();">ਡੋ</td>
+          onclick="showPopup( '55', '8', 'ਡੋ', 'audio/16j.mp3')">
+          ਡੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/16k.mp3').play();">ਡੌ</td>
+          onclick="showPopup( '55', '9', 'ਡੌ', 'audio/16k.mp3')">
+          ਡੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/16l.mp3').play();">ਡੰ</td>
+          onclick="showPopup( '55', '10', 'ਡੰ', 'audio/16l.mp3')">
+          ਡੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/16m.mp3').play();">ਡਾਂ</td>
+          onclick="showPopup( '55', '11', 'ਡਾਂ', 'audio/16m.mp3')">
+          ਡਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort16_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1936,29 +2623,41 @@
           onclick="new Audio('audio/ltrshort17_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/17b.mp3').play();">ਢ</td>
+          onclick="showPopup( '56', '0', 'ਢ', 'audio/17b.mp3')">
+          ਢ</td>
           <td class="entry"
-          onclick="new Audio('audio/17c.mp3').play();">ਢਾ</td>
+          onclick="showPopup( '56', '1', 'ਢਾ', 'audio/17c.mp3')">
+          ਢਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/17d.mp3').play();">ਢਿ</td>
+          onclick="showPopup( '56', '2', 'ਢਿ', 'audio/17d.mp3')">
+          ਢਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/17e.mp3').play();">ਢੀ</td>
+          onclick="showPopup( '56', '3', 'ਢੀ', 'audio/17e.mp3')">
+          ਢੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/17f.mp3').play();">ਢੁ</td>
+          onclick="showPopup( '56', '4', 'ਢੁ', 'audio/17f.mp3')">
+          ਢੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/17g.mp3').play();">ਢੂ</td>
+          onclick="showPopup( '56', '5', 'ਢੂ', 'audio/17g.mp3')">
+          ਢੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/17h.mp3').play();">ਢੇ</td>
+          onclick="showPopup( '56', '6', 'ਢੇ', 'audio/17h.mp3')">
+          ਢੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/17i.mp3').play();">ਢੈ</td>
+          onclick="showPopup( '56', '7', 'ਢੈ', 'audio/17i.mp3')">
+          ਢੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/17j.mp3').play();">ਢੋ</td>
+          onclick="showPopup( '56', '8', 'ਢੋ', 'audio/17j.mp3')">
+          ਢੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/17k.mp3').play();">ਢੌ</td>
+          onclick="showPopup( '56', '9', 'ਢੌ', 'audio/17k.mp3')">
+          ਢੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/17l.mp3').play();">ਢੰ</td>
+          onclick="showPopup( '56', '10', 'ਢੰ', 'audio/17l.mp3')">
+          ਢੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/17m.mp3').play();">ਢਾਂ</td>
+          onclick="showPopup( '56', '11', 'ਢਾਂ', 'audio/17m.mp3')">
+          ਢਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort17_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1968,29 +2667,41 @@
           onclick="new Audio('audio/ltrshort18_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/18b.mp3').play();">ਣ</td>
+          onclick="showPopup( '57', '0', 'ਣ', 'audio/18b.mp3')">
+          ਣ</td>
           <td class="entry"
-          onclick="new Audio('audio/18c.mp3').play();">ਣਾ</td>
+          onclick="showPopup( '57', '1', 'ਣਾ', 'audio/18c.mp3')">
+          ਣਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/18d.mp3').play();">ਣਿ</td>
+          onclick="showPopup( '57', '2', 'ਣਿ', 'audio/18d.mp3')">
+          ਣਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/18e.mp3').play();">ਣੀ</td>
+          onclick="showPopup( '57', '3', 'ਣੀ', 'audio/18e.mp3')">
+          ਣੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/18f.mp3').play();">ਣੁ</td>
+          onclick="showPopup( '57', '4', 'ਣੁ', 'audio/18f.mp3')">
+          ਣੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/18g.mp3').play();">ਣੂ</td>
+          onclick="showPopup( '57', '5', 'ਣੂ', 'audio/18g.mp3')">
+          ਣੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/18h.mp3').play();">ਣੇ</td>
+          onclick="showPopup( '57', '6', 'ਣੇ', 'audio/18h.mp3')">
+          ਣੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/18i.mp3').play();">ਣੈ</td>
+          onclick="showPopup( '57', '7', 'ਣੈ', 'audio/18i.mp3')">
+          ਣੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/18j.mp3').play();">ਣੋ</td>
+          onclick="showPopup( '57', '8', 'ਣੋ', 'audio/18j.mp3')">
+          ਣੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/18k.mp3').play();">ਣੌ</td>
+          onclick="showPopup( '57', '9', 'ਣੌ', 'audio/18k.mp3')">
+          ਣੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/18l.mp3').play();">ਣੰ</td>
+          onclick="showPopup( '57', '10', 'ਣੰ', 'audio/18l.mp3')">
+          ਣੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/18m.mp3').play();">ਣਾਂ</td>
+          onclick="showPopup( '57', '11', 'ਣਾਂ', 'audio/18m.mp3')">
+          ਣਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort18_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2000,29 +2711,41 @@
           onclick="new Audio('audio/ltrshort19_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/19b.mp3').play();">ਤ</td>
+          onclick="showPopup( '58', '0', 'ਤ', 'audio/19b.mp3')">
+          ਤ</td>
           <td class="entry"
-          onclick="new Audio('audio/19c.mp3').play();">ਤਾ</td>
+          onclick="showPopup( '58', '1', 'ਤਾ', 'audio/19c.mp3')">
+          ਤਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/19d.mp3').play();">ਤਿ</td>
+          onclick="showPopup( '58', '2', 'ਤਿ', 'audio/19d.mp3')">
+          ਤਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/19e.mp3').play();">ਤੀ</td>
+          onclick="showPopup( '58', '3', 'ਤੀ', 'audio/19e.mp3')">
+          ਤੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/19f.mp3').play();">ਤੁ</td>
+          onclick="showPopup( '58', '4', 'ਤੁ', 'audio/19f.mp3')">
+          ਤੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/19g.mp3').play();">ਤੂ</td>
+          onclick="showPopup( '58', '5', 'ਤੂ', 'audio/19g.mp3')">
+          ਤੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/19h.mp3').play();">ਤੇ</td>
+          onclick="showPopup( '58', '6', 'ਤੇ', 'audio/19h.mp3')">
+          ਤੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/19i.mp3').play();">ਤੈ</td>
+          onclick="showPopup( '58', '7', 'ਤੈ', 'audio/19i.mp3')">
+          ਤੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/19j.mp3').play();">ਤੋ</td>
+          onclick="showPopup( '58', '8', 'ਤੋ', 'audio/19j.mp3')">
+          ਤੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/19k.mp3').play();">ਤੌ</td>
+          onclick="showPopup( '58', '9', 'ਤੌ', 'audio/19k.mp3')">
+          ਤੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/19l.mp3').play();">ਤੰ</td>
+          onclick="showPopup( '58', '10', 'ਤੰ', 'audio/19l.mp3')">
+          ਤੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/19m.mp3').play();">ਤਾਂ</td>
+          onclick="showPopup( '58', '11', 'ਤਾਂ', 'audio/19m.mp3')">
+          ਤਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort19_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2032,29 +2755,41 @@
           onclick="new Audio('audio/ltrshort20_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/20b.mp3').play();">ਥ</td>
+          onclick="showPopup( '59', '0', 'ਥ', 'audio/20b.mp3')">
+          ਥ</td>
           <td class="entry"
-          onclick="new Audio('audio/20c.mp3').play();">ਥਾ</td>
+          onclick="showPopup( '59', '1', 'ਥਾ', 'audio/20c.mp3')">
+          ਥਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/20d.mp3').play();">ਥਿ</td>
+          onclick="showPopup( '59', '2', 'ਥਿ', 'audio/20d.mp3')">
+          ਥਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/20e.mp3').play();">ਥੀ</td>
+          onclick="showPopup( '59', '3', 'ਥੀ', 'audio/20e.mp3')">
+          ਥੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/20f.mp3').play();">ਥੁ</td>
+          onclick="showPopup( '59', '4', 'ਥੁ', 'audio/20f.mp3')">
+          ਥੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/20g.mp3').play();">ਥੂ</td>
+          onclick="showPopup( '59', '5', 'ਥੂ', 'audio/20g.mp3')">
+          ਥੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/20h.mp3').play();">ਥੇ</td>
+          onclick="showPopup( '59', '6', 'ਥੇ', 'audio/20h.mp3')">
+          ਥੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/20i.mp3').play();">ਥੈ</td>
+          onclick="showPopup( '59', '7', 'ਥੈ', 'audio/20i.mp3')">
+          ਥੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/20j.mp3').play();">ਥੋ</td>
+          onclick="showPopup( '59', '8', 'ਥੋ', 'audio/20j.mp3')">
+          ਥੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/20k.mp3').play();">ਥੌ</td>
+          onclick="showPopup( '59', '9', 'ਥੌ', 'audio/20k.mp3')">
+          ਥੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/20l.mp3').play();">ਥੰ</td>
+          onclick="showPopup( '59', '10', 'ਥੰ', 'audio/20l.mp3')">
+          ਥੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/20m.mp3').play();">ਥਾਂ</td>
+          onclick="showPopup( '59', '11', 'ਥਾਂ', 'audio/20m.mp3')">
+          ਥਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort20_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2064,29 +2799,41 @@
           onclick="new Audio('audio/ltrshort21_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/21b.mp3').play();">ਦ</td>
+          onclick="showPopup( '60', '0', 'ਦ', 'audio/21b.mp3')">
+          ਦ</td>
           <td class="entry"
-          onclick="new Audio('audio/21c.mp3').play();">ਦਾ</td>
+          onclick="showPopup( '60', '1', 'ਦਾ', 'audio/21c.mp3')">
+          ਦਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/21d.mp3').play();">ਦਿ</td>
+          onclick="showPopup( '60', '2', 'ਦਿ', 'audio/21d.mp3')">
+          ਦਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/21e.mp3').play();">ਦੀ</td>
+          onclick="showPopup( '60', '3', 'ਦੀ', 'audio/21e.mp3')">
+          ਦੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/21f.mp3').play();">ਦੁ</td>
+          onclick="showPopup( '60', '4', 'ਦੁ', 'audio/21f.mp3')">
+          ਦੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/21g.mp3').play();">ਦੂ</td>
+          onclick="showPopup( '60', '5', 'ਦੂ', 'audio/21g.mp3')">
+          ਦੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/21h.mp3').play();">ਦੇ</td>
+          onclick="showPopup( '60', '6', 'ਦੇ', 'audio/21h.mp3')">
+          ਦੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/21i.mp3').play();">ਦੈ</td>
+          onclick="showPopup( '60', '7', 'ਦੈ', 'audio/21i.mp3')">
+          ਦੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/21j.mp3').play();">ਦੋ</td>
+          onclick="showPopup( '60', '8', 'ਦੋ', 'audio/21j.mp3')">
+          ਦੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/21k.mp3').play();">ਦੌ</td>
+          onclick="showPopup( '60', '9', 'ਦੌ', 'audio/21k.mp3')">
+          ਦੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/21l.mp3').play();">ਦੰ</td>
+          onclick="showPopup( '60', '10', 'ਦੰ', 'audio/21l.mp3')">
+          ਦੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/21m.mp3').play();">ਦਾਂ</td>
+          onclick="showPopup( '60', '11', 'ਦਾਂ', 'audio/21m.mp3')">
+          ਦਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort21_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2096,29 +2843,41 @@
           onclick="new Audio('audio/ltrshort22_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/22b.mp3').play();">ਧ</td>
+          onclick="showPopup( '61', '0', 'ਧ', 'audio/22b.mp3')">
+          ਧ</td>
           <td class="entry"
-          onclick="new Audio('audio/22c.mp3').play();">ਧਾ</td>
+          onclick="showPopup( '61', '1', 'ਧਾ', 'audio/22c.mp3')">
+          ਧਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/22d.mp3').play();">ਧਿ</td>
+          onclick="showPopup( '61', '2', 'ਧਿ', 'audio/22d.mp3')">
+          ਧਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/22e.mp3').play();">ਧੀ</td>
+          onclick="showPopup( '61', '3', 'ਧੀ', 'audio/22e.mp3')">
+          ਧੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/22f.mp3').play();">ਧੁ</td>
+          onclick="showPopup( '61', '4', 'ਧੁ', 'audio/22f.mp3')">
+          ਧੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/22g.mp3').play();">ਧੂ</td>
+          onclick="showPopup( '61', '5', 'ਧੂ', 'audio/22g.mp3')">
+          ਧੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/22h.mp3').play();">ਧੇ</td>
+          onclick="showPopup( '61', '6', 'ਧੇ', 'audio/22h.mp3')">
+          ਧੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/22i.mp3').play();">ਧੈ</td>
+          onclick="showPopup( '61', '7', 'ਧੈ', 'audio/22i.mp3')">
+          ਧੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/22j.mp3').play();">ਧੋ</td>
+          onclick="showPopup( '61', '8', 'ਧੋ', 'audio/22j.mp3')">
+          ਧੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/22k.mp3').play();">ਧੌ</td>
+          onclick="showPopup( '61', '9', 'ਧੌ', 'audio/22k.mp3')">
+          ਧੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/22l.mp3').play();">ਧੰ</td>
+          onclick="showPopup( '61', '10', 'ਧੰ', 'audio/22l.mp3')">
+          ਧੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/22m.mp3').play();">ਧਾਂ</td>
+          onclick="showPopup( '61', '11', 'ਧਾਂ', 'audio/22m.mp3')">
+          ਧਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort22_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2128,29 +2887,41 @@
           onclick="new Audio('audio/ltrshort23_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/23b.mp3').play();">ਨ</td>
+          onclick="showPopup( '62', '0', 'ਨ', 'audio/23b.mp3')">
+          ਨ</td>
           <td class="entry"
-          onclick="new Audio('audio/23c.mp3').play();">ਨਾ</td>
+          onclick="showPopup( '62', '1', 'ਨਾ', 'audio/23c.mp3')">
+          ਨਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/23d.mp3').play();">ਨਿ</td>
+          onclick="showPopup( '62', '2', 'ਨਿ', 'audio/23d.mp3')">
+          ਨਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/23e.mp3').play();">ਨੀ</td>
+          onclick="showPopup( '62', '3', 'ਨੀ', 'audio/23e.mp3')">
+          ਨੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/23f.mp3').play();">ਨੁ</td>
+          onclick="showPopup( '62', '4', 'ਨੁ', 'audio/23f.mp3')">
+          ਨੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/23g.mp3').play();">ਨੂ</td>
+          onclick="showPopup( '62', '5', 'ਨੂ', 'audio/23g.mp3')">
+          ਨੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/23h.mp3').play();">ਨੇ</td>
+          onclick="showPopup( '62', '6', 'ਨੇ', 'audio/23h.mp3')">
+          ਨੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/23i.mp3').play();">ਨੈ</td>
+          onclick="showPopup( '62', '7', 'ਨੈ', 'audio/23i.mp3')">
+          ਨੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/23j.mp3').play();">ਨੋ</td>
+          onclick="showPopup( '62', '8', 'ਨੋ', 'audio/23j.mp3')">
+          ਨੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/23k.mp3').play();">ਨੌ</td>
+          onclick="showPopup( '62', '9', 'ਨੌ', 'audio/23k.mp3')">
+          ਨੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/23l.mp3').play();">ਨੰ</td>
+          onclick="showPopup( '62', '10', 'ਨੰ', 'audio/23l.mp3')">
+          ਨੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/23m.mp3').play();">ਨਾਂ</td>
+          onclick="showPopup( '62', '11', 'ਨਾਂ', 'audio/23m.mp3')">
+          ਨਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort23_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2160,29 +2931,41 @@
           onclick="new Audio('audio/ltrshort24_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/24b.mp3').play();">ਪ</td>
+          onclick="showPopup( '63', '0', 'ਪ', 'audio/24b.mp3')">
+          ਪ</td>
           <td class="entry"
-          onclick="new Audio('audio/24c.mp3').play();">ਪਾ</td>
+          onclick="showPopup( '63', '1', 'ਪਾ', 'audio/24c.mp3')">
+          ਪਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/24d.mp3').play();">ਪਿ</td>
+          onclick="showPopup( '63', '2', 'ਪਿ', 'audio/24d.mp3')">
+          ਪਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/24e.mp3').play();">ਪੀ</td>
+          onclick="showPopup( '63', '3', 'ਪੀ', 'audio/24e.mp3')">
+          ਪੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/24f.mp3').play();">ਪੁ</td>
+          onclick="showPopup( '63', '4', 'ਪੁ', 'audio/24f.mp3')">
+          ਪੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/24g.mp3').play();">ਪੂ</td>
+          onclick="showPopup( '63', '5', 'ਪੂ', 'audio/24g.mp3')">
+          ਪੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/24h.mp3').play();">ਪੇ</td>
+          onclick="showPopup( '63', '6', 'ਪੇ', 'audio/24h.mp3')">
+          ਪੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/24i.mp3').play();">ਪੈ</td>
+          onclick="showPopup( '63', '7', 'ਪੈ', 'audio/24i.mp3')">
+          ਪੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/24j.mp3').play();">ਪੋ</td>
+          onclick="showPopup( '63', '8', 'ਪੋ', 'audio/24j.mp3')">
+          ਪੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/24k.mp3').play();">ਪੌ</td>
+          onclick="showPopup( '63', '9', 'ਪੌ', 'audio/24k.mp3')">
+          ਪੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/24l.mp3').play();">ਪੰ</td>
+          onclick="showPopup( '63', '10', 'ਪੰ', 'audio/24l.mp3')">
+          ਪੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/24m.mp3').play();">ਪਾਂ</td>
+          onclick="showPopup( '63', '11', 'ਪਾਂ', 'audio/24m.mp3')">
+          ਪਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort24_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2192,29 +2975,41 @@
           onclick="new Audio('audio/ltrshort25_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/25b.mp3').play();">ਫ</td>
+          onclick="showPopup( '64', '0', 'ਫ', 'audio/25b.mp3')">
+          ਫ</td>
           <td class="entry"
-          onclick="new Audio('audio/25c.mp3').play();">ਫਾ</td>
+          onclick="showPopup( '64', '1', 'ਫਾ', 'audio/25c.mp3')">
+          ਫਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/25d.mp3').play();">ਫਿ</td>
+          onclick="showPopup( '64', '2', 'ਫਿ', 'audio/25d.mp3')">
+          ਫਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/25e.mp3').play();">ਫੀ</td>
+          onclick="showPopup( '64', '3', 'ਫੀ', 'audio/25e.mp3')">
+          ਫੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/25f.mp3').play();">ਫੁ</td>
+          onclick="showPopup( '64', '4', 'ਫੁ', 'audio/25f.mp3')">
+          ਫੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/25g.mp3').play();">ਫੂ</td>
+          onclick="showPopup( '64', '5', 'ਫੂ', 'audio/25g.mp3')">
+          ਫੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/25h.mp3').play();">ਫੇ</td>
+          onclick="showPopup( '64', '6', 'ਫੇ', 'audio/25h.mp3')">
+          ਫੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/25i.mp3').play();">ਫੈ</td>
+          onclick="showPopup( '64', '7', 'ਫੈ', 'audio/25i.mp3')">
+          ਫੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/25j.mp3').play();">ਫੋ</td>
+          onclick="showPopup( '64', '8', 'ਫੋ', 'audio/25j.mp3')">
+          ਫੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/25k.mp3').play();">ਫੌ</td>
+          onclick="showPopup( '64', '9', 'ਫੌ', 'audio/25k.mp3')">
+          ਫੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/25l.mp3').play();">ਫੰ</td>
+          onclick="showPopup( '64', '10', 'ਫੰ', 'audio/25l.mp3')">
+          ਫੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/25m.mp3').play();">ਫਾਂ</td>
+          onclick="showPopup( '64', '11', 'ਫਾਂ', 'audio/25m.mp3')">
+          ਫਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort25_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2224,29 +3019,41 @@
           onclick="new Audio('audio/ltrshort26_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/26b.mp3').play();">ਬ</td>
+          onclick="showPopup( '65', '0', 'ਬ', 'audio/26b.mp3')">
+          ਬ</td>
           <td class="entry"
-          onclick="new Audio('audio/26c.mp3').play();">ਬਾ</td>
+          onclick="showPopup( '65', '1', 'ਬਾ', 'audio/26c.mp3')">
+          ਬਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/26d.mp3').play();">ਬਿ</td>
+          onclick="showPopup( '65', '2', 'ਬਿ', 'audio/26d.mp3')">
+          ਬਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/26e.mp3').play();">ਬੀ</td>
+          onclick="showPopup( '65', '3', 'ਬੀ', 'audio/26e.mp3')">
+          ਬੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/26f.mp3').play();">ਬੁ</td>
+          onclick="showPopup( '65', '4', 'ਬੁ', 'audio/26f.mp3')">
+          ਬੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/26g.mp3').play();">ਬੂ</td>
+          onclick="showPopup( '65', '5', 'ਬੂ', 'audio/26g.mp3')">
+          ਬੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/26h.mp3').play();">ਬੇ</td>
+          onclick="showPopup( '65', '6', 'ਬੇ', 'audio/26h.mp3')">
+          ਬੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/26i.mp3').play();">ਬੈ</td>
+          onclick="showPopup( '65', '7', 'ਬੈ', 'audio/26i.mp3')">
+          ਬੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/26j.mp3').play();">ਬੋ</td>
+          onclick="showPopup( '65', '8', 'ਬੋ', 'audio/26j.mp3')">
+          ਬੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/26k.mp3').play();">ਬੌ</td>
+          onclick="showPopup( '65', '9', 'ਬੌ', 'audio/26k.mp3')">
+          ਬੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/26l.mp3').play();">ਬੰ</td>
+          onclick="showPopup( '65', '10', 'ਬੰ', 'audio/26l.mp3')">
+          ਬੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/26m.mp3').play();">ਬਾਂ</td>
+          onclick="showPopup( '65', '11', 'ਬਾਂ', 'audio/26m.mp3')">
+          ਬਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort26_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2256,29 +3063,41 @@
           onclick="new Audio('audio/ltrshort27_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/27b.mp3').play();">ਭ</td>
+          onclick="showPopup( '66', '0', 'ਭ', 'audio/27b.mp3')">
+          ਭ</td>
           <td class="entry"
-          onclick="new Audio('audio/27c.mp3').play();">ਭਾ</td>
+          onclick="showPopup( '66', '1', 'ਭਾ', 'audio/27c.mp3')">
+          ਭਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/27d.mp3').play();">ਭਿ</td>
+          onclick="showPopup( '66', '2', 'ਭਿ', 'audio/27d.mp3')">
+          ਭਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/27e.mp3').play();">ਭੀ</td>
+          onclick="showPopup( '66', '3', 'ਭੀ', 'audio/27e.mp3')">
+          ਭੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/27f.mp3').play();">ਭੁ</td>
+          onclick="showPopup( '66', '4', 'ਭੁ', 'audio/27f.mp3')">
+          ਭੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/27g.mp3').play();">ਭੂ</td>
+          onclick="showPopup( '66', '5', 'ਭੂ', 'audio/27g.mp3')">
+          ਭੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/27h.mp3').play();">ਭੇ</td>
+          onclick="showPopup( '66', '6', 'ਭੇ', 'audio/27h.mp3')">
+          ਭੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/27i.mp3').play();">ਭੈ</td>
+          onclick="showPopup( '66', '7', 'ਭੈ', 'audio/27i.mp3')">
+          ਭੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/27j.mp3').play();">ਭੋ</td>
+          onclick="showPopup( '66', '8', 'ਭੋ', 'audio/27j.mp3')">
+          ਭੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/27k.mp3').play();">ਭੌ</td>
+          onclick="showPopup( '66', '9', 'ਭੌ', 'audio/27k.mp3')">
+          ਭੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/27l.mp3').play();">ਭੰ</td>
+          onclick="showPopup( '66', '10', 'ਭੰ', 'audio/27l.mp3')">
+          ਭੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/27m.mp3').play();">ਭਾਂ</td>
+          onclick="showPopup( '66', '11', 'ਭਾਂ', 'audio/27m.mp3')">
+          ਭਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort27_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2288,29 +3107,41 @@
           onclick="new Audio('audio/ltrshort28_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/28b.mp3').play();">ਮ</td>
+          onclick="showPopup( '67', '0', 'ਮ', 'audio/28b.mp3')">
+          ਮ</td>
           <td class="entry"
-          onclick="new Audio('audio/28c.mp3').play();">ਮਾ</td>
+          onclick="showPopup( '67', '1', 'ਮਾ', 'audio/28c.mp3')">
+          ਮਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/28d.mp3').play();">ਮਿ</td>
+          onclick="showPopup( '67', '2', 'ਮਿ', 'audio/28d.mp3')">
+          ਮਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/28e.mp3').play();">ਮੀ</td>
+          onclick="showPopup( '67', '3', 'ਮੀ', 'audio/28e.mp3')">
+          ਮੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/28f.mp3').play();">ਮੁ</td>
+          onclick="showPopup( '67', '4', 'ਮੁ', 'audio/28f.mp3')">
+          ਮੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/28g.mp3').play();">ਮੂ</td>
+          onclick="showPopup( '67', '5', 'ਮੂ', 'audio/28g.mp3')">
+          ਮੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/28h.mp3').play();">ਮੇ</td>
+          onclick="showPopup( '67', '6', 'ਮੇ', 'audio/28h.mp3')">
+          ਮੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/28i.mp3').play();">ਮੈ</td>
+          onclick="showPopup( '67', '7', 'ਮੈ', 'audio/28i.mp3')">
+          ਮੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/28j.mp3').play();">ਮੋ</td>
+          onclick="showPopup( '67', '8', 'ਮੋ', 'audio/28j.mp3')">
+          ਮੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/28k.mp3').play();">ਮੌ</td>
+          onclick="showPopup( '67', '9', 'ਮੌ', 'audio/28k.mp3')">
+          ਮੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/28l.mp3').play();">ਮੰ</td>
+          onclick="showPopup( '67', '10', 'ਮੰ', 'audio/28l.mp3')">
+          ਮੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/28m.mp3').play();">ਮਾਂ</td>
+          onclick="showPopup( '67', '11', 'ਮਾਂ', 'audio/28m.mp3')">
+          ਮਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort28_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2320,29 +3151,41 @@
           onclick="new Audio('audio/ltrshort29_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/29b.mp3').play();">ਯ</td>
+          onclick="showPopup( '68', '0', 'ਯ', 'audio/29b.mp3')">
+          ਯ</td>
           <td class="entry"
-          onclick="new Audio('audio/29c.mp3').play();">ਯਾ</td>
+          onclick="showPopup( '68', '1', 'ਯਾ', 'audio/29c.mp3')">
+          ਯਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/29d.mp3').play();">ਯਿ</td>
+          onclick="showPopup( '68', '2', 'ਯਿ', 'audio/29d.mp3')">
+          ਯਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/29e.mp3').play();">ਯੀ</td>
+          onclick="showPopup( '68', '3', 'ਯੀ', 'audio/29e.mp3')">
+          ਯੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/29f.mp3').play();">ਯੁ</td>
+          onclick="showPopup( '68', '4', 'ਯੁ', 'audio/29f.mp3')">
+          ਯੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/29g.mp3').play();">ਯੂ</td>
+          onclick="showPopup( '68', '5', 'ਯੂ', 'audio/29g.mp3')">
+          ਯੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/29h.mp3').play();">ਯੇ</td>
+          onclick="showPopup( '68', '6', 'ਯੇ', 'audio/29h.mp3')">
+          ਯੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/29i.mp3').play();">ਯੈ</td>
+          onclick="showPopup( '68', '7', 'ਯੈ', 'audio/29i.mp3')">
+          ਯੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/29j.mp3').play();">ਯੋ</td>
+          onclick="showPopup( '68', '8', 'ਯੋ', 'audio/29j.mp3')">
+          ਯੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/29k.mp3').play();">ਯੌ</td>
+          onclick="showPopup( '68', '9', 'ਯੌ', 'audio/29k.mp3')">
+          ਯੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/29l.mp3').play();">ਯੰ</td>
+          onclick="showPopup( '68', '10', 'ਯੰ', 'audio/29l.mp3')">
+          ਯੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/29m.mp3').play();">ਯਾਂ</td>
+          onclick="showPopup( '68', '11', 'ਯਾਂ', 'audio/29m.mp3')">
+          ਯਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort29_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2352,29 +3195,41 @@
           onclick="new Audio('audio/ltrshort30_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/30b.mp3').play();">ਰ</td>
+          onclick="showPopup( '69', '0', 'ਰ', 'audio/30b.mp3')">
+          ਰ</td>
           <td class="entry"
-          onclick="new Audio('audio/30c.mp3').play();">ਰਾ</td>
+          onclick="showPopup( '69', '1', 'ਰਾ', 'audio/30c.mp3')">
+          ਰਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/30d.mp3').play();">ਰਿ</td>
+          onclick="showPopup( '69', '2', 'ਰਿ', 'audio/30d.mp3')">
+          ਰਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/30e.mp3').play();">ਰੀ</td>
+          onclick="showPopup( '69', '3', 'ਰੀ', 'audio/30e.mp3')">
+          ਰੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/30f.mp3').play();">ਰੁ</td>
+          onclick="showPopup( '69', '4', 'ਰੁ', 'audio/30f.mp3')">
+          ਰੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/30g.mp3').play();">ਰੂ</td>
+          onclick="showPopup( '69', '5', 'ਰੂ', 'audio/30g.mp3')">
+          ਰੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/30h.mp3').play();">ਰੇ</td>
+          onclick="showPopup( '69', '6', 'ਰੇ', 'audio/30h.mp3')">
+          ਰੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/30i.mp3').play();">ਰੈ</td>
+          onclick="showPopup( '69', '7', 'ਰੈ', 'audio/30i.mp3')">
+          ਰੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/30j.mp3').play();">ਰੋ</td>
+          onclick="showPopup( '69', '8', 'ਰੋ', 'audio/30j.mp3')">
+          ਰੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/30k.mp3').play();">ਰੌ</td>
+          onclick="showPopup( '69', '9', 'ਰੌ', 'audio/30k.mp3')">
+          ਰੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/30l.mp3').play();">ਰੰ</td>
+          onclick="showPopup( '69', '10', 'ਰੰ', 'audio/30l.mp3')">
+          ਰੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/30m.mp3').play();">ਰਾਂ</td>
+          onclick="showPopup( '69', '11', 'ਰਾਂ', 'audio/30m.mp3')">
+          ਰਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort30_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2384,29 +3239,41 @@
           onclick="new Audio('audio/ltrshort31_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/31b.mp3').play();">ਲ</td>
+          onclick="showPopup( '70', '0', 'ਲ', 'audio/31b.mp3')">
+          ਲ</td>
           <td class="entry"
-          onclick="new Audio('audio/31c.mp3').play();">ਲਾ</td>
+          onclick="showPopup( '70', '1', 'ਲਾ', 'audio/31c.mp3')">
+          ਲਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/31d.mp3').play();">ਲਿ</td>
+          onclick="showPopup( '70', '2', 'ਲਿ', 'audio/31d.mp3')">
+          ਲਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/31e.mp3').play();">ਲੀ</td>
+          onclick="showPopup( '70', '3', 'ਲੀ', 'audio/31e.mp3')">
+          ਲੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/31f.mp3').play();">ਲੁ</td>
+          onclick="showPopup( '70', '4', 'ਲੁ', 'audio/31f.mp3')">
+          ਲੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/31g.mp3').play();">ਲੂ</td>
+          onclick="showPopup( '70', '5', 'ਲੂ', 'audio/31g.mp3')">
+          ਲੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/31h.mp3').play();">ਲੇ</td>
+          onclick="showPopup( '70', '6', 'ਲੇ', 'audio/31h.mp3')">
+          ਲੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/31i.mp3').play();">ਲੈ</td>
+          onclick="showPopup( '70', '7', 'ਲੈ', 'audio/31i.mp3')">
+          ਲੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/31j.mp3').play();">ਲੋ</td>
+          onclick="showPopup( '70', '8', 'ਲੋ', 'audio/31j.mp3')">
+          ਲੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/31k.mp3').play();">ਲੌ</td>
+          onclick="showPopup( '70', '9', 'ਲੌ', 'audio/31k.mp3')">
+          ਲੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/31l.mp3').play();">ਲੰ</td>
+          onclick="showPopup( '70', '10', 'ਲੰ', 'audio/31l.mp3')">
+          ਲੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/31m.mp3').play();">ਲਾਂ</td>
+          onclick="showPopup( '70', '11', 'ਲਾਂ', 'audio/31m.mp3')">
+          ਲਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort31_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2416,29 +3283,41 @@
           onclick="new Audio('audio/ltrshort32_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/32b.mp3').play();">ਵ</td>
+          onclick="showPopup( '71', '0', 'ਵ', 'audio/32b.mp3')">
+          ਵ</td>
           <td class="entry"
-          onclick="new Audio('audio/32c.mp3').play();">ਵਾ</td>
+          onclick="showPopup( '71', '1', 'ਵਾ', 'audio/32c.mp3')">
+          ਵਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/32d.mp3').play();">ਵਿ</td>
+          onclick="showPopup( '71', '2', 'ਵਿ', 'audio/32d.mp3')">
+          ਵਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/32e.mp3').play();">ਵੀ</td>
+          onclick="showPopup( '71', '3', 'ਵੀ', 'audio/32e.mp3')">
+          ਵੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/32f.mp3').play();">ਵੁ</td>
+          onclick="showPopup( '71', '4', 'ਵੁ', 'audio/32f.mp3')">
+          ਵੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/32g.mp3').play();">ਵੂ</td>
+          onclick="showPopup( '71', '5', 'ਵੂ', 'audio/32g.mp3')">
+          ਵੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/32h.mp3').play();">ਵੇ</td>
+          onclick="showPopup( '71', '6', 'ਵੇ', 'audio/32h.mp3')">
+          ਵੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/32i.mp3').play();">ਵੈ</td>
+          onclick="showPopup( '71', '7', 'ਵੈ', 'audio/32i.mp3')">
+          ਵੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/32j.mp3').play();">ਵੋ</td>
+          onclick="showPopup( '71', '8', 'ਵੋ', 'audio/32j.mp3')">
+          ਵੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/32k.mp3').play();">ਵੌ</td>
+          onclick="showPopup( '71', '9', 'ਵੌ', 'audio/32k.mp3')">
+          ਵੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/32l.mp3').play();">ਵੰ</td>
+          onclick="showPopup( '71', '10', 'ਵੰ', 'audio/32l.mp3')">
+          ਵੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/32m.mp3').play();">ਵਾਂ</td>
+          onclick="showPopup( '71', '11', 'ਵਾਂ', 'audio/32m.mp3')">
+          ਵਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort32_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2448,29 +3327,41 @@
           onclick="new Audio('audio/ltrshort33_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/33b.mp3').play();">ੜ</td>
+          onclick="showPopup( '72', '0', 'ੜ', 'audio/33b.mp3')">
+          ੜ</td>
           <td class="entry"
-          onclick="new Audio('audio/33c.mp3').play();">ੜਾ</td>
+          onclick="showPopup( '72', '1', 'ੜਾ', 'audio/33c.mp3')">
+          ੜਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/33d.mp3').play();">ੜਿ</td>
+          onclick="showPopup( '72', '2', 'ੜਿ', 'audio/33d.mp3')">
+          ੜਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/33e.mp3').play();">ੜੀ</td>
+          onclick="showPopup( '72', '3', 'ੜੀ', 'audio/33e.mp3')">
+          ੜੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/33f.mp3').play();">ੜੁ</td>
+          onclick="showPopup( '72', '4', 'ੜੁ', 'audio/33f.mp3')">
+          ੜੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/33g.mp3').play();">ੜੂ</td>
+          onclick="showPopup( '72', '5', 'ੜੂ', 'audio/33g.mp3')">
+          ੜੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/33h.mp3').play();">ੜੇ</td>
+          onclick="showPopup( '72', '6', 'ੜੇ', 'audio/33h.mp3')">
+          ੜੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/33i.mp3').play();">ੜੈ</td>
+          onclick="showPopup( '72', '7', 'ੜੈ', 'audio/33i.mp3')">
+          ੜੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/33j.mp3').play();">ੜੋ</td>
+          onclick="showPopup( '72', '8', 'ੜੋ', 'audio/33j.mp3')">
+          ੜੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/33k.mp3').play();">ੜੌ</td>
+          onclick="showPopup( '72', '9', 'ੜੌ', 'audio/33k.mp3')">
+          ੜੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/33l.mp3').play();">ੜੰ</td>
+          onclick="showPopup( '72', '10', 'ੜੰ', 'audio/33l.mp3')">
+          ੜੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/33m.mp3').play();">ੜਾਂ</td>
+          onclick="showPopup( '72', '11', 'ੜਾਂ', 'audio/33m.mp3')">
+          ੜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort33_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2480,29 +3371,41 @@
           onclick="new Audio('audio/ltrshort34_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/34b.mp3').play();">ਸ਼</td>
+          onclick="showPopup( '73', '0', 'ਸ਼', 'audio/34b.mp3')">
+          ਸ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/34c.mp3').play();">ਸ਼ਾ</td>
+          onclick="showPopup( '73', '1', 'ਸ਼ਾ', 'audio/34c.mp3')">
+          ਸ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/34d.mp3').play();">ਸ਼ਿ</td>
+          onclick="showPopup( '73', '2', 'ਸ਼ਿ', 'audio/34d.mp3')">
+          ਸ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/34e.mp3').play();">ਸ਼ੀ</td>
+          onclick="showPopup( '73', '3', 'ਸ਼ੀ', 'audio/34e.mp3')">
+          ਸ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/34f.mp3').play();">ਸ਼ੁ</td>
+          onclick="showPopup( '73', '4', 'ਸ਼ੁ', 'audio/34f.mp3')">
+          ਸ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/34g.mp3').play();">ਸ਼ੂ</td>
+          onclick="showPopup( '73', '5', 'ਸ਼ੂ', 'audio/34g.mp3')">
+          ਸ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/34h.mp3').play();">ਸ਼ੇ</td>
+          onclick="showPopup( '73', '6', 'ਸ਼ੇ', 'audio/34h.mp3')">
+          ਸ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/34i.mp3').play();">ਸ਼ੈ</td>
+          onclick="showPopup( '73', '7', 'ਸ਼ੈ', 'audio/34i.mp3')">
+          ਸ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/34j.mp3').play();">ਸ਼ੋ</td>
+          onclick="showPopup( '73', '8', 'ਸ਼ੋ', 'audio/34j.mp3')">
+          ਸ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/34k.mp3').play();">ਸ਼ੌ</td>
+          onclick="showPopup( '73', '9', 'ਸ਼ੌ', 'audio/34k.mp3')">
+          ਸ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/34l.mp3').play();">ਸ਼ੰ</td>
+          onclick="showPopup( '73', '10', 'ਸ਼ੰ', 'audio/34l.mp3')">
+          ਸ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/34m.mp3').play();">ਸ਼ਾਂ</td>
+          onclick="showPopup( '73', '11', 'ਸ਼ਾਂ', 'audio/34m.mp3')">
+          ਸ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort34_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2512,29 +3415,40 @@
           onclick="new Audio('audio/ltrshort35_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/35b.mp3').play();">ਖ਼</td>
+          onclick="showPopup( '74', '0', 'ਖ਼', 'audio/35b.mp3')">
+          ਖ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/35c.mp3').play();">ਖ਼ਾ</td>
+          onclick="showPopup( '74', '1', 'ਖ਼ਾ', 'audio/35c.mp3')">
+          ਖ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/35d.mp3').play();">ਖ਼ਿ</td>
+          onclick="showPopup( '74', '2', 'ਖ਼ਿ', 'audio/35d.mp3')">
+          ਖ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/35e.mp3').play();">ਖ਼ੀ</td>
+          onclick="showPopup( '74', '3', 'ਖ਼ੀ', 'audio/35e.mp3')">
+          ਖ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/35f.mp3').play();">ਖ਼ੁ</td>
+          onclick="showPopup( '74', '4', 'ਖ਼ੁ', 'audio/35f.mp3')">
+          ਖ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/35g.mp3').play();">ਖ਼ੂ</td>
+          onclick="showPopup( '74', '5', 'ਖ਼ੂ', 'audio/35g.mp3')">
+          ਖ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/35h.mp3').play();">ਖ਼ੇ</td>
+          onclick="showPopup( '74', '6', 'ਖ਼ੇ', 'audio/35h.mp3')">
+          ਖ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/35i.mp3').play();">ਖ਼ੈ</td>
+          onclick="showPopup( '74', '7', 'ਖ਼ੈ', 'audio/35i.mp3')">
+          ਖ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/35j.mp3').play();">ਖ਼ੋ</td>
+          onclick="showPopup( '74', '8', 'ਖ਼ੋ', 'audio/35j.mp3')">
+          ਖ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/35k.mp3').play();">ਖ਼ੌ</td>
+          onclick="showPopup( '74', '9', 'ਖ਼ੌ', 'audio/35k.mp3')">
+          ਖ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/35l.mp3').play();">ਖ਼ੰ</td>
+          onclick="showPopup( '74', '10', 'ਖ਼ੰ', 'audio/35l.mp3')">
+          ਖ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/35m.mp3').play();">ਖ਼ਾਂ</td>
+          onclick="showPopup( '74', '11', 'ਖ਼ਾਂ', 'audio/35m.mp3')">ਖ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort35_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2544,29 +3458,40 @@
           onclick="new Audio('audio/ltrshort36_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/36b.mp3').play();">ਗ਼</td>
+          onclick="showPopup( '75', '0', 'ਗ਼', 'audio/36b.mp3')">
+          ਗ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/36c.mp3').play();">ਗ਼ਾ</td>
+          onclick="showPopup( '75', '1', 'ਗ਼ਾ', 'audio/36c.mp3')">
+          ਗ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/36d.mp3').play();">ਗ਼ਿ</td>
+          onclick="showPopup( '75', '2', 'ਗ਼ਿ', 'audio/36d.mp3')">
+          ਗ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/36e.mp3').play();">ਗ਼ੀ</td>
+          onclick="showPopup( '75', '3', 'ਗ਼ੀ', 'audio/36e.mp3')">
+          ਗ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/36f.mp3').play();">ਗ਼ੁ</td>
+          onclick="showPopup( '75', '4', 'ਗ਼ੁ', 'audio/36f.mp3')">
+          ਗ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/36g.mp3').play();">ਗ਼ੂ</td>
+          onclick="showPopup( '75', '5', 'ਗ਼ੂ', 'audio/36g.mp3')">
+          ਗ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/36h.mp3').play();">ਗ਼ੇ</td>
+          onclick="showPopup( '75', '6', 'ਗ਼ੇ', 'audio/36h.mp3')">
+          ਗ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/36i.mp3').play();">ਗ਼ੈ</td>
+          onclick="showPopup( '75', '7', 'ਗ਼ੈ', 'audio/36i.mp3')">
+          ਗ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/36j.mp3').play();">ਗ਼ੋ</td>
+          onclick="showPopup( '75', '8', 'ਗ਼ੋ', 'audio/36j.mp3')">
+          ਗ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/36k.mp3').play();">ਗ਼ੌ</td>
+          onclick="showPopup( '75', '9', 'ਗ਼ੌ', 'audio/36k.mp3')">
+          ਗ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/36l.mp3').play();">ਗ਼ੰ</td>
+          onclick="showPopup( '75', '10', 'ਗ਼ੰ', 'audio/36l.mp3')">
+          ਗ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/36m.mp3').play();">ਗ਼ਾਂ</td>
+          onclick="showPopup( '75', '11', 'ਗ਼ਾਂ', 'audio/36m.mp3')">ਗ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort36_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2576,29 +3501,41 @@
           onclick="new Audio('audio/ltrshort37_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/37b.mp3').play();">ਜ਼</td>
+          onclick="showPopup( '76', '0', 'ਜ਼', 'audio/37b.mp3')">
+          ਜ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/37c.mp3').play();">ਜ਼ਾ</td>
+          onclick="showPopup( '76', '1', 'ਜ਼ਾ', 'audio/37c.mp3')">
+          ਜ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/37d.mp3').play();">ਜ਼ਿ</td>
+          onclick="showPopup( '76', '2', 'ਜ਼ਿ', 'audio/37d.mp3')">
+          ਜ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/37e.mp3').play();">ਜ਼ੀ</td>
+          onclick="showPopup( '76', '3', 'ਜ਼ੀ', 'audio/37e.mp3')">
+          ਜ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/37f.mp3').play();">ਜ਼ੁ</td>
+          onclick="showPopup( '76', '4', 'ਜ਼ੁ', 'audio/37f.mp3')">
+          ਜ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/37g.mp3').play();">ਜ਼ੂ</td>
+          onclick="showPopup( '76', '5', 'ਜ਼ੂ', 'audio/37g.mp3')">
+          ਜ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/37h.mp3').play();">ਜ਼ੇ</td>
+          onclick="showPopup( '76', '6', 'ਜ਼ੇ', 'audio/37h.mp3')">
+          ਜ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/37i.mp3').play();">ਜ਼ੈ</td>
+          onclick="showPopup( '76', '7', 'ਜ਼ੈ', 'audio/37i.mp3')">
+          ਜ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/37j.mp3').play();">ਜ਼ੋ</td>
+          onclick="showPopup( '76', '8', 'ਜ਼ੋ', 'audio/37j.mp3')">
+          ਜ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/37k.mp3').play();">ਜ਼ੌ</td>
+          onclick="showPopup( '76', '9', 'ਜ਼ੌ', 'audio/37k.mp3')">
+          ਜ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/37l.mp3').play();">ਜ਼ੰ</td>
+          onclick="showPopup( '76', '10', 'ਜ਼ੰ', 'audio/37l.mp3')">
+          ਜ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/37m.mp3').play();">ਜ਼ਾਂ</td>
+          onclick="showPopup( '76', '11', 'ਜ਼ਾਂ', 'audio/37m.mp3')">
+          ਜ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort37_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2608,29 +3545,40 @@
           onclick="new Audio('audio/ltrshort38_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/38b.mp3').play();">ਫ਼</td>
+          onclick="showPopup( '77', '0', 'ਫ਼', 'audio/38b.mp3')">
+          ਫ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/38c.mp3').play();">ਫ਼ਾ</td>
+          onclick="showPopup( '77', '1', 'ਫ਼ਾ', 'audio/38c.mp3')">
+          ਫ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/38d.mp3').play();">ਫ਼ਿ</td>
+          onclick="showPopup( '77', '2', 'ਫ਼ਿ', 'audio/38d.mp3')">
+          ਫ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/38e.mp3').play();">ਫ਼ੀ</td>
+          onclick="showPopup( '77', '3', 'ਫ਼ੀ', 'audio/38e.mp3')">
+          ਫ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/38f.mp3').play();">ਫ਼ੁ</td>
+          onclick="showPopup( '77', '4', 'ਫ਼ੁ', 'audio/38f.mp3')">
+          ਫ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/38g.mp3').play();">ਫ਼ੂ</td>
+          onclick="showPopup( '77', '5', 'ਫ਼ੂ', 'audio/38g.mp3')">
+          ਫ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/38h.mp3').play();">ਫ਼ੇ</td>
+          onclick="showPopup( '77', '6', 'ਫ਼ੇ', 'audio/38h.mp3')">
+          ਫ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/38i.mp3').play();">ਫ਼ੈ</td>
+          onclick="showPopup( '77', '7', 'ਫ਼ੈ', 'audio/38i.mp3')">
+          ਫ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/38j.mp3').play();">ਫ਼ੋ</td>
+          onclick="showPopup( '77', '8', 'ਫ਼ੋ', 'audio/38j.mp3')">
+          ਫ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/38k.mp3').play();">ਫ਼ੌ</td>
+          onclick="showPopup( '77', '9', 'ਫ਼ੌ', 'audio/38k.mp3')">
+          ਫ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/38l.mp3').play();">ਫ਼ੰ</td>
+          onclick="showPopup( '77', '10', 'ਫ਼ੰ', 'audio/38l.mp3')">
+          ਫ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/38m.mp3').play();">ਫ਼ਾਂ</td>
+          onclick="showPopup( '77', '11', 'ਫ਼ਾਂ', 'audio/38m.mp3')">ਫ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort38_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2640,29 +3588,40 @@
           onclick="new Audio('audio/ltrshort39_MP3WRAP.mp3').play();">Play
           LTR</td>
           <td class="entry"
-          onclick="new Audio('audio/39b.mp3').play();">ਲ਼</td>
+          onclick="showPopup( '78', '0', 'ਲ਼', 'audio/39b.mp3')">
+          ਲ਼</td>
           <td class="entry"
-          onclick="new Audio('audio/39c.mp3').play();">ਲ਼ਾ</td>
+          onclick="showPopup( '78', '1', 'ਲ਼ਾ', 'audio/39c.mp3')">
+          ਲ਼ਾ</td>
           <td class="entry"
-          onclick="new Audio('audio/39d.mp3').play();">ਲ਼ਿ</td>
+          onclick="showPopup( '78', '2', 'ਲ਼ਿ', 'audio/39d.mp3')">
+          ਲ਼ਿ</td>
           <td class="entry"
-          onclick="new Audio('audio/39e.mp3').play();">ਲ਼ੀ</td>
+          onclick="showPopup( '78', '3', 'ਲ਼ੀ', 'audio/39e.mp3')">
+          ਲ਼ੀ</td>
           <td class="entry"
-          onclick="new Audio('audio/39f.mp3').play();">ਲ਼ੁ</td>
+          onclick="showPopup( '78', '4', 'ਲ਼ੁ', 'audio/39f.mp3')">
+          ਲ਼ੁ</td>
           <td class="entry"
-          onclick="new Audio('audio/39g.mp3').play();">ਲ਼ੂ</td>
+          onclick="showPopup( '78', '5', 'ਲ਼ੂ', 'audio/39g.mp3')">
+          ਲ਼ੂ</td>
           <td class="entry"
-          onclick="new Audio('audio/39h.mp3').play();">ਲ਼ੇ</td>
+          onclick="showPopup( '78', '6', 'ਲ਼ੇ', 'audio/39h.mp3')">
+          ਲ਼ੇ</td>
           <td class="entry"
-          onclick="new Audio('audio/39i.mp3').play();">ਲ਼ੈ</td>
+          onclick="showPopup( '78', '7', 'ਲ਼ੈ', 'audio/39i.mp3')">
+          ਲ਼ੈ</td>
           <td class="entry"
-          onclick="new Audio('audio/39j.mp3').play();">ਲ਼ੋ</td>
+          onclick="showPopup( '78', '8', 'ਲ਼ੋ', 'audio/39j.mp3')">
+          ਲ਼ੋ</td>
           <td class="entry"
-          onclick="new Audio('audio/39k.mp3').play();">ਲ਼ੌ</td>
+          onclick="showPopup( '78', '9', 'ਲ਼ੌ', 'audio/39k.mp3')">
+          ਲ਼ੌ</td>
           <td class="entry"
-          onclick="new Audio('audio/39l.mp3').play();">ਲ਼ੰ</td>
+          onclick="showPopup( '78', '10', 'ਲ਼ੰ', 'audio/39l.mp3')">
+          ਲ਼ੰ</td>
           <td class="entry"
-          onclick="new Audio('audio/39m.mp3').play();">ਲ਼ਾਂ</td>
+          onclick="showPopup( '78', '11', 'ਲ਼ਾਂ', 'audio/39m.mp3')">ਲ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort39_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2714,7 +3673,13 @@
       <a href="mailto:simon@journeyman.cc">Simon Brooke</a> for 
       <img alt="Lucy Fyfe" id="bug" src="img/bug.jpg" />
       </p>
-      <p>all errors my own</p>
+      <p>all errors my own.</p>
+      <p>
+      <img alt="GitHub logo" height="16"
+      src="img/github-logo-transparent.png" width="16" />
+      Find me/fork me on 
+      <a
+      href="https://github.com/simon-brooke/muharni">GitHub</a></p>
     </div>
   </body>
 </html>

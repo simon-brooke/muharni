@@ -21,6 +21,10 @@ th {
     background-color: silver;
 }
 
+.character-table {
+    position: relative
+}
+
 .entry {
     font-size: 3em;
 }
@@ -40,4 +44,10 @@ th {
 #footer p {
     margin: 0;
     padding: 0.25em;
+}
+
+#popup {
+    position: absolute;
+    display: none;
+    background-color: whitesmoke;
 }

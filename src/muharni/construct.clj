@@ -83,14 +83,21 @@
   "Emit a table cell describing one entry from entries with either the
    long or short audio clip available on click. "
   [^Integer row ^Integer col ^Boolean long?]
-  (vector :td {:class "entry"
+  (let [audio (format
+               "audio/%02d%s.mp3"
+               (inc row)
+               ((columns col) (if long? :upper-latin :lower-latin)))
+        char ((entries row) col)]
+    (vector :td {:class "entry"
 
                :onclick (format
-                         "new Audio('audio/%02d%s.mp3').play();"
-                         (inc row)
-                         ((columns col) (if long? :upper-latin :lower-latin)))}
+                         "showPopup( '%s', '%s', '%s', '%s')"
+                         (if long? row (+ row 40))
+                         col
+                         char
+                         audio)}
           ;; (audio row col long?)
-          ((entries row) col)))
+          char)))
 
 ;; (entry-cell 3 4 true)
 
@@ -135,11 +142,13 @@
                  [[:td]]
                  (map #(vector
                         :td {:class "play-column"
-                             :onclick (format
+                             :onclick 
+                             (format
                                        "new Audio('audio/%s%s%s_MP3WRAP.mp3').play();"
                                        (if ttb? "ttb" "btt")
                                        (if long? "long" "short")
-                                       ((columns %) (if long? :upper-latin :lower-latin)))}
+                                       ((columns %) (if long? :upper-latin :lower-latin)))
+                             }
                         (str "Play " (if ttb? "down" "up")))
                       (range (count columns)))
                  [[:td]])))
@@ -150,7 +159,8 @@
   [^Boolean long?]
   (apply
    vector
-   (concat [:table]
+   (concat [:table {:class "character-table"
+                    :summary "Table of Punjabi characters from which to select sound recordings"}]
            [(col-headers-row)
             (play-column-row true long?)]
            (map #(entries-row % long?)
@@ -164,10 +174,28 @@
   [title]
   [:html
    [:head
-    [:meta {:charset "UTF-8"}]
-    [:link {:rel "stylesheet" :href "style.css"}]
+    [:meta {:charset "UTF-8" :content ""}]
+    [:link {:rel "stylesheet" :type "text/css" :href "style.css"}]
+    ;; pull jquery from Google rather than host locally.
+    [:script {:type "text/javascript"
+              :src "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"}]
+    [:script {:type "text/javascript"
+              :src "scripts/muharni.js"}]
     [:title (str title)]]
-   [:body
+   [:body {:id "body"}
+    [:div {:id "popup" 
+           :onmouseout "hidePopup();"
+           :style "display: none; border: thin solid gray; width: 10%"}
+     [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
+     [:table {:id "controls" :summary "Controls for audio playback and recording"}
+      [:tr
+       [:th "Tutor"]
+       [:td {:id "play-tutor"} [:button {:onclick "playTutorSound();"}
+                                "&#9658;"]]]
+      [:tr
+       [:th "You"]
+       [:td {:id "play-student"} [:button {:onclick "playStudentSound();"} "&#9658;"]]
+       [:td {:id "record-stop"} [:button {:onclick "recordStudentSound();"} "&#9210;"]]]]]
     [:h1 (str title)]
     [:button {:onclick "var l = document.getElementById('long');
                         var s = document.getElementById('short');
@@ -189,7 +217,10 @@
     [:div {:id "footer"}
      [:p "Made with love by " [:a {:href "mailto:simon@journeyman.cc"} "Simon Brooke"] " for "
       [:img {:id "bug" :src "img/bug.jpg" :alt "Lucy Fyfe"}]]
-     [:p "all errors my own"]]]])
+     [:p "all errors my own."]
+     [:p [:img {:height 16 :width 16 :alt "GitHub logo" :src "img/github-logo-transparent.png"}]
+      "Find me/fork me on "
+      [:a {:href "https://github.com/simon-brooke/muharni"} "GitHub"]]]]])
 
 (defn tidy-page
   "Reads HTML as a string, emits cleaned-up HTML as a string. This is not yet
