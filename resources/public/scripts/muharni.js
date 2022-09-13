@@ -18,9 +18,9 @@ const studentSounds = Array(80).fill(0).map(x => Array(13).fill(null));
 
 
 
-function recordStudentSound() {
-    if (currentCell) {
-        $('#record-student').css('background-color', 'green');
+function recordStudentSound(r, c) {
+    if (Number.isInteger(r) && Number.isInteger(c)) {
+        $('#record-student').css('color', 'green');
         navigator.mediaDevices.getUserMedia({ audio: true })
             .then(stream => {
                 const mediaRecorder = new MediaRecorder(stream);
@@ -35,27 +35,18 @@ function recordStudentSound() {
                 setTimeout(() => {
                     mediaRecorder.stop();
                     if (audioChunks.length > 0) {
-                        studentSounds[currentCell.row][currentCell.col] = new Blob(audioChunks);
+                        studentSounds[r][c] = new Blob(audioChunks);
                         $('#play-student').prop('disabled', false);
+                        console.log("Successfully recorded student sound for row " + r + ", column " + c);
+                    } else {
+                        console.warn("Failed to record student sound for row " + r + ", column " + c);
                     }
-                    $('#record-student').css('background-color', 'red');
+                    $('#record-student').css('color', 'red');
 
                 }, 3000);
             });
     }
 }
-
-/**
- * If a student sound has been recorded for the current cell, play it.
- */
-function playStudentSound() {
-    if (currentCell) {
-        if (studentSounds[currentCell.row][currentCell.col] != null) {
-            new Audio(URL.createObjectURL(studentSounds[currentCell.row][currentCell.col])).play();
-        }
-    }
-}
-
 
 $(document).ready(function() {
     $(".entry").on("click", function(e) {
@@ -63,18 +54,48 @@ $(document).ready(function() {
 
         if (cellId)
         {
+            let row = parseInt(cellId.slice(1, 3));
+            let colChar = cellId.slice( 3);
+
+            if (colChar == colChar.toLowerCase()) {
+                row += 40; /* we're wrapping lower case into the bottom half of the array */
+            }
+
+            let col = cellId.charCodeAt(3) - 65;
+            if (col > 26 ) { 
+                col -= 32; /* lower case */
+            }
+
+            let studentAudio = studentSounds[row][col];
+
             $("#popup").css({
                 'left': e.pageX,
                 'top': e.pageY
             });
 
-            $("#character").text(e.currentTarget.innerText);
+            $("#character").text(e.currentTarget.innerText +": " + row +"," + col + ".");
 
             $("#play-tutor").off("click"); /* trying to remove any previous click handler */
             $("#play-tutor").on("click", function(e){
                 let audioUrl = "audio/" + cellId.slice(1) + ".mp3";
+                console.log("Playing tutor audio " + audioUrl );
                 new Audio( audioUrl).play();
             });
+
+            $("#record-stop").off("click");
+            $("#record-stop").on("click", function(e) {
+                console.log( "Recording student sound for row " + row + ", column " + col);
+                recordStudentSound(row, col);
+            });
+
+            $("#play-student").off("click");
+            if (studentAudio != null) {
+                $("#play-student").on( "click", function(e) {
+                    console.log( "Playing student sound for row " + row + ", column " + col);
+                    new Audio(URL.createObjectURL(studentAudio)).play();
+                });
+            } 
+            $("#play-student").prop("disabled", studentAudio == null);
         
             $("#popup").show();
         }

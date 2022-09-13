@@ -195,7 +195,6 @@
     [:title (str title)]]
    [:body {:id "body"}
     [:div {:id "popup"
-           :onmouseout "hidePopup();"
            :style "display: none; border: thin solid gray; width: 10%"}
      [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
      [:table {:id "controls" :summary "Controls for audio playback and recording"}
