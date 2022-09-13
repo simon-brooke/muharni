@@ -83,25 +83,28 @@
   "Emit a table cell describing one entry from entries with either the
    long or short audio clip available on click. "
   [^Integer row ^Integer col ^Boolean long?]
-  (let [audio (format
-               "audio/%02d%s.mp3"
-               (inc row)
-               ((columns col) (if long? :upper-latin :lower-latin)))
+  (let [r (inc row)
+        c ((columns col) (if long? :upper-latin :lower-latin))
+        audio (format "audio/%02d%s.mp3" r c)
         char ((entries row) col)]
     (vector :td {:class "entry"
-
-               :onclick (format
-                         "showPopup( '%s', '%s', '%s', '%s')"
-                         (if long? row (+ row 40))
-                         col
-                         char
-                         audio)}
+                 :id (format "%s%02d%s" (if long? "l" "s") r c)
+                ;;  :onclick (format
+                ;;            "showPopup( '%s', '%s', '%s', '%s')"
+                ;;            (if long? row (+ row 40))
+                ;;            col
+                ;;            char
+                ;;            audio)
+                 }
           ;; (audio row col long?)
-          char)))
+            char)))
 
 ;; (entry-cell 3 4 true)
 
 (defn all-entries-cell
+  "Return a table cell which plays the sound for all entries in the specified 
+   `row`, concatenated from left to right if `ltr?` is true else right to left,
+   and playing long recordings if `long?` is true else short recordings."
   [^Integer row ^Boolean ltr? ^Boolean long?]
   [:td {:class "play-row"
         :onclick (format "new Audio('audio/%s%s%02d_MP3WRAP.mp3').play();"
@@ -112,6 +115,8 @@
 
 
 (defn entries-row
+  "Return a table row for the specified `row` number for long recordings if 
+   `long?` is true else short recordings."
   [^Integer row ^Boolean long?]
   (apply vector
          (concat [:tr]
@@ -122,9 +127,10 @@
 ;; (entries-row 3 true)
 
 (defn col-header-cell
-  [^Integer col]
+  "Return a header cell for the indicated `column`."
+  [^Integer column]
   (vector :th
-          (:name (columns col))))
+          (:name (columns column))))
 
 (defn col-headers-row
   []
@@ -136,19 +142,21 @@
 ;; (col-headers-row)
 
 (defn play-column-row
+  "Return a table row of cells which play concatenated sounds for each column,
+   concatenating from top to bottom is `ttb?` is true, else bottom to top, and
+   playing long recordings if `long?` is true else short recordings."
   [^Boolean ttb? ^Boolean long?]
   (apply vector
          (concat [:tr]
                  [[:td]]
                  (map #(vector
                         :td {:class "play-column"
-                             :onclick 
+                             :onclick
                              (format
-                                       "new Audio('audio/%s%s%s_MP3WRAP.mp3').play();"
-                                       (if ttb? "ttb" "btt")
-                                       (if long? "long" "short")
-                                       ((columns %) (if long? :upper-latin :lower-latin)))
-                             }
+                              "new Audio('audio/%s%s%s_MP3WRAP.mp3').play();"
+                              (if ttb? "ttb" "btt")
+                              (if long? "long" "short")
+                              ((columns %) (if long? :upper-latin :lower-latin)))}
                         (str "Play " (if ttb? "down" "up")))
                       (range (count columns)))
                  [[:td]])))
@@ -156,6 +164,8 @@
 ;; (play-column-row true true)
 
 (defn table
+  "Lay out a muharni table, playing long recordings if `long?` is true else 
+   short recordings."
   [^Boolean long?]
   (apply
    vector
@@ -171,6 +181,7 @@
 ;; (table true)
 
 (defn page
+  "Construct the complete muharni tables page."
   [title]
   [:html
    [:head
@@ -183,19 +194,19 @@
               :src "scripts/muharni.js"}]
     [:title (str title)]]
    [:body {:id "body"}
-    [:div {:id "popup" 
+    [:div {:id "popup"
            :onmouseout "hidePopup();"
            :style "display: none; border: thin solid gray; width: 10%"}
      [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
      [:table {:id "controls" :summary "Controls for audio playback and recording"}
       [:tr
        [:th "Tutor"]
-       [:td {:id "play-tutor"} [:button {:onclick "playTutorSound();"}
+       [:td  [:button {:id "play-tutor"}
                                 "&#9658;"]]]
       [:tr
        [:th "You"]
-       [:td {:id "play-student"} [:button {:onclick "playStudentSound();"} "&#9658;"]]
-       [:td {:id "record-stop"} [:button {:onclick "recordStudentSound();"} "&#9210;"]]]]]
+       [:td  [:button {:id "play-student"} "&#9658;"]]
+       [:td  [:button {:id "record-stop"} "&#9210;"]]]]]
     [:h1 (str title)]
     [:button {:onclick "var l = document.getElementById('long');
                         var s = document.getElementById('short');
@@ -223,9 +234,7 @@
       [:a {:href "https://github.com/simon-brooke/muharni"} "GitHub"]]]]])
 
 (defn tidy-page
-  "Reads HTML as a string, emits cleaned-up HTML as a string. This is not yet
-   working with HTML as produced by Hiccup, since Hiccup is currently 
-   entitifying single quotes within (JavaScript) strings."
+  "Reads HTML from `page` as a string, returns cleaned-up HTML as a string."
   [^String page]
   (let [tidy (Tidy.)
         props (doto (Properties.)
@@ -239,14 +248,13 @@
     ;; (set! (. config indentContent) true)
     ;; (set! (. config smartIndent) true)
     (doto (.getConfiguration tidy) (.addProps props) (.adjust))
-    (.parse tidy (input-stream (.getBytes page))
+    ;;  NOTE: Hiccup is currently entitifying single quotes within 
+    ;; (JavaScript) strings. This is NOT desirable behaviour!
+    (.parse tidy (input-stream (.getBytes (s/replace page #"\&apos;" "'")))
             output)
-    (.toString output)))
+    (str "<!DOCTYPE html>\n" (.toString output))))
 
 (spit "resources/public/index.html"
       (tidy-page
-       (s/replace
-        (str (html 
-              ;;{:escape-strings? false}
-              (page "Muharni table")))
-        #"\&apos;" "'")))
+       (str (html
+             (page "Muharni table")))))

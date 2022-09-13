@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="generator"
@@ -21,17 +22,17 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       summary="Controls for audio playback and recording">
         <tr>
           <th>Tutor</th>
-          <td id="play-tutor">
-            <button onclick="playTutorSound();">►</button>
+          <td>
+            <button id="play-tutor">►</button>
           </td>
         </tr>
         <tr>
           <th>You</th>
-          <td id="play-student">
-            <button onclick="playStudentSound();">►</button>
+          <td>
+            <button id="play-student">►</button>
           </td>
-          <td id="record-stop">
-            <button onclick="recordStudentSound();">⏺</button>
+          <td>
+            <button id="record-stop">⏺</button>
           </td>
         </tr>
       </table>
@@ -104,42 +105,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong01_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '0', '0', 'ਅ', 'audio/01B.mp3')">
-          ਅ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '1', 'ਆ', 'audio/01C.mp3')">
-          ਆ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '2', 'ਇ', 'audio/01D.mp3')">
-          ਇ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '3', 'ਈ', 'audio/01E.mp3')">
-          ਈ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '4', 'ਉ', 'audio/01F.mp3')">
-          ਉ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '5', 'ਊ', 'audio/01G.mp3')">
-          ਊ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '6', 'ਏ', 'audio/01H.mp3')">
-          ਏ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '7', 'ਐ', 'audio/01I.mp3')">
-          ਐ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '8', 'ਓ', 'audio/01J.mp3')">
-          ਓ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '9', 'ਔ', 'audio/01K.mp3')">
-          ਔ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '10', 'ਅੰ', 'audio/01L.mp3')">
-          ਅੰ</td>
-          <td class="entry"
-          onclick="showPopup( '0', '11', 'ਆਂ', 'audio/01M.mp3')">
-          ਆਂ</td>
+          <td class="entry" id="l01B">ਅ</td>
+          <td class="entry" id="l01C">ਆ</td>
+          <td class="entry" id="l01D">ਇ</td>
+          <td class="entry" id="l01E">ਈ</td>
+          <td class="entry" id="l01F">ਉ</td>
+          <td class="entry" id="l01G">ਊ</td>
+          <td class="entry" id="l01H">ਏ</td>
+          <td class="entry" id="l01I">ਐ</td>
+          <td class="entry" id="l01J">ਓ</td>
+          <td class="entry" id="l01K">ਔ</td>
+          <td class="entry" id="l01L">ਅੰ</td>
+          <td class="entry" id="l01M">ਆਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong01_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -148,42 +125,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong02_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '1', '0', 'ਸ', 'audio/02B.mp3')">
-          ਸ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '1', 'ਸਾ', 'audio/02C.mp3')">
-          ਸਾ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '2', 'ਸਿ', 'audio/02D.mp3')">
-          ਸਿ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '3', 'ਸੀ', 'audio/02E.mp3')">
-          ਸੀ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '4', 'ਸੁ', 'audio/02F.mp3')">
-          ਸੁ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '5', 'ਸੂ', 'audio/02G.mp3')">
-          ਸੂ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '6', 'ਸੇ', 'audio/02H.mp3')">
-          ਸੇ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '7', 'ਸੈ', 'audio/02I.mp3')">
-          ਸੈ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '8', 'ਸੋ', 'audio/02J.mp3')">
-          ਸੋ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '9', 'ਸੌ', 'audio/02K.mp3')">
-          ਸੌ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '10', 'ਸੰ', 'audio/02L.mp3')">
-          ਸੰ</td>
-          <td class="entry"
-          onclick="showPopup( '1', '11', 'ਸਾਂ', 'audio/02M.mp3')">
-          ਸਾਂ</td>
+          <td class="entry" id="l02B">ਸ</td>
+          <td class="entry" id="l02C">ਸਾ</td>
+          <td class="entry" id="l02D">ਸਿ</td>
+          <td class="entry" id="l02E">ਸੀ</td>
+          <td class="entry" id="l02F">ਸੁ</td>
+          <td class="entry" id="l02G">ਸੂ</td>
+          <td class="entry" id="l02H">ਸੇ</td>
+          <td class="entry" id="l02I">ਸੈ</td>
+          <td class="entry" id="l02J">ਸੋ</td>
+          <td class="entry" id="l02K">ਸੌ</td>
+          <td class="entry" id="l02L">ਸੰ</td>
+          <td class="entry" id="l02M">ਸਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong02_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -192,42 +145,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong03_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '2', '0', 'ਹ', 'audio/03B.mp3')">
-          ਹ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '1', 'ਹਾ', 'audio/03C.mp3')">
-          ਹਾ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '2', 'ਹਿ', 'audio/03D.mp3')">
-          ਹਿ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '3', 'ਹੀ', 'audio/03E.mp3')">
-          ਹੀ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '4', 'ਹੁ', 'audio/03F.mp3')">
-          ਹੁ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '5', 'ਹੂ', 'audio/03G.mp3')">
-          ਹੂ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '6', 'ਹੇ', 'audio/03H.mp3')">
-          ਹੇ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '7', 'ਹੈ', 'audio/03I.mp3')">
-          ਹੈ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '8', 'ਹੋ', 'audio/03J.mp3')">
-          ਹੋ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '9', 'ਹੌ', 'audio/03K.mp3')">
-          ਹੌ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '10', 'ਹੰ', 'audio/03L.mp3')">
-          ਹੰ</td>
-          <td class="entry"
-          onclick="showPopup( '2', '11', 'ਹਾਂ', 'audio/03M.mp3')">
-          ਹਾਂ</td>
+          <td class="entry" id="l03B">ਹ</td>
+          <td class="entry" id="l03C">ਹਾ</td>
+          <td class="entry" id="l03D">ਹਿ</td>
+          <td class="entry" id="l03E">ਹੀ</td>
+          <td class="entry" id="l03F">ਹੁ</td>
+          <td class="entry" id="l03G">ਹੂ</td>
+          <td class="entry" id="l03H">ਹੇ</td>
+          <td class="entry" id="l03I">ਹੈ</td>
+          <td class="entry" id="l03J">ਹੋ</td>
+          <td class="entry" id="l03K">ਹੌ</td>
+          <td class="entry" id="l03L">ਹੰ</td>
+          <td class="entry" id="l03M">ਹਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong03_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -236,42 +165,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong04_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '3', '0', 'ਕ', 'audio/04B.mp3')">
-          ਕ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '1', 'ਕਾ', 'audio/04C.mp3')">
-          ਕਾ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '2', 'ਕਿ', 'audio/04D.mp3')">
-          ਕਿ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '3', 'ਕੀ', 'audio/04E.mp3')">
-          ਕੀ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '4', 'ਕੁ', 'audio/04F.mp3')">
-          ਕੁ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '5', 'ਕੂ', 'audio/04G.mp3')">
-          ਕੂ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '6', 'ਕੇ', 'audio/04H.mp3')">
-          ਕੇ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '7', 'ਕੈ', 'audio/04I.mp3')">
-          ਕੈ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '8', 'ਕੋ', 'audio/04J.mp3')">
-          ਕੋ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '9', 'ਕੌ', 'audio/04K.mp3')">
-          ਕੌ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '10', 'ਕੰ', 'audio/04L.mp3')">
-          ਕੰ</td>
-          <td class="entry"
-          onclick="showPopup( '3', '11', 'ਕਾਂ', 'audio/04M.mp3')">
-          ਕਾਂ</td>
+          <td class="entry" id="l04B">ਕ</td>
+          <td class="entry" id="l04C">ਕਾ</td>
+          <td class="entry" id="l04D">ਕਿ</td>
+          <td class="entry" id="l04E">ਕੀ</td>
+          <td class="entry" id="l04F">ਕੁ</td>
+          <td class="entry" id="l04G">ਕੂ</td>
+          <td class="entry" id="l04H">ਕੇ</td>
+          <td class="entry" id="l04I">ਕੈ</td>
+          <td class="entry" id="l04J">ਕੋ</td>
+          <td class="entry" id="l04K">ਕੌ</td>
+          <td class="entry" id="l04L">ਕੰ</td>
+          <td class="entry" id="l04M">ਕਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong04_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -280,42 +185,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong05_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '4', '0', 'ਖ', 'audio/05B.mp3')">
-          ਖ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '1', 'ਖਾ', 'audio/05C.mp3')">
-          ਖਾ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '2', 'ਖਿ', 'audio/05D.mp3')">
-          ਖਿ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '3', 'ਖੀ', 'audio/05E.mp3')">
-          ਖੀ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '4', 'ਖੁ', 'audio/05F.mp3')">
-          ਖੁ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '5', 'ਖੂ', 'audio/05G.mp3')">
-          ਖੂ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '6', 'ਖੇ', 'audio/05H.mp3')">
-          ਖੇ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '7', 'ਖੈ', 'audio/05I.mp3')">
-          ਖੈ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '8', 'ਖੋ', 'audio/05J.mp3')">
-          ਖੋ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '9', 'ਖੌ', 'audio/05K.mp3')">
-          ਖੌ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '10', 'ਖੰ', 'audio/05L.mp3')">
-          ਖੰ</td>
-          <td class="entry"
-          onclick="showPopup( '4', '11', 'ਖਾਂ', 'audio/05M.mp3')">
-          ਖਾਂ</td>
+          <td class="entry" id="l05B">ਖ</td>
+          <td class="entry" id="l05C">ਖਾ</td>
+          <td class="entry" id="l05D">ਖਿ</td>
+          <td class="entry" id="l05E">ਖੀ</td>
+          <td class="entry" id="l05F">ਖੁ</td>
+          <td class="entry" id="l05G">ਖੂ</td>
+          <td class="entry" id="l05H">ਖੇ</td>
+          <td class="entry" id="l05I">ਖੈ</td>
+          <td class="entry" id="l05J">ਖੋ</td>
+          <td class="entry" id="l05K">ਖੌ</td>
+          <td class="entry" id="l05L">ਖੰ</td>
+          <td class="entry" id="l05M">ਖਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong05_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -324,42 +205,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong06_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '5', '0', 'ਗ', 'audio/06B.mp3')">
-          ਗ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '1', 'ਗਾ', 'audio/06C.mp3')">
-          ਗਾ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '2', 'ਗਿ', 'audio/06D.mp3')">
-          ਗਿ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '3', 'ਗੀ', 'audio/06E.mp3')">
-          ਗੀ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '4', 'ਗੁ', 'audio/06F.mp3')">
-          ਗੁ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '5', 'ਗੂ', 'audio/06G.mp3')">
-          ਗੂ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '6', 'ਗੇ', 'audio/06H.mp3')">
-          ਗੇ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '7', 'ਗੈ', 'audio/06I.mp3')">
-          ਗੈ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '8', 'ਗੋ', 'audio/06J.mp3')">
-          ਗੋ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '9', 'ਗੌ', 'audio/06K.mp3')">
-          ਗੌ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '10', 'ਗੰ', 'audio/06L.mp3')">
-          ਗੰ</td>
-          <td class="entry"
-          onclick="showPopup( '5', '11', 'ਗਾਂ', 'audio/06M.mp3')">
-          ਗਾਂ</td>
+          <td class="entry" id="l06B">ਗ</td>
+          <td class="entry" id="l06C">ਗਾ</td>
+          <td class="entry" id="l06D">ਗਿ</td>
+          <td class="entry" id="l06E">ਗੀ</td>
+          <td class="entry" id="l06F">ਗੁ</td>
+          <td class="entry" id="l06G">ਗੂ</td>
+          <td class="entry" id="l06H">ਗੇ</td>
+          <td class="entry" id="l06I">ਗੈ</td>
+          <td class="entry" id="l06J">ਗੋ</td>
+          <td class="entry" id="l06K">ਗੌ</td>
+          <td class="entry" id="l06L">ਗੰ</td>
+          <td class="entry" id="l06M">ਗਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong06_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -368,42 +225,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong07_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '6', '0', 'ਘ', 'audio/07B.mp3')">
-          ਘ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '1', 'ਘਾ', 'audio/07C.mp3')">
-          ਘਾ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '2', 'ਘਿ', 'audio/07D.mp3')">
-          ਘਿ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '3', 'ਘੀ', 'audio/07E.mp3')">
-          ਘੀ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '4', 'ਘੁ', 'audio/07F.mp3')">
-          ਘੁ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '5', 'ਘੂ', 'audio/07G.mp3')">
-          ਘੂ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '6', 'ਘੇ', 'audio/07H.mp3')">
-          ਘੇ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '7', 'ਘੈ', 'audio/07I.mp3')">
-          ਘੈ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '8', 'ਘੋ', 'audio/07J.mp3')">
-          ਘੋ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '9', 'ਘੌ', 'audio/07K.mp3')">
-          ਘੌ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '10', 'ਘੰ', 'audio/07L.mp3')">
-          ਘੰ</td>
-          <td class="entry"
-          onclick="showPopup( '6', '11', 'ਘਾਂ', 'audio/07M.mp3')">
-          ਘਾਂ</td>
+          <td class="entry" id="l07B">ਘ</td>
+          <td class="entry" id="l07C">ਘਾ</td>
+          <td class="entry" id="l07D">ਘਿ</td>
+          <td class="entry" id="l07E">ਘੀ</td>
+          <td class="entry" id="l07F">ਘੁ</td>
+          <td class="entry" id="l07G">ਘੂ</td>
+          <td class="entry" id="l07H">ਘੇ</td>
+          <td class="entry" id="l07I">ਘੈ</td>
+          <td class="entry" id="l07J">ਘੋ</td>
+          <td class="entry" id="l07K">ਘੌ</td>
+          <td class="entry" id="l07L">ਘੰ</td>
+          <td class="entry" id="l07M">ਘਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong07_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -412,42 +245,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong08_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '7', '0', 'ਙ', 'audio/08B.mp3')">
-          ਙ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '1', 'ਙਾ', 'audio/08C.mp3')">
-          ਙਾ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '2', 'ਙਿ', 'audio/08D.mp3')">
-          ਙਿ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '3', 'ਙੀ', 'audio/08E.mp3')">
-          ਙੀ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '4', 'ਙੁ', 'audio/08F.mp3')">
-          ਙੁ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '5', 'ਙੂ', 'audio/08G.mp3')">
-          ਙੂ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '6', 'ਙੇ', 'audio/08H.mp3')">
-          ਙੇ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '7', 'ਙੈ', 'audio/08I.mp3')">
-          ਙੈ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '8', 'ਙੋ', 'audio/08J.mp3')">
-          ਙੋ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '9', 'ਙੌ', 'audio/08K.mp3')">
-          ਙੌ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '10', 'ਙੰ', 'audio/08L.mp3')">
-          ਙੰ</td>
-          <td class="entry"
-          onclick="showPopup( '7', '11', 'ਙਾਂ', 'audio/08M.mp3')">
-          ਙਾਂ</td>
+          <td class="entry" id="l08B">ਙ</td>
+          <td class="entry" id="l08C">ਙਾ</td>
+          <td class="entry" id="l08D">ਙਿ</td>
+          <td class="entry" id="l08E">ਙੀ</td>
+          <td class="entry" id="l08F">ਙੁ</td>
+          <td class="entry" id="l08G">ਙੂ</td>
+          <td class="entry" id="l08H">ਙੇ</td>
+          <td class="entry" id="l08I">ਙੈ</td>
+          <td class="entry" id="l08J">ਙੋ</td>
+          <td class="entry" id="l08K">ਙੌ</td>
+          <td class="entry" id="l08L">ਙੰ</td>
+          <td class="entry" id="l08M">ਙਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong08_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -456,42 +265,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong09_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '8', '0', 'ਚ', 'audio/09B.mp3')">
-          ਚ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '1', 'ਚਾ', 'audio/09C.mp3')">
-          ਚਾ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '2', 'ਚਿ', 'audio/09D.mp3')">
-          ਚਿ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '3', 'ਚੀ', 'audio/09E.mp3')">
-          ਚੀ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '4', 'ਚੁ', 'audio/09F.mp3')">
-          ਚੁ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '5', 'ਚੂ', 'audio/09G.mp3')">
-          ਚੂ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '6', 'ਚੇ', 'audio/09H.mp3')">
-          ਚੇ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '7', 'ਚੈ', 'audio/09I.mp3')">
-          ਚੈ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '8', 'ਚੋ', 'audio/09J.mp3')">
-          ਚੋ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '9', 'ਚੌ', 'audio/09K.mp3')">
-          ਚੌ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '10', 'ਚੰ', 'audio/09L.mp3')">
-          ਚੰ</td>
-          <td class="entry"
-          onclick="showPopup( '8', '11', 'ਚਾਂ', 'audio/09M.mp3')">
-          ਚਾਂ</td>
+          <td class="entry" id="l09B">ਚ</td>
+          <td class="entry" id="l09C">ਚਾ</td>
+          <td class="entry" id="l09D">ਚਿ</td>
+          <td class="entry" id="l09E">ਚੀ</td>
+          <td class="entry" id="l09F">ਚੁ</td>
+          <td class="entry" id="l09G">ਚੂ</td>
+          <td class="entry" id="l09H">ਚੇ</td>
+          <td class="entry" id="l09I">ਚੈ</td>
+          <td class="entry" id="l09J">ਚੋ</td>
+          <td class="entry" id="l09K">ਚੌ</td>
+          <td class="entry" id="l09L">ਚੰ</td>
+          <td class="entry" id="l09M">ਚਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong09_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -500,42 +285,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong10_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '9', '0', 'ਛ', 'audio/10B.mp3')">
-          ਛ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '1', 'ਛਾ', 'audio/10C.mp3')">
-          ਛਾ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '2', 'ਛਿ', 'audio/10D.mp3')">
-          ਛਿ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '3', 'ਛੀ', 'audio/10E.mp3')">
-          ਛੀ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '4', 'ਛੁ', 'audio/10F.mp3')">
-          ਛੁ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '5', 'ਛੂ', 'audio/10G.mp3')">
-          ਛੂ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '6', 'ਛੇ', 'audio/10H.mp3')">
-          ਛੇ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '7', 'ਛੈ', 'audio/10I.mp3')">
-          ਛੈ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '8', 'ਛੋ', 'audio/10J.mp3')">
-          ਛੋ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '9', 'ਛੌ', 'audio/10K.mp3')">
-          ਛੌ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '10', 'ਛੰ', 'audio/10L.mp3')">
-          ਛੰ</td>
-          <td class="entry"
-          onclick="showPopup( '9', '11', 'ਛਾਂ', 'audio/10M.mp3')">
-          ਛਾਂ</td>
+          <td class="entry" id="l10B">ਛ</td>
+          <td class="entry" id="l10C">ਛਾ</td>
+          <td class="entry" id="l10D">ਛਿ</td>
+          <td class="entry" id="l10E">ਛੀ</td>
+          <td class="entry" id="l10F">ਛੁ</td>
+          <td class="entry" id="l10G">ਛੂ</td>
+          <td class="entry" id="l10H">ਛੇ</td>
+          <td class="entry" id="l10I">ਛੈ</td>
+          <td class="entry" id="l10J">ਛੋ</td>
+          <td class="entry" id="l10K">ਛੌ</td>
+          <td class="entry" id="l10L">ਛੰ</td>
+          <td class="entry" id="l10M">ਛਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong10_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -544,42 +305,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong11_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '10', '0', 'ਜ', 'audio/11B.mp3')">
-          ਜ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '1', 'ਜਾ', 'audio/11C.mp3')">
-          ਜਾ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '2', 'ਜਿ', 'audio/11D.mp3')">
-          ਜਿ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '3', 'ਜੀ', 'audio/11E.mp3')">
-          ਜੀ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '4', 'ਜੁ', 'audio/11F.mp3')">
-          ਜੁ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '5', 'ਜੂ', 'audio/11G.mp3')">
-          ਜੂ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '6', 'ਜੇ', 'audio/11H.mp3')">
-          ਜੇ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '7', 'ਜੈ', 'audio/11I.mp3')">
-          ਜੈ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '8', 'ਜੋ', 'audio/11J.mp3')">
-          ਜੋ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '9', 'ਜੌ', 'audio/11K.mp3')">
-          ਜੌ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '10', 'ਜੰ', 'audio/11L.mp3')">
-          ਜੰ</td>
-          <td class="entry"
-          onclick="showPopup( '10', '11', 'ਜਾਂ', 'audio/11M.mp3')">
-          ਜਾਂ</td>
+          <td class="entry" id="l11B">ਜ</td>
+          <td class="entry" id="l11C">ਜਾ</td>
+          <td class="entry" id="l11D">ਜਿ</td>
+          <td class="entry" id="l11E">ਜੀ</td>
+          <td class="entry" id="l11F">ਜੁ</td>
+          <td class="entry" id="l11G">ਜੂ</td>
+          <td class="entry" id="l11H">ਜੇ</td>
+          <td class="entry" id="l11I">ਜੈ</td>
+          <td class="entry" id="l11J">ਜੋ</td>
+          <td class="entry" id="l11K">ਜੌ</td>
+          <td class="entry" id="l11L">ਜੰ</td>
+          <td class="entry" id="l11M">ਜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong11_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -588,42 +325,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong12_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '11', '0', 'ਝ', 'audio/12B.mp3')">
-          ਝ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '1', 'ਝਾ', 'audio/12C.mp3')">
-          ਝਾ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '2', 'ਝਿ', 'audio/12D.mp3')">
-          ਝਿ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '3', 'ਝੀ', 'audio/12E.mp3')">
-          ਝੀ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '4', 'ਝੁ', 'audio/12F.mp3')">
-          ਝੁ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '5', 'ਝੂ', 'audio/12G.mp3')">
-          ਝੂ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '6', 'ਝੇ', 'audio/12H.mp3')">
-          ਝੇ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '7', 'ਝੈ', 'audio/12I.mp3')">
-          ਝੈ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '8', 'ਝੋ', 'audio/12J.mp3')">
-          ਝੋ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '9', 'ਝੌ', 'audio/12K.mp3')">
-          ਝੌ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '10', 'ਝੰ', 'audio/12L.mp3')">
-          ਝੰ</td>
-          <td class="entry"
-          onclick="showPopup( '11', '11', 'ਝਾਂ', 'audio/12M.mp3')">
-          ਝਾਂ</td>
+          <td class="entry" id="l12B">ਝ</td>
+          <td class="entry" id="l12C">ਝਾ</td>
+          <td class="entry" id="l12D">ਝਿ</td>
+          <td class="entry" id="l12E">ਝੀ</td>
+          <td class="entry" id="l12F">ਝੁ</td>
+          <td class="entry" id="l12G">ਝੂ</td>
+          <td class="entry" id="l12H">ਝੇ</td>
+          <td class="entry" id="l12I">ਝੈ</td>
+          <td class="entry" id="l12J">ਝੋ</td>
+          <td class="entry" id="l12K">ਝੌ</td>
+          <td class="entry" id="l12L">ਝੰ</td>
+          <td class="entry" id="l12M">ਝਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong12_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -632,42 +345,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong13_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '12', '0', 'ਞ', 'audio/13B.mp3')">
-          ਞ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '1', 'ਞਾ', 'audio/13C.mp3')">
-          ਞਾ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '2', 'ਞਿ', 'audio/13D.mp3')">
-          ਞਿ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '3', 'ਞੀ', 'audio/13E.mp3')">
-          ਞੀ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '4', 'ਞੁ', 'audio/13F.mp3')">
-          ਞੁ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '5', 'ਞੂ', 'audio/13G.mp3')">
-          ਞੂ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '6', 'ਞੇ', 'audio/13H.mp3')">
-          ਞੇ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '7', 'ਞੈ', 'audio/13I.mp3')">
-          ਞੈ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '8', 'ਞੋ', 'audio/13J.mp3')">
-          ਞੋ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '9', 'ਞੌ', 'audio/13K.mp3')">
-          ਞੌ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '10', 'ਞੰ', 'audio/13L.mp3')">
-          ਞੰ</td>
-          <td class="entry"
-          onclick="showPopup( '12', '11', 'ਞਾਂ', 'audio/13M.mp3')">
-          ਞਾਂ</td>
+          <td class="entry" id="l13B">ਞ</td>
+          <td class="entry" id="l13C">ਞਾ</td>
+          <td class="entry" id="l13D">ਞਿ</td>
+          <td class="entry" id="l13E">ਞੀ</td>
+          <td class="entry" id="l13F">ਞੁ</td>
+          <td class="entry" id="l13G">ਞੂ</td>
+          <td class="entry" id="l13H">ਞੇ</td>
+          <td class="entry" id="l13I">ਞੈ</td>
+          <td class="entry" id="l13J">ਞੋ</td>
+          <td class="entry" id="l13K">ਞੌ</td>
+          <td class="entry" id="l13L">ਞੰ</td>
+          <td class="entry" id="l13M">ਞਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong13_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -676,42 +365,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong14_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '13', '0', 'ਟ', 'audio/14B.mp3')">
-          ਟ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '1', 'ਟਾ', 'audio/14C.mp3')">
-          ਟਾ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '2', 'ਟਿ', 'audio/14D.mp3')">
-          ਟਿ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '3', 'ਟੀ', 'audio/14E.mp3')">
-          ਟੀ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '4', 'ਟੁ', 'audio/14F.mp3')">
-          ਟੁ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '5', 'ਟੂ', 'audio/14G.mp3')">
-          ਟੂ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '6', 'ਟੇ', 'audio/14H.mp3')">
-          ਟੇ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '7', 'ਟੈ', 'audio/14I.mp3')">
-          ਟੈ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '8', 'ਟੋ', 'audio/14J.mp3')">
-          ਟੋ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '9', 'ਟੌ', 'audio/14K.mp3')">
-          ਟੌ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '10', 'ਟੰ', 'audio/14L.mp3')">
-          ਟੰ</td>
-          <td class="entry"
-          onclick="showPopup( '13', '11', 'ਟਾਂ', 'audio/14M.mp3')">
-          ਟਾਂ</td>
+          <td class="entry" id="l14B">ਟ</td>
+          <td class="entry" id="l14C">ਟਾ</td>
+          <td class="entry" id="l14D">ਟਿ</td>
+          <td class="entry" id="l14E">ਟੀ</td>
+          <td class="entry" id="l14F">ਟੁ</td>
+          <td class="entry" id="l14G">ਟੂ</td>
+          <td class="entry" id="l14H">ਟੇ</td>
+          <td class="entry" id="l14I">ਟੈ</td>
+          <td class="entry" id="l14J">ਟੋ</td>
+          <td class="entry" id="l14K">ਟੌ</td>
+          <td class="entry" id="l14L">ਟੰ</td>
+          <td class="entry" id="l14M">ਟਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong14_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -720,42 +385,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong15_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '14', '0', 'ਠ', 'audio/15B.mp3')">
-          ਠ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '1', 'ਠਾ', 'audio/15C.mp3')">
-          ਠਾ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '2', 'ਠਿ', 'audio/15D.mp3')">
-          ਠਿ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '3', 'ਠੀ', 'audio/15E.mp3')">
-          ਠੀ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '4', 'ਠੁ', 'audio/15F.mp3')">
-          ਠੁ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '5', 'ਠੂ', 'audio/15G.mp3')">
-          ਠੂ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '6', 'ਠੇ', 'audio/15H.mp3')">
-          ਠੇ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '7', 'ਠੈ', 'audio/15I.mp3')">
-          ਠੈ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '8', 'ਠੋ', 'audio/15J.mp3')">
-          ਠੋ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '9', 'ਠੌ', 'audio/15K.mp3')">
-          ਠੌ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '10', 'ਠੰ', 'audio/15L.mp3')">
-          ਠੰ</td>
-          <td class="entry"
-          onclick="showPopup( '14', '11', 'ਠਾਂ', 'audio/15M.mp3')">
-          ਠਾਂ</td>
+          <td class="entry" id="l15B">ਠ</td>
+          <td class="entry" id="l15C">ਠਾ</td>
+          <td class="entry" id="l15D">ਠਿ</td>
+          <td class="entry" id="l15E">ਠੀ</td>
+          <td class="entry" id="l15F">ਠੁ</td>
+          <td class="entry" id="l15G">ਠੂ</td>
+          <td class="entry" id="l15H">ਠੇ</td>
+          <td class="entry" id="l15I">ਠੈ</td>
+          <td class="entry" id="l15J">ਠੋ</td>
+          <td class="entry" id="l15K">ਠੌ</td>
+          <td class="entry" id="l15L">ਠੰ</td>
+          <td class="entry" id="l15M">ਠਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong15_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -764,42 +405,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong16_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '15', '0', 'ਡ', 'audio/16B.mp3')">
-          ਡ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '1', 'ਡਾ', 'audio/16C.mp3')">
-          ਡਾ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '2', 'ਡਿ', 'audio/16D.mp3')">
-          ਡਿ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '3', 'ਡੀ', 'audio/16E.mp3')">
-          ਡੀ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '4', 'ਡੁ', 'audio/16F.mp3')">
-          ਡੁ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '5', 'ਡੂ', 'audio/16G.mp3')">
-          ਡੂ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '6', 'ਡੇ', 'audio/16H.mp3')">
-          ਡੇ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '7', 'ਡੈ', 'audio/16I.mp3')">
-          ਡੈ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '8', 'ਡੋ', 'audio/16J.mp3')">
-          ਡੋ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '9', 'ਡੌ', 'audio/16K.mp3')">
-          ਡੌ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '10', 'ਡੰ', 'audio/16L.mp3')">
-          ਡੰ</td>
-          <td class="entry"
-          onclick="showPopup( '15', '11', 'ਡਾਂ', 'audio/16M.mp3')">
-          ਡਾਂ</td>
+          <td class="entry" id="l16B">ਡ</td>
+          <td class="entry" id="l16C">ਡਾ</td>
+          <td class="entry" id="l16D">ਡਿ</td>
+          <td class="entry" id="l16E">ਡੀ</td>
+          <td class="entry" id="l16F">ਡੁ</td>
+          <td class="entry" id="l16G">ਡੂ</td>
+          <td class="entry" id="l16H">ਡੇ</td>
+          <td class="entry" id="l16I">ਡੈ</td>
+          <td class="entry" id="l16J">ਡੋ</td>
+          <td class="entry" id="l16K">ਡੌ</td>
+          <td class="entry" id="l16L">ਡੰ</td>
+          <td class="entry" id="l16M">ਡਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong16_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -808,42 +425,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong17_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '16', '0', 'ਢ', 'audio/17B.mp3')">
-          ਢ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '1', 'ਢਾ', 'audio/17C.mp3')">
-          ਢਾ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '2', 'ਢਿ', 'audio/17D.mp3')">
-          ਢਿ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '3', 'ਢੀ', 'audio/17E.mp3')">
-          ਢੀ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '4', 'ਢੁ', 'audio/17F.mp3')">
-          ਢੁ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '5', 'ਢੂ', 'audio/17G.mp3')">
-          ਢੂ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '6', 'ਢੇ', 'audio/17H.mp3')">
-          ਢੇ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '7', 'ਢੈ', 'audio/17I.mp3')">
-          ਢੈ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '8', 'ਢੋ', 'audio/17J.mp3')">
-          ਢੋ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '9', 'ਢੌ', 'audio/17K.mp3')">
-          ਢੌ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '10', 'ਢੰ', 'audio/17L.mp3')">
-          ਢੰ</td>
-          <td class="entry"
-          onclick="showPopup( '16', '11', 'ਢਾਂ', 'audio/17M.mp3')">
-          ਢਾਂ</td>
+          <td class="entry" id="l17B">ਢ</td>
+          <td class="entry" id="l17C">ਢਾ</td>
+          <td class="entry" id="l17D">ਢਿ</td>
+          <td class="entry" id="l17E">ਢੀ</td>
+          <td class="entry" id="l17F">ਢੁ</td>
+          <td class="entry" id="l17G">ਢੂ</td>
+          <td class="entry" id="l17H">ਢੇ</td>
+          <td class="entry" id="l17I">ਢੈ</td>
+          <td class="entry" id="l17J">ਢੋ</td>
+          <td class="entry" id="l17K">ਢੌ</td>
+          <td class="entry" id="l17L">ਢੰ</td>
+          <td class="entry" id="l17M">ਢਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong17_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -852,42 +445,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong18_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '17', '0', 'ਣ', 'audio/18B.mp3')">
-          ਣ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '1', 'ਣਾ', 'audio/18C.mp3')">
-          ਣਾ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '2', 'ਣਿ', 'audio/18D.mp3')">
-          ਣਿ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '3', 'ਣੀ', 'audio/18E.mp3')">
-          ਣੀ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '4', 'ਣੁ', 'audio/18F.mp3')">
-          ਣੁ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '5', 'ਣੂ', 'audio/18G.mp3')">
-          ਣੂ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '6', 'ਣੇ', 'audio/18H.mp3')">
-          ਣੇ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '7', 'ਣੈ', 'audio/18I.mp3')">
-          ਣੈ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '8', 'ਣੋ', 'audio/18J.mp3')">
-          ਣੋ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '9', 'ਣੌ', 'audio/18K.mp3')">
-          ਣੌ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '10', 'ਣੰ', 'audio/18L.mp3')">
-          ਣੰ</td>
-          <td class="entry"
-          onclick="showPopup( '17', '11', 'ਣਾਂ', 'audio/18M.mp3')">
-          ਣਾਂ</td>
+          <td class="entry" id="l18B">ਣ</td>
+          <td class="entry" id="l18C">ਣਾ</td>
+          <td class="entry" id="l18D">ਣਿ</td>
+          <td class="entry" id="l18E">ਣੀ</td>
+          <td class="entry" id="l18F">ਣੁ</td>
+          <td class="entry" id="l18G">ਣੂ</td>
+          <td class="entry" id="l18H">ਣੇ</td>
+          <td class="entry" id="l18I">ਣੈ</td>
+          <td class="entry" id="l18J">ਣੋ</td>
+          <td class="entry" id="l18K">ਣੌ</td>
+          <td class="entry" id="l18L">ਣੰ</td>
+          <td class="entry" id="l18M">ਣਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong18_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -896,42 +465,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong19_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '18', '0', 'ਤ', 'audio/19B.mp3')">
-          ਤ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '1', 'ਤਾ', 'audio/19C.mp3')">
-          ਤਾ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '2', 'ਤਿ', 'audio/19D.mp3')">
-          ਤਿ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '3', 'ਤੀ', 'audio/19E.mp3')">
-          ਤੀ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '4', 'ਤੁ', 'audio/19F.mp3')">
-          ਤੁ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '5', 'ਤੂ', 'audio/19G.mp3')">
-          ਤੂ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '6', 'ਤੇ', 'audio/19H.mp3')">
-          ਤੇ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '7', 'ਤੈ', 'audio/19I.mp3')">
-          ਤੈ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '8', 'ਤੋ', 'audio/19J.mp3')">
-          ਤੋ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '9', 'ਤੌ', 'audio/19K.mp3')">
-          ਤੌ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '10', 'ਤੰ', 'audio/19L.mp3')">
-          ਤੰ</td>
-          <td class="entry"
-          onclick="showPopup( '18', '11', 'ਤਾਂ', 'audio/19M.mp3')">
-          ਤਾਂ</td>
+          <td class="entry" id="l19B">ਤ</td>
+          <td class="entry" id="l19C">ਤਾ</td>
+          <td class="entry" id="l19D">ਤਿ</td>
+          <td class="entry" id="l19E">ਤੀ</td>
+          <td class="entry" id="l19F">ਤੁ</td>
+          <td class="entry" id="l19G">ਤੂ</td>
+          <td class="entry" id="l19H">ਤੇ</td>
+          <td class="entry" id="l19I">ਤੈ</td>
+          <td class="entry" id="l19J">ਤੋ</td>
+          <td class="entry" id="l19K">ਤੌ</td>
+          <td class="entry" id="l19L">ਤੰ</td>
+          <td class="entry" id="l19M">ਤਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong19_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -940,42 +485,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong20_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '19', '0', 'ਥ', 'audio/20B.mp3')">
-          ਥ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '1', 'ਥਾ', 'audio/20C.mp3')">
-          ਥਾ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '2', 'ਥਿ', 'audio/20D.mp3')">
-          ਥਿ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '3', 'ਥੀ', 'audio/20E.mp3')">
-          ਥੀ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '4', 'ਥੁ', 'audio/20F.mp3')">
-          ਥੁ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '5', 'ਥੂ', 'audio/20G.mp3')">
-          ਥੂ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '6', 'ਥੇ', 'audio/20H.mp3')">
-          ਥੇ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '7', 'ਥੈ', 'audio/20I.mp3')">
-          ਥੈ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '8', 'ਥੋ', 'audio/20J.mp3')">
-          ਥੋ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '9', 'ਥੌ', 'audio/20K.mp3')">
-          ਥੌ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '10', 'ਥੰ', 'audio/20L.mp3')">
-          ਥੰ</td>
-          <td class="entry"
-          onclick="showPopup( '19', '11', 'ਥਾਂ', 'audio/20M.mp3')">
-          ਥਾਂ</td>
+          <td class="entry" id="l20B">ਥ</td>
+          <td class="entry" id="l20C">ਥਾ</td>
+          <td class="entry" id="l20D">ਥਿ</td>
+          <td class="entry" id="l20E">ਥੀ</td>
+          <td class="entry" id="l20F">ਥੁ</td>
+          <td class="entry" id="l20G">ਥੂ</td>
+          <td class="entry" id="l20H">ਥੇ</td>
+          <td class="entry" id="l20I">ਥੈ</td>
+          <td class="entry" id="l20J">ਥੋ</td>
+          <td class="entry" id="l20K">ਥੌ</td>
+          <td class="entry" id="l20L">ਥੰ</td>
+          <td class="entry" id="l20M">ਥਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong20_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -984,42 +505,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong21_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '20', '0', 'ਦ', 'audio/21B.mp3')">
-          ਦ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '1', 'ਦਾ', 'audio/21C.mp3')">
-          ਦਾ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '2', 'ਦਿ', 'audio/21D.mp3')">
-          ਦਿ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '3', 'ਦੀ', 'audio/21E.mp3')">
-          ਦੀ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '4', 'ਦੁ', 'audio/21F.mp3')">
-          ਦੁ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '5', 'ਦੂ', 'audio/21G.mp3')">
-          ਦੂ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '6', 'ਦੇ', 'audio/21H.mp3')">
-          ਦੇ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '7', 'ਦੈ', 'audio/21I.mp3')">
-          ਦੈ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '8', 'ਦੋ', 'audio/21J.mp3')">
-          ਦੋ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '9', 'ਦੌ', 'audio/21K.mp3')">
-          ਦੌ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '10', 'ਦੰ', 'audio/21L.mp3')">
-          ਦੰ</td>
-          <td class="entry"
-          onclick="showPopup( '20', '11', 'ਦਾਂ', 'audio/21M.mp3')">
-          ਦਾਂ</td>
+          <td class="entry" id="l21B">ਦ</td>
+          <td class="entry" id="l21C">ਦਾ</td>
+          <td class="entry" id="l21D">ਦਿ</td>
+          <td class="entry" id="l21E">ਦੀ</td>
+          <td class="entry" id="l21F">ਦੁ</td>
+          <td class="entry" id="l21G">ਦੂ</td>
+          <td class="entry" id="l21H">ਦੇ</td>
+          <td class="entry" id="l21I">ਦੈ</td>
+          <td class="entry" id="l21J">ਦੋ</td>
+          <td class="entry" id="l21K">ਦੌ</td>
+          <td class="entry" id="l21L">ਦੰ</td>
+          <td class="entry" id="l21M">ਦਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong21_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1028,42 +525,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong22_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '21', '0', 'ਧ', 'audio/22B.mp3')">
-          ਧ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '1', 'ਧਾ', 'audio/22C.mp3')">
-          ਧਾ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '2', 'ਧਿ', 'audio/22D.mp3')">
-          ਧਿ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '3', 'ਧੀ', 'audio/22E.mp3')">
-          ਧੀ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '4', 'ਧੁ', 'audio/22F.mp3')">
-          ਧੁ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '5', 'ਧੂ', 'audio/22G.mp3')">
-          ਧੂ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '6', 'ਧੇ', 'audio/22H.mp3')">
-          ਧੇ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '7', 'ਧੈ', 'audio/22I.mp3')">
-          ਧੈ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '8', 'ਧੋ', 'audio/22J.mp3')">
-          ਧੋ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '9', 'ਧੌ', 'audio/22K.mp3')">
-          ਧੌ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '10', 'ਧੰ', 'audio/22L.mp3')">
-          ਧੰ</td>
-          <td class="entry"
-          onclick="showPopup( '21', '11', 'ਧਾਂ', 'audio/22M.mp3')">
-          ਧਾਂ</td>
+          <td class="entry" id="l22B">ਧ</td>
+          <td class="entry" id="l22C">ਧਾ</td>
+          <td class="entry" id="l22D">ਧਿ</td>
+          <td class="entry" id="l22E">ਧੀ</td>
+          <td class="entry" id="l22F">ਧੁ</td>
+          <td class="entry" id="l22G">ਧੂ</td>
+          <td class="entry" id="l22H">ਧੇ</td>
+          <td class="entry" id="l22I">ਧੈ</td>
+          <td class="entry" id="l22J">ਧੋ</td>
+          <td class="entry" id="l22K">ਧੌ</td>
+          <td class="entry" id="l22L">ਧੰ</td>
+          <td class="entry" id="l22M">ਧਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong22_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1072,42 +545,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong23_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '22', '0', 'ਨ', 'audio/23B.mp3')">
-          ਨ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '1', 'ਨਾ', 'audio/23C.mp3')">
-          ਨਾ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '2', 'ਨਿ', 'audio/23D.mp3')">
-          ਨਿ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '3', 'ਨੀ', 'audio/23E.mp3')">
-          ਨੀ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '4', 'ਨੁ', 'audio/23F.mp3')">
-          ਨੁ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '5', 'ਨੂ', 'audio/23G.mp3')">
-          ਨੂ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '6', 'ਨੇ', 'audio/23H.mp3')">
-          ਨੇ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '7', 'ਨੈ', 'audio/23I.mp3')">
-          ਨੈ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '8', 'ਨੋ', 'audio/23J.mp3')">
-          ਨੋ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '9', 'ਨੌ', 'audio/23K.mp3')">
-          ਨੌ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '10', 'ਨੰ', 'audio/23L.mp3')">
-          ਨੰ</td>
-          <td class="entry"
-          onclick="showPopup( '22', '11', 'ਨਾਂ', 'audio/23M.mp3')">
-          ਨਾਂ</td>
+          <td class="entry" id="l23B">ਨ</td>
+          <td class="entry" id="l23C">ਨਾ</td>
+          <td class="entry" id="l23D">ਨਿ</td>
+          <td class="entry" id="l23E">ਨੀ</td>
+          <td class="entry" id="l23F">ਨੁ</td>
+          <td class="entry" id="l23G">ਨੂ</td>
+          <td class="entry" id="l23H">ਨੇ</td>
+          <td class="entry" id="l23I">ਨੈ</td>
+          <td class="entry" id="l23J">ਨੋ</td>
+          <td class="entry" id="l23K">ਨੌ</td>
+          <td class="entry" id="l23L">ਨੰ</td>
+          <td class="entry" id="l23M">ਨਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong23_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1116,42 +565,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong24_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '23', '0', 'ਪ', 'audio/24B.mp3')">
-          ਪ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '1', 'ਪਾ', 'audio/24C.mp3')">
-          ਪਾ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '2', 'ਪਿ', 'audio/24D.mp3')">
-          ਪਿ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '3', 'ਪੀ', 'audio/24E.mp3')">
-          ਪੀ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '4', 'ਪੁ', 'audio/24F.mp3')">
-          ਪੁ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '5', 'ਪੂ', 'audio/24G.mp3')">
-          ਪੂ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '6', 'ਪੇ', 'audio/24H.mp3')">
-          ਪੇ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '7', 'ਪੈ', 'audio/24I.mp3')">
-          ਪੈ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '8', 'ਪੋ', 'audio/24J.mp3')">
-          ਪੋ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '9', 'ਪੌ', 'audio/24K.mp3')">
-          ਪੌ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '10', 'ਪੰ', 'audio/24L.mp3')">
-          ਪੰ</td>
-          <td class="entry"
-          onclick="showPopup( '23', '11', 'ਪਾਂ', 'audio/24M.mp3')">
-          ਪਾਂ</td>
+          <td class="entry" id="l24B">ਪ</td>
+          <td class="entry" id="l24C">ਪਾ</td>
+          <td class="entry" id="l24D">ਪਿ</td>
+          <td class="entry" id="l24E">ਪੀ</td>
+          <td class="entry" id="l24F">ਪੁ</td>
+          <td class="entry" id="l24G">ਪੂ</td>
+          <td class="entry" id="l24H">ਪੇ</td>
+          <td class="entry" id="l24I">ਪੈ</td>
+          <td class="entry" id="l24J">ਪੋ</td>
+          <td class="entry" id="l24K">ਪੌ</td>
+          <td class="entry" id="l24L">ਪੰ</td>
+          <td class="entry" id="l24M">ਪਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong24_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1160,42 +585,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong25_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '24', '0', 'ਫ', 'audio/25B.mp3')">
-          ਫ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '1', 'ਫਾ', 'audio/25C.mp3')">
-          ਫਾ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '2', 'ਫਿ', 'audio/25D.mp3')">
-          ਫਿ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '3', 'ਫੀ', 'audio/25E.mp3')">
-          ਫੀ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '4', 'ਫੁ', 'audio/25F.mp3')">
-          ਫੁ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '5', 'ਫੂ', 'audio/25G.mp3')">
-          ਫੂ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '6', 'ਫੇ', 'audio/25H.mp3')">
-          ਫੇ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '7', 'ਫੈ', 'audio/25I.mp3')">
-          ਫੈ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '8', 'ਫੋ', 'audio/25J.mp3')">
-          ਫੋ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '9', 'ਫੌ', 'audio/25K.mp3')">
-          ਫੌ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '10', 'ਫੰ', 'audio/25L.mp3')">
-          ਫੰ</td>
-          <td class="entry"
-          onclick="showPopup( '24', '11', 'ਫਾਂ', 'audio/25M.mp3')">
-          ਫਾਂ</td>
+          <td class="entry" id="l25B">ਫ</td>
+          <td class="entry" id="l25C">ਫਾ</td>
+          <td class="entry" id="l25D">ਫਿ</td>
+          <td class="entry" id="l25E">ਫੀ</td>
+          <td class="entry" id="l25F">ਫੁ</td>
+          <td class="entry" id="l25G">ਫੂ</td>
+          <td class="entry" id="l25H">ਫੇ</td>
+          <td class="entry" id="l25I">ਫੈ</td>
+          <td class="entry" id="l25J">ਫੋ</td>
+          <td class="entry" id="l25K">ਫੌ</td>
+          <td class="entry" id="l25L">ਫੰ</td>
+          <td class="entry" id="l25M">ਫਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong25_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1204,42 +605,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong26_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '25', '0', 'ਬ', 'audio/26B.mp3')">
-          ਬ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '1', 'ਬਾ', 'audio/26C.mp3')">
-          ਬਾ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '2', 'ਬਿ', 'audio/26D.mp3')">
-          ਬਿ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '3', 'ਬੀ', 'audio/26E.mp3')">
-          ਬੀ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '4', 'ਬੁ', 'audio/26F.mp3')">
-          ਬੁ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '5', 'ਬੂ', 'audio/26G.mp3')">
-          ਬੂ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '6', 'ਬੇ', 'audio/26H.mp3')">
-          ਬੇ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '7', 'ਬੈ', 'audio/26I.mp3')">
-          ਬੈ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '8', 'ਬੋ', 'audio/26J.mp3')">
-          ਬੋ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '9', 'ਬੌ', 'audio/26K.mp3')">
-          ਬੌ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '10', 'ਬੰ', 'audio/26L.mp3')">
-          ਬੰ</td>
-          <td class="entry"
-          onclick="showPopup( '25', '11', 'ਬਾਂ', 'audio/26M.mp3')">
-          ਬਾਂ</td>
+          <td class="entry" id="l26B">ਬ</td>
+          <td class="entry" id="l26C">ਬਾ</td>
+          <td class="entry" id="l26D">ਬਿ</td>
+          <td class="entry" id="l26E">ਬੀ</td>
+          <td class="entry" id="l26F">ਬੁ</td>
+          <td class="entry" id="l26G">ਬੂ</td>
+          <td class="entry" id="l26H">ਬੇ</td>
+          <td class="entry" id="l26I">ਬੈ</td>
+          <td class="entry" id="l26J">ਬੋ</td>
+          <td class="entry" id="l26K">ਬੌ</td>
+          <td class="entry" id="l26L">ਬੰ</td>
+          <td class="entry" id="l26M">ਬਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong26_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1248,42 +625,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong27_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '26', '0', 'ਭ', 'audio/27B.mp3')">
-          ਭ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '1', 'ਭਾ', 'audio/27C.mp3')">
-          ਭਾ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '2', 'ਭਿ', 'audio/27D.mp3')">
-          ਭਿ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '3', 'ਭੀ', 'audio/27E.mp3')">
-          ਭੀ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '4', 'ਭੁ', 'audio/27F.mp3')">
-          ਭੁ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '5', 'ਭੂ', 'audio/27G.mp3')">
-          ਭੂ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '6', 'ਭੇ', 'audio/27H.mp3')">
-          ਭੇ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '7', 'ਭੈ', 'audio/27I.mp3')">
-          ਭੈ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '8', 'ਭੋ', 'audio/27J.mp3')">
-          ਭੋ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '9', 'ਭੌ', 'audio/27K.mp3')">
-          ਭੌ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '10', 'ਭੰ', 'audio/27L.mp3')">
-          ਭੰ</td>
-          <td class="entry"
-          onclick="showPopup( '26', '11', 'ਭਾਂ', 'audio/27M.mp3')">
-          ਭਾਂ</td>
+          <td class="entry" id="l27B">ਭ</td>
+          <td class="entry" id="l27C">ਭਾ</td>
+          <td class="entry" id="l27D">ਭਿ</td>
+          <td class="entry" id="l27E">ਭੀ</td>
+          <td class="entry" id="l27F">ਭੁ</td>
+          <td class="entry" id="l27G">ਭੂ</td>
+          <td class="entry" id="l27H">ਭੇ</td>
+          <td class="entry" id="l27I">ਭੈ</td>
+          <td class="entry" id="l27J">ਭੋ</td>
+          <td class="entry" id="l27K">ਭੌ</td>
+          <td class="entry" id="l27L">ਭੰ</td>
+          <td class="entry" id="l27M">ਭਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong27_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1292,42 +645,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong28_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '27', '0', 'ਮ', 'audio/28B.mp3')">
-          ਮ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '1', 'ਮਾ', 'audio/28C.mp3')">
-          ਮਾ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '2', 'ਮਿ', 'audio/28D.mp3')">
-          ਮਿ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '3', 'ਮੀ', 'audio/28E.mp3')">
-          ਮੀ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '4', 'ਮੁ', 'audio/28F.mp3')">
-          ਮੁ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '5', 'ਮੂ', 'audio/28G.mp3')">
-          ਮੂ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '6', 'ਮੇ', 'audio/28H.mp3')">
-          ਮੇ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '7', 'ਮੈ', 'audio/28I.mp3')">
-          ਮੈ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '8', 'ਮੋ', 'audio/28J.mp3')">
-          ਮੋ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '9', 'ਮੌ', 'audio/28K.mp3')">
-          ਮੌ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '10', 'ਮੰ', 'audio/28L.mp3')">
-          ਮੰ</td>
-          <td class="entry"
-          onclick="showPopup( '27', '11', 'ਮਾਂ', 'audio/28M.mp3')">
-          ਮਾਂ</td>
+          <td class="entry" id="l28B">ਮ</td>
+          <td class="entry" id="l28C">ਮਾ</td>
+          <td class="entry" id="l28D">ਮਿ</td>
+          <td class="entry" id="l28E">ਮੀ</td>
+          <td class="entry" id="l28F">ਮੁ</td>
+          <td class="entry" id="l28G">ਮੂ</td>
+          <td class="entry" id="l28H">ਮੇ</td>
+          <td class="entry" id="l28I">ਮੈ</td>
+          <td class="entry" id="l28J">ਮੋ</td>
+          <td class="entry" id="l28K">ਮੌ</td>
+          <td class="entry" id="l28L">ਮੰ</td>
+          <td class="entry" id="l28M">ਮਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong28_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1336,42 +665,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong29_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '28', '0', 'ਯ', 'audio/29B.mp3')">
-          ਯ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '1', 'ਯਾ', 'audio/29C.mp3')">
-          ਯਾ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '2', 'ਯਿ', 'audio/29D.mp3')">
-          ਯਿ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '3', 'ਯੀ', 'audio/29E.mp3')">
-          ਯੀ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '4', 'ਯੁ', 'audio/29F.mp3')">
-          ਯੁ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '5', 'ਯੂ', 'audio/29G.mp3')">
-          ਯੂ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '6', 'ਯੇ', 'audio/29H.mp3')">
-          ਯੇ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '7', 'ਯੈ', 'audio/29I.mp3')">
-          ਯੈ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '8', 'ਯੋ', 'audio/29J.mp3')">
-          ਯੋ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '9', 'ਯੌ', 'audio/29K.mp3')">
-          ਯੌ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '10', 'ਯੰ', 'audio/29L.mp3')">
-          ਯੰ</td>
-          <td class="entry"
-          onclick="showPopup( '28', '11', 'ਯਾਂ', 'audio/29M.mp3')">
-          ਯਾਂ</td>
+          <td class="entry" id="l29B">ਯ</td>
+          <td class="entry" id="l29C">ਯਾ</td>
+          <td class="entry" id="l29D">ਯਿ</td>
+          <td class="entry" id="l29E">ਯੀ</td>
+          <td class="entry" id="l29F">ਯੁ</td>
+          <td class="entry" id="l29G">ਯੂ</td>
+          <td class="entry" id="l29H">ਯੇ</td>
+          <td class="entry" id="l29I">ਯੈ</td>
+          <td class="entry" id="l29J">ਯੋ</td>
+          <td class="entry" id="l29K">ਯੌ</td>
+          <td class="entry" id="l29L">ਯੰ</td>
+          <td class="entry" id="l29M">ਯਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong29_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1380,42 +685,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong30_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '29', '0', 'ਰ', 'audio/30B.mp3')">
-          ਰ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '1', 'ਰਾ', 'audio/30C.mp3')">
-          ਰਾ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '2', 'ਰਿ', 'audio/30D.mp3')">
-          ਰਿ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '3', 'ਰੀ', 'audio/30E.mp3')">
-          ਰੀ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '4', 'ਰੁ', 'audio/30F.mp3')">
-          ਰੁ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '5', 'ਰੂ', 'audio/30G.mp3')">
-          ਰੂ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '6', 'ਰੇ', 'audio/30H.mp3')">
-          ਰੇ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '7', 'ਰੈ', 'audio/30I.mp3')">
-          ਰੈ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '8', 'ਰੋ', 'audio/30J.mp3')">
-          ਰੋ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '9', 'ਰੌ', 'audio/30K.mp3')">
-          ਰੌ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '10', 'ਰੰ', 'audio/30L.mp3')">
-          ਰੰ</td>
-          <td class="entry"
-          onclick="showPopup( '29', '11', 'ਰਾਂ', 'audio/30M.mp3')">
-          ਰਾਂ</td>
+          <td class="entry" id="l30B">ਰ</td>
+          <td class="entry" id="l30C">ਰਾ</td>
+          <td class="entry" id="l30D">ਰਿ</td>
+          <td class="entry" id="l30E">ਰੀ</td>
+          <td class="entry" id="l30F">ਰੁ</td>
+          <td class="entry" id="l30G">ਰੂ</td>
+          <td class="entry" id="l30H">ਰੇ</td>
+          <td class="entry" id="l30I">ਰੈ</td>
+          <td class="entry" id="l30J">ਰੋ</td>
+          <td class="entry" id="l30K">ਰੌ</td>
+          <td class="entry" id="l30L">ਰੰ</td>
+          <td class="entry" id="l30M">ਰਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong30_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1424,42 +705,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong31_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '30', '0', 'ਲ', 'audio/31B.mp3')">
-          ਲ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '1', 'ਲਾ', 'audio/31C.mp3')">
-          ਲਾ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '2', 'ਲਿ', 'audio/31D.mp3')">
-          ਲਿ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '3', 'ਲੀ', 'audio/31E.mp3')">
-          ਲੀ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '4', 'ਲੁ', 'audio/31F.mp3')">
-          ਲੁ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '5', 'ਲੂ', 'audio/31G.mp3')">
-          ਲੂ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '6', 'ਲੇ', 'audio/31H.mp3')">
-          ਲੇ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '7', 'ਲੈ', 'audio/31I.mp3')">
-          ਲੈ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '8', 'ਲੋ', 'audio/31J.mp3')">
-          ਲੋ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '9', 'ਲੌ', 'audio/31K.mp3')">
-          ਲੌ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '10', 'ਲੰ', 'audio/31L.mp3')">
-          ਲੰ</td>
-          <td class="entry"
-          onclick="showPopup( '30', '11', 'ਲਾਂ', 'audio/31M.mp3')">
-          ਲਾਂ</td>
+          <td class="entry" id="l31B">ਲ</td>
+          <td class="entry" id="l31C">ਲਾ</td>
+          <td class="entry" id="l31D">ਲਿ</td>
+          <td class="entry" id="l31E">ਲੀ</td>
+          <td class="entry" id="l31F">ਲੁ</td>
+          <td class="entry" id="l31G">ਲੂ</td>
+          <td class="entry" id="l31H">ਲੇ</td>
+          <td class="entry" id="l31I">ਲੈ</td>
+          <td class="entry" id="l31J">ਲੋ</td>
+          <td class="entry" id="l31K">ਲੌ</td>
+          <td class="entry" id="l31L">ਲੰ</td>
+          <td class="entry" id="l31M">ਲਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong31_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1468,42 +725,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong32_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '31', '0', 'ਵ', 'audio/32B.mp3')">
-          ਵ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '1', 'ਵਾ', 'audio/32C.mp3')">
-          ਵਾ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '2', 'ਵਿ', 'audio/32D.mp3')">
-          ਵਿ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '3', 'ਵੀ', 'audio/32E.mp3')">
-          ਵੀ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '4', 'ਵੁ', 'audio/32F.mp3')">
-          ਵੁ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '5', 'ਵੂ', 'audio/32G.mp3')">
-          ਵੂ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '6', 'ਵੇ', 'audio/32H.mp3')">
-          ਵੇ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '7', 'ਵੈ', 'audio/32I.mp3')">
-          ਵੈ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '8', 'ਵੋ', 'audio/32J.mp3')">
-          ਵੋ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '9', 'ਵੌ', 'audio/32K.mp3')">
-          ਵੌ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '10', 'ਵੰ', 'audio/32L.mp3')">
-          ਵੰ</td>
-          <td class="entry"
-          onclick="showPopup( '31', '11', 'ਵਾਂ', 'audio/32M.mp3')">
-          ਵਾਂ</td>
+          <td class="entry" id="l32B">ਵ</td>
+          <td class="entry" id="l32C">ਵਾ</td>
+          <td class="entry" id="l32D">ਵਿ</td>
+          <td class="entry" id="l32E">ਵੀ</td>
+          <td class="entry" id="l32F">ਵੁ</td>
+          <td class="entry" id="l32G">ਵੂ</td>
+          <td class="entry" id="l32H">ਵੇ</td>
+          <td class="entry" id="l32I">ਵੈ</td>
+          <td class="entry" id="l32J">ਵੋ</td>
+          <td class="entry" id="l32K">ਵੌ</td>
+          <td class="entry" id="l32L">ਵੰ</td>
+          <td class="entry" id="l32M">ਵਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong32_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1512,42 +745,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong33_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '32', '0', 'ੜ', 'audio/33B.mp3')">
-          ੜ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '1', 'ੜਾ', 'audio/33C.mp3')">
-          ੜਾ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '2', 'ੜਿ', 'audio/33D.mp3')">
-          ੜਿ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '3', 'ੜੀ', 'audio/33E.mp3')">
-          ੜੀ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '4', 'ੜੁ', 'audio/33F.mp3')">
-          ੜੁ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '5', 'ੜੂ', 'audio/33G.mp3')">
-          ੜੂ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '6', 'ੜੇ', 'audio/33H.mp3')">
-          ੜੇ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '7', 'ੜੈ', 'audio/33I.mp3')">
-          ੜੈ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '8', 'ੜੋ', 'audio/33J.mp3')">
-          ੜੋ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '9', 'ੜੌ', 'audio/33K.mp3')">
-          ੜੌ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '10', 'ੜੰ', 'audio/33L.mp3')">
-          ੜੰ</td>
-          <td class="entry"
-          onclick="showPopup( '32', '11', 'ੜਾਂ', 'audio/33M.mp3')">
-          ੜਾਂ</td>
+          <td class="entry" id="l33B">ੜ</td>
+          <td class="entry" id="l33C">ੜਾ</td>
+          <td class="entry" id="l33D">ੜਿ</td>
+          <td class="entry" id="l33E">ੜੀ</td>
+          <td class="entry" id="l33F">ੜੁ</td>
+          <td class="entry" id="l33G">ੜੂ</td>
+          <td class="entry" id="l33H">ੜੇ</td>
+          <td class="entry" id="l33I">ੜੈ</td>
+          <td class="entry" id="l33J">ੜੋ</td>
+          <td class="entry" id="l33K">ੜੌ</td>
+          <td class="entry" id="l33L">ੜੰ</td>
+          <td class="entry" id="l33M">ੜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong33_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1556,42 +765,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong34_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '33', '0', 'ਸ਼', 'audio/34B.mp3')">
-          ਸ਼</td>
-          <td class="entry"
-          onclick="showPopup( '33', '1', 'ਸ਼ਾ', 'audio/34C.mp3')">
-          ਸ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '2', 'ਸ਼ਿ', 'audio/34D.mp3')">
-          ਸ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '3', 'ਸ਼ੀ', 'audio/34E.mp3')">
-          ਸ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '4', 'ਸ਼ੁ', 'audio/34F.mp3')">
-          ਸ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '5', 'ਸ਼ੂ', 'audio/34G.mp3')">
-          ਸ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '6', 'ਸ਼ੇ', 'audio/34H.mp3')">
-          ਸ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '7', 'ਸ਼ੈ', 'audio/34I.mp3')">
-          ਸ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '8', 'ਸ਼ੋ', 'audio/34J.mp3')">
-          ਸ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '9', 'ਸ਼ੌ', 'audio/34K.mp3')">
-          ਸ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '10', 'ਸ਼ੰ', 'audio/34L.mp3')">
-          ਸ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '33', '11', 'ਸ਼ਾਂ', 'audio/34M.mp3')">
-          ਸ਼ਾਂ</td>
+          <td class="entry" id="l34B">ਸ਼</td>
+          <td class="entry" id="l34C">ਸ਼ਾ</td>
+          <td class="entry" id="l34D">ਸ਼ਿ</td>
+          <td class="entry" id="l34E">ਸ਼ੀ</td>
+          <td class="entry" id="l34F">ਸ਼ੁ</td>
+          <td class="entry" id="l34G">ਸ਼ੂ</td>
+          <td class="entry" id="l34H">ਸ਼ੇ</td>
+          <td class="entry" id="l34I">ਸ਼ੈ</td>
+          <td class="entry" id="l34J">ਸ਼ੋ</td>
+          <td class="entry" id="l34K">ਸ਼ੌ</td>
+          <td class="entry" id="l34L">ਸ਼ੰ</td>
+          <td class="entry" id="l34M">ਸ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong34_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1600,41 +785,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong35_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '34', '0', 'ਖ਼', 'audio/35B.mp3')">
-          ਖ਼</td>
-          <td class="entry"
-          onclick="showPopup( '34', '1', 'ਖ਼ਾ', 'audio/35C.mp3')">
-          ਖ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '2', 'ਖ਼ਿ', 'audio/35D.mp3')">
-          ਖ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '3', 'ਖ਼ੀ', 'audio/35E.mp3')">
-          ਖ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '4', 'ਖ਼ੁ', 'audio/35F.mp3')">
-          ਖ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '5', 'ਖ਼ੂ', 'audio/35G.mp3')">
-          ਖ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '6', 'ਖ਼ੇ', 'audio/35H.mp3')">
-          ਖ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '7', 'ਖ਼ੈ', 'audio/35I.mp3')">
-          ਖ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '8', 'ਖ਼ੋ', 'audio/35J.mp3')">
-          ਖ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '9', 'ਖ਼ੌ', 'audio/35K.mp3')">
-          ਖ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '10', 'ਖ਼ੰ', 'audio/35L.mp3')">
-          ਖ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '34', '11', 'ਖ਼ਾਂ', 'audio/35M.mp3')">ਖ਼ਾਂ</td>
+          <td class="entry" id="l35B">ਖ਼</td>
+          <td class="entry" id="l35C">ਖ਼ਾ</td>
+          <td class="entry" id="l35D">ਖ਼ਿ</td>
+          <td class="entry" id="l35E">ਖ਼ੀ</td>
+          <td class="entry" id="l35F">ਖ਼ੁ</td>
+          <td class="entry" id="l35G">ਖ਼ੂ</td>
+          <td class="entry" id="l35H">ਖ਼ੇ</td>
+          <td class="entry" id="l35I">ਖ਼ੈ</td>
+          <td class="entry" id="l35J">ਖ਼ੋ</td>
+          <td class="entry" id="l35K">ਖ਼ੌ</td>
+          <td class="entry" id="l35L">ਖ਼ੰ</td>
+          <td class="entry" id="l35M">ਖ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong35_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1643,41 +805,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong36_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '35', '0', 'ਗ਼', 'audio/36B.mp3')">
-          ਗ਼</td>
-          <td class="entry"
-          onclick="showPopup( '35', '1', 'ਗ਼ਾ', 'audio/36C.mp3')">
-          ਗ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '2', 'ਗ਼ਿ', 'audio/36D.mp3')">
-          ਗ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '3', 'ਗ਼ੀ', 'audio/36E.mp3')">
-          ਗ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '4', 'ਗ਼ੁ', 'audio/36F.mp3')">
-          ਗ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '5', 'ਗ਼ੂ', 'audio/36G.mp3')">
-          ਗ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '6', 'ਗ਼ੇ', 'audio/36H.mp3')">
-          ਗ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '7', 'ਗ਼ੈ', 'audio/36I.mp3')">
-          ਗ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '8', 'ਗ਼ੋ', 'audio/36J.mp3')">
-          ਗ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '9', 'ਗ਼ੌ', 'audio/36K.mp3')">
-          ਗ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '10', 'ਗ਼ੰ', 'audio/36L.mp3')">
-          ਗ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '35', '11', 'ਗ਼ਾਂ', 'audio/36M.mp3')">ਗ਼ਾਂ</td>
+          <td class="entry" id="l36B">ਗ਼</td>
+          <td class="entry" id="l36C">ਗ਼ਾ</td>
+          <td class="entry" id="l36D">ਗ਼ਿ</td>
+          <td class="entry" id="l36E">ਗ਼ੀ</td>
+          <td class="entry" id="l36F">ਗ਼ੁ</td>
+          <td class="entry" id="l36G">ਗ਼ੂ</td>
+          <td class="entry" id="l36H">ਗ਼ੇ</td>
+          <td class="entry" id="l36I">ਗ਼ੈ</td>
+          <td class="entry" id="l36J">ਗ਼ੋ</td>
+          <td class="entry" id="l36K">ਗ਼ੌ</td>
+          <td class="entry" id="l36L">ਗ਼ੰ</td>
+          <td class="entry" id="l36M">ਗ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong36_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1686,42 +825,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong37_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '36', '0', 'ਜ਼', 'audio/37B.mp3')">
-          ਜ਼</td>
-          <td class="entry"
-          onclick="showPopup( '36', '1', 'ਜ਼ਾ', 'audio/37C.mp3')">
-          ਜ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '2', 'ਜ਼ਿ', 'audio/37D.mp3')">
-          ਜ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '3', 'ਜ਼ੀ', 'audio/37E.mp3')">
-          ਜ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '4', 'ਜ਼ੁ', 'audio/37F.mp3')">
-          ਜ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '5', 'ਜ਼ੂ', 'audio/37G.mp3')">
-          ਜ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '6', 'ਜ਼ੇ', 'audio/37H.mp3')">
-          ਜ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '7', 'ਜ਼ੈ', 'audio/37I.mp3')">
-          ਜ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '8', 'ਜ਼ੋ', 'audio/37J.mp3')">
-          ਜ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '9', 'ਜ਼ੌ', 'audio/37K.mp3')">
-          ਜ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '10', 'ਜ਼ੰ', 'audio/37L.mp3')">
-          ਜ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '36', '11', 'ਜ਼ਾਂ', 'audio/37M.mp3')">
-          ਜ਼ਾਂ</td>
+          <td class="entry" id="l37B">ਜ਼</td>
+          <td class="entry" id="l37C">ਜ਼ਾ</td>
+          <td class="entry" id="l37D">ਜ਼ਿ</td>
+          <td class="entry" id="l37E">ਜ਼ੀ</td>
+          <td class="entry" id="l37F">ਜ਼ੁ</td>
+          <td class="entry" id="l37G">ਜ਼ੂ</td>
+          <td class="entry" id="l37H">ਜ਼ੇ</td>
+          <td class="entry" id="l37I">ਜ਼ੈ</td>
+          <td class="entry" id="l37J">ਜ਼ੋ</td>
+          <td class="entry" id="l37K">ਜ਼ੌ</td>
+          <td class="entry" id="l37L">ਜ਼ੰ</td>
+          <td class="entry" id="l37M">ਜ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong37_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1730,41 +845,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong38_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '37', '0', 'ਫ਼', 'audio/38B.mp3')">
-          ਫ਼</td>
-          <td class="entry"
-          onclick="showPopup( '37', '1', 'ਫ਼ਾ', 'audio/38C.mp3')">
-          ਫ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '2', 'ਫ਼ਿ', 'audio/38D.mp3')">
-          ਫ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '3', 'ਫ਼ੀ', 'audio/38E.mp3')">
-          ਫ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '4', 'ਫ਼ੁ', 'audio/38F.mp3')">
-          ਫ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '5', 'ਫ਼ੂ', 'audio/38G.mp3')">
-          ਫ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '6', 'ਫ਼ੇ', 'audio/38H.mp3')">
-          ਫ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '7', 'ਫ਼ੈ', 'audio/38I.mp3')">
-          ਫ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '8', 'ਫ਼ੋ', 'audio/38J.mp3')">
-          ਫ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '9', 'ਫ਼ੌ', 'audio/38K.mp3')">
-          ਫ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '10', 'ਫ਼ੰ', 'audio/38L.mp3')">
-          ਫ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '37', '11', 'ਫ਼ਾਂ', 'audio/38M.mp3')">ਫ਼ਾਂ</td>
+          <td class="entry" id="l38B">ਫ਼</td>
+          <td class="entry" id="l38C">ਫ਼ਾ</td>
+          <td class="entry" id="l38D">ਫ਼ਿ</td>
+          <td class="entry" id="l38E">ਫ਼ੀ</td>
+          <td class="entry" id="l38F">ਫ਼ੁ</td>
+          <td class="entry" id="l38G">ਫ਼ੂ</td>
+          <td class="entry" id="l38H">ਫ਼ੇ</td>
+          <td class="entry" id="l38I">ਫ਼ੈ</td>
+          <td class="entry" id="l38J">ਫ਼ੋ</td>
+          <td class="entry" id="l38K">ਫ਼ੌ</td>
+          <td class="entry" id="l38L">ਫ਼ੰ</td>
+          <td class="entry" id="l38M">ਫ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong38_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1773,41 +865,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrlong39_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '38', '0', 'ਲ਼', 'audio/39B.mp3')">
-          ਲ਼</td>
-          <td class="entry"
-          onclick="showPopup( '38', '1', 'ਲ਼ਾ', 'audio/39C.mp3')">
-          ਲ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '2', 'ਲ਼ਿ', 'audio/39D.mp3')">
-          ਲ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '3', 'ਲ਼ੀ', 'audio/39E.mp3')">
-          ਲ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '4', 'ਲ਼ੁ', 'audio/39F.mp3')">
-          ਲ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '5', 'ਲ਼ੂ', 'audio/39G.mp3')">
-          ਲ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '6', 'ਲ਼ੇ', 'audio/39H.mp3')">
-          ਲ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '7', 'ਲ਼ੈ', 'audio/39I.mp3')">
-          ਲ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '8', 'ਲ਼ੋ', 'audio/39J.mp3')">
-          ਲ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '9', 'ਲ਼ੌ', 'audio/39K.mp3')">
-          ਲ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '10', 'ਲ਼ੰ', 'audio/39L.mp3')">
-          ਲ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '38', '11', 'ਲ਼ਾਂ', 'audio/39M.mp3')">ਲ਼ਾਂ</td>
+          <td class="entry" id="l39B">ਲ਼</td>
+          <td class="entry" id="l39C">ਲ਼ਾ</td>
+          <td class="entry" id="l39D">ਲ਼ਿ</td>
+          <td class="entry" id="l39E">ਲ਼ੀ</td>
+          <td class="entry" id="l39F">ਲ਼ੁ</td>
+          <td class="entry" id="l39G">ਲ਼ੂ</td>
+          <td class="entry" id="l39H">ਲ਼ੇ</td>
+          <td class="entry" id="l39I">ਲ਼ੈ</td>
+          <td class="entry" id="l39J">ਲ਼ੋ</td>
+          <td class="entry" id="l39K">ਲ਼ੌ</td>
+          <td class="entry" id="l39L">ਲ਼ੰ</td>
+          <td class="entry" id="l39M">ਲ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtllong39_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1918,42 +987,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort01_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '40', '0', 'ਅ', 'audio/01b.mp3')">
-          ਅ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '1', 'ਆ', 'audio/01c.mp3')">
-          ਆ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '2', 'ਇ', 'audio/01d.mp3')">
-          ਇ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '3', 'ਈ', 'audio/01e.mp3')">
-          ਈ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '4', 'ਉ', 'audio/01f.mp3')">
-          ਉ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '5', 'ਊ', 'audio/01g.mp3')">
-          ਊ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '6', 'ਏ', 'audio/01h.mp3')">
-          ਏ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '7', 'ਐ', 'audio/01i.mp3')">
-          ਐ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '8', 'ਓ', 'audio/01j.mp3')">
-          ਓ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '9', 'ਔ', 'audio/01k.mp3')">
-          ਔ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '10', 'ਅੰ', 'audio/01l.mp3')">
-          ਅੰ</td>
-          <td class="entry"
-          onclick="showPopup( '40', '11', 'ਆਂ', 'audio/01m.mp3')">
-          ਆਂ</td>
+          <td class="entry" id="s01b">ਅ</td>
+          <td class="entry" id="s01c">ਆ</td>
+          <td class="entry" id="s01d">ਇ</td>
+          <td class="entry" id="s01e">ਈ</td>
+          <td class="entry" id="s01f">ਉ</td>
+          <td class="entry" id="s01g">ਊ</td>
+          <td class="entry" id="s01h">ਏ</td>
+          <td class="entry" id="s01i">ਐ</td>
+          <td class="entry" id="s01j">ਓ</td>
+          <td class="entry" id="s01k">ਔ</td>
+          <td class="entry" id="s01l">ਅੰ</td>
+          <td class="entry" id="s01m">ਆਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort01_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -1962,42 +1007,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort02_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '41', '0', 'ਸ', 'audio/02b.mp3')">
-          ਸ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '1', 'ਸਾ', 'audio/02c.mp3')">
-          ਸਾ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '2', 'ਸਿ', 'audio/02d.mp3')">
-          ਸਿ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '3', 'ਸੀ', 'audio/02e.mp3')">
-          ਸੀ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '4', 'ਸੁ', 'audio/02f.mp3')">
-          ਸੁ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '5', 'ਸੂ', 'audio/02g.mp3')">
-          ਸੂ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '6', 'ਸੇ', 'audio/02h.mp3')">
-          ਸੇ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '7', 'ਸੈ', 'audio/02i.mp3')">
-          ਸੈ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '8', 'ਸੋ', 'audio/02j.mp3')">
-          ਸੋ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '9', 'ਸੌ', 'audio/02k.mp3')">
-          ਸੌ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '10', 'ਸੰ', 'audio/02l.mp3')">
-          ਸੰ</td>
-          <td class="entry"
-          onclick="showPopup( '41', '11', 'ਸਾਂ', 'audio/02m.mp3')">
-          ਸਾਂ</td>
+          <td class="entry" id="s02b">ਸ</td>
+          <td class="entry" id="s02c">ਸਾ</td>
+          <td class="entry" id="s02d">ਸਿ</td>
+          <td class="entry" id="s02e">ਸੀ</td>
+          <td class="entry" id="s02f">ਸੁ</td>
+          <td class="entry" id="s02g">ਸੂ</td>
+          <td class="entry" id="s02h">ਸੇ</td>
+          <td class="entry" id="s02i">ਸੈ</td>
+          <td class="entry" id="s02j">ਸੋ</td>
+          <td class="entry" id="s02k">ਸੌ</td>
+          <td class="entry" id="s02l">ਸੰ</td>
+          <td class="entry" id="s02m">ਸਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort02_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2006,42 +1027,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort03_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '42', '0', 'ਹ', 'audio/03b.mp3')">
-          ਹ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '1', 'ਹਾ', 'audio/03c.mp3')">
-          ਹਾ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '2', 'ਹਿ', 'audio/03d.mp3')">
-          ਹਿ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '3', 'ਹੀ', 'audio/03e.mp3')">
-          ਹੀ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '4', 'ਹੁ', 'audio/03f.mp3')">
-          ਹੁ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '5', 'ਹੂ', 'audio/03g.mp3')">
-          ਹੂ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '6', 'ਹੇ', 'audio/03h.mp3')">
-          ਹੇ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '7', 'ਹੈ', 'audio/03i.mp3')">
-          ਹੈ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '8', 'ਹੋ', 'audio/03j.mp3')">
-          ਹੋ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '9', 'ਹੌ', 'audio/03k.mp3')">
-          ਹੌ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '10', 'ਹੰ', 'audio/03l.mp3')">
-          ਹੰ</td>
-          <td class="entry"
-          onclick="showPopup( '42', '11', 'ਹਾਂ', 'audio/03m.mp3')">
-          ਹਾਂ</td>
+          <td class="entry" id="s03b">ਹ</td>
+          <td class="entry" id="s03c">ਹਾ</td>
+          <td class="entry" id="s03d">ਹਿ</td>
+          <td class="entry" id="s03e">ਹੀ</td>
+          <td class="entry" id="s03f">ਹੁ</td>
+          <td class="entry" id="s03g">ਹੂ</td>
+          <td class="entry" id="s03h">ਹੇ</td>
+          <td class="entry" id="s03i">ਹੈ</td>
+          <td class="entry" id="s03j">ਹੋ</td>
+          <td class="entry" id="s03k">ਹੌ</td>
+          <td class="entry" id="s03l">ਹੰ</td>
+          <td class="entry" id="s03m">ਹਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort03_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2050,42 +1047,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort04_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '43', '0', 'ਕ', 'audio/04b.mp3')">
-          ਕ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '1', 'ਕਾ', 'audio/04c.mp3')">
-          ਕਾ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '2', 'ਕਿ', 'audio/04d.mp3')">
-          ਕਿ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '3', 'ਕੀ', 'audio/04e.mp3')">
-          ਕੀ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '4', 'ਕੁ', 'audio/04f.mp3')">
-          ਕੁ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '5', 'ਕੂ', 'audio/04g.mp3')">
-          ਕੂ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '6', 'ਕੇ', 'audio/04h.mp3')">
-          ਕੇ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '7', 'ਕੈ', 'audio/04i.mp3')">
-          ਕੈ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '8', 'ਕੋ', 'audio/04j.mp3')">
-          ਕੋ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '9', 'ਕੌ', 'audio/04k.mp3')">
-          ਕੌ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '10', 'ਕੰ', 'audio/04l.mp3')">
-          ਕੰ</td>
-          <td class="entry"
-          onclick="showPopup( '43', '11', 'ਕਾਂ', 'audio/04m.mp3')">
-          ਕਾਂ</td>
+          <td class="entry" id="s04b">ਕ</td>
+          <td class="entry" id="s04c">ਕਾ</td>
+          <td class="entry" id="s04d">ਕਿ</td>
+          <td class="entry" id="s04e">ਕੀ</td>
+          <td class="entry" id="s04f">ਕੁ</td>
+          <td class="entry" id="s04g">ਕੂ</td>
+          <td class="entry" id="s04h">ਕੇ</td>
+          <td class="entry" id="s04i">ਕੈ</td>
+          <td class="entry" id="s04j">ਕੋ</td>
+          <td class="entry" id="s04k">ਕੌ</td>
+          <td class="entry" id="s04l">ਕੰ</td>
+          <td class="entry" id="s04m">ਕਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort04_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2094,42 +1067,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort05_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '44', '0', 'ਖ', 'audio/05b.mp3')">
-          ਖ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '1', 'ਖਾ', 'audio/05c.mp3')">
-          ਖਾ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '2', 'ਖਿ', 'audio/05d.mp3')">
-          ਖਿ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '3', 'ਖੀ', 'audio/05e.mp3')">
-          ਖੀ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '4', 'ਖੁ', 'audio/05f.mp3')">
-          ਖੁ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '5', 'ਖੂ', 'audio/05g.mp3')">
-          ਖੂ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '6', 'ਖੇ', 'audio/05h.mp3')">
-          ਖੇ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '7', 'ਖੈ', 'audio/05i.mp3')">
-          ਖੈ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '8', 'ਖੋ', 'audio/05j.mp3')">
-          ਖੋ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '9', 'ਖੌ', 'audio/05k.mp3')">
-          ਖੌ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '10', 'ਖੰ', 'audio/05l.mp3')">
-          ਖੰ</td>
-          <td class="entry"
-          onclick="showPopup( '44', '11', 'ਖਾਂ', 'audio/05m.mp3')">
-          ਖਾਂ</td>
+          <td class="entry" id="s05b">ਖ</td>
+          <td class="entry" id="s05c">ਖਾ</td>
+          <td class="entry" id="s05d">ਖਿ</td>
+          <td class="entry" id="s05e">ਖੀ</td>
+          <td class="entry" id="s05f">ਖੁ</td>
+          <td class="entry" id="s05g">ਖੂ</td>
+          <td class="entry" id="s05h">ਖੇ</td>
+          <td class="entry" id="s05i">ਖੈ</td>
+          <td class="entry" id="s05j">ਖੋ</td>
+          <td class="entry" id="s05k">ਖੌ</td>
+          <td class="entry" id="s05l">ਖੰ</td>
+          <td class="entry" id="s05m">ਖਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort05_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2138,42 +1087,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort06_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '45', '0', 'ਗ', 'audio/06b.mp3')">
-          ਗ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '1', 'ਗਾ', 'audio/06c.mp3')">
-          ਗਾ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '2', 'ਗਿ', 'audio/06d.mp3')">
-          ਗਿ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '3', 'ਗੀ', 'audio/06e.mp3')">
-          ਗੀ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '4', 'ਗੁ', 'audio/06f.mp3')">
-          ਗੁ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '5', 'ਗੂ', 'audio/06g.mp3')">
-          ਗੂ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '6', 'ਗੇ', 'audio/06h.mp3')">
-          ਗੇ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '7', 'ਗੈ', 'audio/06i.mp3')">
-          ਗੈ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '8', 'ਗੋ', 'audio/06j.mp3')">
-          ਗੋ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '9', 'ਗੌ', 'audio/06k.mp3')">
-          ਗੌ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '10', 'ਗੰ', 'audio/06l.mp3')">
-          ਗੰ</td>
-          <td class="entry"
-          onclick="showPopup( '45', '11', 'ਗਾਂ', 'audio/06m.mp3')">
-          ਗਾਂ</td>
+          <td class="entry" id="s06b">ਗ</td>
+          <td class="entry" id="s06c">ਗਾ</td>
+          <td class="entry" id="s06d">ਗਿ</td>
+          <td class="entry" id="s06e">ਗੀ</td>
+          <td class="entry" id="s06f">ਗੁ</td>
+          <td class="entry" id="s06g">ਗੂ</td>
+          <td class="entry" id="s06h">ਗੇ</td>
+          <td class="entry" id="s06i">ਗੈ</td>
+          <td class="entry" id="s06j">ਗੋ</td>
+          <td class="entry" id="s06k">ਗੌ</td>
+          <td class="entry" id="s06l">ਗੰ</td>
+          <td class="entry" id="s06m">ਗਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort06_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2182,42 +1107,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort07_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '46', '0', 'ਘ', 'audio/07b.mp3')">
-          ਘ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '1', 'ਘਾ', 'audio/07c.mp3')">
-          ਘਾ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '2', 'ਘਿ', 'audio/07d.mp3')">
-          ਘਿ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '3', 'ਘੀ', 'audio/07e.mp3')">
-          ਘੀ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '4', 'ਘੁ', 'audio/07f.mp3')">
-          ਘੁ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '5', 'ਘੂ', 'audio/07g.mp3')">
-          ਘੂ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '6', 'ਘੇ', 'audio/07h.mp3')">
-          ਘੇ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '7', 'ਘੈ', 'audio/07i.mp3')">
-          ਘੈ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '8', 'ਘੋ', 'audio/07j.mp3')">
-          ਘੋ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '9', 'ਘੌ', 'audio/07k.mp3')">
-          ਘੌ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '10', 'ਘੰ', 'audio/07l.mp3')">
-          ਘੰ</td>
-          <td class="entry"
-          onclick="showPopup( '46', '11', 'ਘਾਂ', 'audio/07m.mp3')">
-          ਘਾਂ</td>
+          <td class="entry" id="s07b">ਘ</td>
+          <td class="entry" id="s07c">ਘਾ</td>
+          <td class="entry" id="s07d">ਘਿ</td>
+          <td class="entry" id="s07e">ਘੀ</td>
+          <td class="entry" id="s07f">ਘੁ</td>
+          <td class="entry" id="s07g">ਘੂ</td>
+          <td class="entry" id="s07h">ਘੇ</td>
+          <td class="entry" id="s07i">ਘੈ</td>
+          <td class="entry" id="s07j">ਘੋ</td>
+          <td class="entry" id="s07k">ਘੌ</td>
+          <td class="entry" id="s07l">ਘੰ</td>
+          <td class="entry" id="s07m">ਘਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort07_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2226,42 +1127,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort08_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '47', '0', 'ਙ', 'audio/08b.mp3')">
-          ਙ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '1', 'ਙਾ', 'audio/08c.mp3')">
-          ਙਾ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '2', 'ਙਿ', 'audio/08d.mp3')">
-          ਙਿ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '3', 'ਙੀ', 'audio/08e.mp3')">
-          ਙੀ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '4', 'ਙੁ', 'audio/08f.mp3')">
-          ਙੁ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '5', 'ਙੂ', 'audio/08g.mp3')">
-          ਙੂ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '6', 'ਙੇ', 'audio/08h.mp3')">
-          ਙੇ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '7', 'ਙੈ', 'audio/08i.mp3')">
-          ਙੈ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '8', 'ਙੋ', 'audio/08j.mp3')">
-          ਙੋ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '9', 'ਙੌ', 'audio/08k.mp3')">
-          ਙੌ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '10', 'ਙੰ', 'audio/08l.mp3')">
-          ਙੰ</td>
-          <td class="entry"
-          onclick="showPopup( '47', '11', 'ਙਾਂ', 'audio/08m.mp3')">
-          ਙਾਂ</td>
+          <td class="entry" id="s08b">ਙ</td>
+          <td class="entry" id="s08c">ਙਾ</td>
+          <td class="entry" id="s08d">ਙਿ</td>
+          <td class="entry" id="s08e">ਙੀ</td>
+          <td class="entry" id="s08f">ਙੁ</td>
+          <td class="entry" id="s08g">ਙੂ</td>
+          <td class="entry" id="s08h">ਙੇ</td>
+          <td class="entry" id="s08i">ਙੈ</td>
+          <td class="entry" id="s08j">ਙੋ</td>
+          <td class="entry" id="s08k">ਙੌ</td>
+          <td class="entry" id="s08l">ਙੰ</td>
+          <td class="entry" id="s08m">ਙਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort08_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2270,42 +1147,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort09_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '48', '0', 'ਚ', 'audio/09b.mp3')">
-          ਚ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '1', 'ਚਾ', 'audio/09c.mp3')">
-          ਚਾ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '2', 'ਚਿ', 'audio/09d.mp3')">
-          ਚਿ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '3', 'ਚੀ', 'audio/09e.mp3')">
-          ਚੀ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '4', 'ਚੁ', 'audio/09f.mp3')">
-          ਚੁ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '5', 'ਚੂ', 'audio/09g.mp3')">
-          ਚੂ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '6', 'ਚੇ', 'audio/09h.mp3')">
-          ਚੇ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '7', 'ਚੈ', 'audio/09i.mp3')">
-          ਚੈ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '8', 'ਚੋ', 'audio/09j.mp3')">
-          ਚੋ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '9', 'ਚੌ', 'audio/09k.mp3')">
-          ਚੌ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '10', 'ਚੰ', 'audio/09l.mp3')">
-          ਚੰ</td>
-          <td class="entry"
-          onclick="showPopup( '48', '11', 'ਚਾਂ', 'audio/09m.mp3')">
-          ਚਾਂ</td>
+          <td class="entry" id="s09b">ਚ</td>
+          <td class="entry" id="s09c">ਚਾ</td>
+          <td class="entry" id="s09d">ਚਿ</td>
+          <td class="entry" id="s09e">ਚੀ</td>
+          <td class="entry" id="s09f">ਚੁ</td>
+          <td class="entry" id="s09g">ਚੂ</td>
+          <td class="entry" id="s09h">ਚੇ</td>
+          <td class="entry" id="s09i">ਚੈ</td>
+          <td class="entry" id="s09j">ਚੋ</td>
+          <td class="entry" id="s09k">ਚੌ</td>
+          <td class="entry" id="s09l">ਚੰ</td>
+          <td class="entry" id="s09m">ਚਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort09_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2314,42 +1167,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort10_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '49', '0', 'ਛ', 'audio/10b.mp3')">
-          ਛ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '1', 'ਛਾ', 'audio/10c.mp3')">
-          ਛਾ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '2', 'ਛਿ', 'audio/10d.mp3')">
-          ਛਿ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '3', 'ਛੀ', 'audio/10e.mp3')">
-          ਛੀ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '4', 'ਛੁ', 'audio/10f.mp3')">
-          ਛੁ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '5', 'ਛੂ', 'audio/10g.mp3')">
-          ਛੂ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '6', 'ਛੇ', 'audio/10h.mp3')">
-          ਛੇ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '7', 'ਛੈ', 'audio/10i.mp3')">
-          ਛੈ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '8', 'ਛੋ', 'audio/10j.mp3')">
-          ਛੋ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '9', 'ਛੌ', 'audio/10k.mp3')">
-          ਛੌ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '10', 'ਛੰ', 'audio/10l.mp3')">
-          ਛੰ</td>
-          <td class="entry"
-          onclick="showPopup( '49', '11', 'ਛਾਂ', 'audio/10m.mp3')">
-          ਛਾਂ</td>
+          <td class="entry" id="s10b">ਛ</td>
+          <td class="entry" id="s10c">ਛਾ</td>
+          <td class="entry" id="s10d">ਛਿ</td>
+          <td class="entry" id="s10e">ਛੀ</td>
+          <td class="entry" id="s10f">ਛੁ</td>
+          <td class="entry" id="s10g">ਛੂ</td>
+          <td class="entry" id="s10h">ਛੇ</td>
+          <td class="entry" id="s10i">ਛੈ</td>
+          <td class="entry" id="s10j">ਛੋ</td>
+          <td class="entry" id="s10k">ਛੌ</td>
+          <td class="entry" id="s10l">ਛੰ</td>
+          <td class="entry" id="s10m">ਛਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort10_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2358,42 +1187,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort11_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '50', '0', 'ਜ', 'audio/11b.mp3')">
-          ਜ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '1', 'ਜਾ', 'audio/11c.mp3')">
-          ਜਾ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '2', 'ਜਿ', 'audio/11d.mp3')">
-          ਜਿ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '3', 'ਜੀ', 'audio/11e.mp3')">
-          ਜੀ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '4', 'ਜੁ', 'audio/11f.mp3')">
-          ਜੁ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '5', 'ਜੂ', 'audio/11g.mp3')">
-          ਜੂ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '6', 'ਜੇ', 'audio/11h.mp3')">
-          ਜੇ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '7', 'ਜੈ', 'audio/11i.mp3')">
-          ਜੈ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '8', 'ਜੋ', 'audio/11j.mp3')">
-          ਜੋ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '9', 'ਜੌ', 'audio/11k.mp3')">
-          ਜੌ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '10', 'ਜੰ', 'audio/11l.mp3')">
-          ਜੰ</td>
-          <td class="entry"
-          onclick="showPopup( '50', '11', 'ਜਾਂ', 'audio/11m.mp3')">
-          ਜਾਂ</td>
+          <td class="entry" id="s11b">ਜ</td>
+          <td class="entry" id="s11c">ਜਾ</td>
+          <td class="entry" id="s11d">ਜਿ</td>
+          <td class="entry" id="s11e">ਜੀ</td>
+          <td class="entry" id="s11f">ਜੁ</td>
+          <td class="entry" id="s11g">ਜੂ</td>
+          <td class="entry" id="s11h">ਜੇ</td>
+          <td class="entry" id="s11i">ਜੈ</td>
+          <td class="entry" id="s11j">ਜੋ</td>
+          <td class="entry" id="s11k">ਜੌ</td>
+          <td class="entry" id="s11l">ਜੰ</td>
+          <td class="entry" id="s11m">ਜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort11_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2402,42 +1207,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort12_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '51', '0', 'ਝ', 'audio/12b.mp3')">
-          ਝ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '1', 'ਝਾ', 'audio/12c.mp3')">
-          ਝਾ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '2', 'ਝਿ', 'audio/12d.mp3')">
-          ਝਿ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '3', 'ਝੀ', 'audio/12e.mp3')">
-          ਝੀ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '4', 'ਝੁ', 'audio/12f.mp3')">
-          ਝੁ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '5', 'ਝੂ', 'audio/12g.mp3')">
-          ਝੂ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '6', 'ਝੇ', 'audio/12h.mp3')">
-          ਝੇ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '7', 'ਝੈ', 'audio/12i.mp3')">
-          ਝੈ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '8', 'ਝੋ', 'audio/12j.mp3')">
-          ਝੋ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '9', 'ਝੌ', 'audio/12k.mp3')">
-          ਝੌ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '10', 'ਝੰ', 'audio/12l.mp3')">
-          ਝੰ</td>
-          <td class="entry"
-          onclick="showPopup( '51', '11', 'ਝਾਂ', 'audio/12m.mp3')">
-          ਝਾਂ</td>
+          <td class="entry" id="s12b">ਝ</td>
+          <td class="entry" id="s12c">ਝਾ</td>
+          <td class="entry" id="s12d">ਝਿ</td>
+          <td class="entry" id="s12e">ਝੀ</td>
+          <td class="entry" id="s12f">ਝੁ</td>
+          <td class="entry" id="s12g">ਝੂ</td>
+          <td class="entry" id="s12h">ਝੇ</td>
+          <td class="entry" id="s12i">ਝੈ</td>
+          <td class="entry" id="s12j">ਝੋ</td>
+          <td class="entry" id="s12k">ਝੌ</td>
+          <td class="entry" id="s12l">ਝੰ</td>
+          <td class="entry" id="s12m">ਝਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort12_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2446,42 +1227,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort13_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '52', '0', 'ਞ', 'audio/13b.mp3')">
-          ਞ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '1', 'ਞਾ', 'audio/13c.mp3')">
-          ਞਾ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '2', 'ਞਿ', 'audio/13d.mp3')">
-          ਞਿ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '3', 'ਞੀ', 'audio/13e.mp3')">
-          ਞੀ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '4', 'ਞੁ', 'audio/13f.mp3')">
-          ਞੁ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '5', 'ਞੂ', 'audio/13g.mp3')">
-          ਞੂ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '6', 'ਞੇ', 'audio/13h.mp3')">
-          ਞੇ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '7', 'ਞੈ', 'audio/13i.mp3')">
-          ਞੈ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '8', 'ਞੋ', 'audio/13j.mp3')">
-          ਞੋ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '9', 'ਞੌ', 'audio/13k.mp3')">
-          ਞੌ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '10', 'ਞੰ', 'audio/13l.mp3')">
-          ਞੰ</td>
-          <td class="entry"
-          onclick="showPopup( '52', '11', 'ਞਾਂ', 'audio/13m.mp3')">
-          ਞਾਂ</td>
+          <td class="entry" id="s13b">ਞ</td>
+          <td class="entry" id="s13c">ਞਾ</td>
+          <td class="entry" id="s13d">ਞਿ</td>
+          <td class="entry" id="s13e">ਞੀ</td>
+          <td class="entry" id="s13f">ਞੁ</td>
+          <td class="entry" id="s13g">ਞੂ</td>
+          <td class="entry" id="s13h">ਞੇ</td>
+          <td class="entry" id="s13i">ਞੈ</td>
+          <td class="entry" id="s13j">ਞੋ</td>
+          <td class="entry" id="s13k">ਞੌ</td>
+          <td class="entry" id="s13l">ਞੰ</td>
+          <td class="entry" id="s13m">ਞਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort13_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2490,42 +1247,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort14_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '53', '0', 'ਟ', 'audio/14b.mp3')">
-          ਟ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '1', 'ਟਾ', 'audio/14c.mp3')">
-          ਟਾ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '2', 'ਟਿ', 'audio/14d.mp3')">
-          ਟਿ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '3', 'ਟੀ', 'audio/14e.mp3')">
-          ਟੀ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '4', 'ਟੁ', 'audio/14f.mp3')">
-          ਟੁ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '5', 'ਟੂ', 'audio/14g.mp3')">
-          ਟੂ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '6', 'ਟੇ', 'audio/14h.mp3')">
-          ਟੇ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '7', 'ਟੈ', 'audio/14i.mp3')">
-          ਟੈ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '8', 'ਟੋ', 'audio/14j.mp3')">
-          ਟੋ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '9', 'ਟੌ', 'audio/14k.mp3')">
-          ਟੌ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '10', 'ਟੰ', 'audio/14l.mp3')">
-          ਟੰ</td>
-          <td class="entry"
-          onclick="showPopup( '53', '11', 'ਟਾਂ', 'audio/14m.mp3')">
-          ਟਾਂ</td>
+          <td class="entry" id="s14b">ਟ</td>
+          <td class="entry" id="s14c">ਟਾ</td>
+          <td class="entry" id="s14d">ਟਿ</td>
+          <td class="entry" id="s14e">ਟੀ</td>
+          <td class="entry" id="s14f">ਟੁ</td>
+          <td class="entry" id="s14g">ਟੂ</td>
+          <td class="entry" id="s14h">ਟੇ</td>
+          <td class="entry" id="s14i">ਟੈ</td>
+          <td class="entry" id="s14j">ਟੋ</td>
+          <td class="entry" id="s14k">ਟੌ</td>
+          <td class="entry" id="s14l">ਟੰ</td>
+          <td class="entry" id="s14m">ਟਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort14_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2534,42 +1267,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort15_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '54', '0', 'ਠ', 'audio/15b.mp3')">
-          ਠ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '1', 'ਠਾ', 'audio/15c.mp3')">
-          ਠਾ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '2', 'ਠਿ', 'audio/15d.mp3')">
-          ਠਿ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '3', 'ਠੀ', 'audio/15e.mp3')">
-          ਠੀ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '4', 'ਠੁ', 'audio/15f.mp3')">
-          ਠੁ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '5', 'ਠੂ', 'audio/15g.mp3')">
-          ਠੂ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '6', 'ਠੇ', 'audio/15h.mp3')">
-          ਠੇ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '7', 'ਠੈ', 'audio/15i.mp3')">
-          ਠੈ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '8', 'ਠੋ', 'audio/15j.mp3')">
-          ਠੋ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '9', 'ਠੌ', 'audio/15k.mp3')">
-          ਠੌ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '10', 'ਠੰ', 'audio/15l.mp3')">
-          ਠੰ</td>
-          <td class="entry"
-          onclick="showPopup( '54', '11', 'ਠਾਂ', 'audio/15m.mp3')">
-          ਠਾਂ</td>
+          <td class="entry" id="s15b">ਠ</td>
+          <td class="entry" id="s15c">ਠਾ</td>
+          <td class="entry" id="s15d">ਠਿ</td>
+          <td class="entry" id="s15e">ਠੀ</td>
+          <td class="entry" id="s15f">ਠੁ</td>
+          <td class="entry" id="s15g">ਠੂ</td>
+          <td class="entry" id="s15h">ਠੇ</td>
+          <td class="entry" id="s15i">ਠੈ</td>
+          <td class="entry" id="s15j">ਠੋ</td>
+          <td class="entry" id="s15k">ਠੌ</td>
+          <td class="entry" id="s15l">ਠੰ</td>
+          <td class="entry" id="s15m">ਠਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort15_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2578,42 +1287,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort16_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '55', '0', 'ਡ', 'audio/16b.mp3')">
-          ਡ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '1', 'ਡਾ', 'audio/16c.mp3')">
-          ਡਾ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '2', 'ਡਿ', 'audio/16d.mp3')">
-          ਡਿ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '3', 'ਡੀ', 'audio/16e.mp3')">
-          ਡੀ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '4', 'ਡੁ', 'audio/16f.mp3')">
-          ਡੁ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '5', 'ਡੂ', 'audio/16g.mp3')">
-          ਡੂ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '6', 'ਡੇ', 'audio/16h.mp3')">
-          ਡੇ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '7', 'ਡੈ', 'audio/16i.mp3')">
-          ਡੈ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '8', 'ਡੋ', 'audio/16j.mp3')">
-          ਡੋ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '9', 'ਡੌ', 'audio/16k.mp3')">
-          ਡੌ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '10', 'ਡੰ', 'audio/16l.mp3')">
-          ਡੰ</td>
-          <td class="entry"
-          onclick="showPopup( '55', '11', 'ਡਾਂ', 'audio/16m.mp3')">
-          ਡਾਂ</td>
+          <td class="entry" id="s16b">ਡ</td>
+          <td class="entry" id="s16c">ਡਾ</td>
+          <td class="entry" id="s16d">ਡਿ</td>
+          <td class="entry" id="s16e">ਡੀ</td>
+          <td class="entry" id="s16f">ਡੁ</td>
+          <td class="entry" id="s16g">ਡੂ</td>
+          <td class="entry" id="s16h">ਡੇ</td>
+          <td class="entry" id="s16i">ਡੈ</td>
+          <td class="entry" id="s16j">ਡੋ</td>
+          <td class="entry" id="s16k">ਡੌ</td>
+          <td class="entry" id="s16l">ਡੰ</td>
+          <td class="entry" id="s16m">ਡਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort16_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2622,42 +1307,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort17_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '56', '0', 'ਢ', 'audio/17b.mp3')">
-          ਢ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '1', 'ਢਾ', 'audio/17c.mp3')">
-          ਢਾ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '2', 'ਢਿ', 'audio/17d.mp3')">
-          ਢਿ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '3', 'ਢੀ', 'audio/17e.mp3')">
-          ਢੀ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '4', 'ਢੁ', 'audio/17f.mp3')">
-          ਢੁ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '5', 'ਢੂ', 'audio/17g.mp3')">
-          ਢੂ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '6', 'ਢੇ', 'audio/17h.mp3')">
-          ਢੇ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '7', 'ਢੈ', 'audio/17i.mp3')">
-          ਢੈ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '8', 'ਢੋ', 'audio/17j.mp3')">
-          ਢੋ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '9', 'ਢੌ', 'audio/17k.mp3')">
-          ਢੌ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '10', 'ਢੰ', 'audio/17l.mp3')">
-          ਢੰ</td>
-          <td class="entry"
-          onclick="showPopup( '56', '11', 'ਢਾਂ', 'audio/17m.mp3')">
-          ਢਾਂ</td>
+          <td class="entry" id="s17b">ਢ</td>
+          <td class="entry" id="s17c">ਢਾ</td>
+          <td class="entry" id="s17d">ਢਿ</td>
+          <td class="entry" id="s17e">ਢੀ</td>
+          <td class="entry" id="s17f">ਢੁ</td>
+          <td class="entry" id="s17g">ਢੂ</td>
+          <td class="entry" id="s17h">ਢੇ</td>
+          <td class="entry" id="s17i">ਢੈ</td>
+          <td class="entry" id="s17j">ਢੋ</td>
+          <td class="entry" id="s17k">ਢੌ</td>
+          <td class="entry" id="s17l">ਢੰ</td>
+          <td class="entry" id="s17m">ਢਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort17_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2666,42 +1327,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort18_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '57', '0', 'ਣ', 'audio/18b.mp3')">
-          ਣ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '1', 'ਣਾ', 'audio/18c.mp3')">
-          ਣਾ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '2', 'ਣਿ', 'audio/18d.mp3')">
-          ਣਿ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '3', 'ਣੀ', 'audio/18e.mp3')">
-          ਣੀ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '4', 'ਣੁ', 'audio/18f.mp3')">
-          ਣੁ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '5', 'ਣੂ', 'audio/18g.mp3')">
-          ਣੂ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '6', 'ਣੇ', 'audio/18h.mp3')">
-          ਣੇ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '7', 'ਣੈ', 'audio/18i.mp3')">
-          ਣੈ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '8', 'ਣੋ', 'audio/18j.mp3')">
-          ਣੋ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '9', 'ਣੌ', 'audio/18k.mp3')">
-          ਣੌ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '10', 'ਣੰ', 'audio/18l.mp3')">
-          ਣੰ</td>
-          <td class="entry"
-          onclick="showPopup( '57', '11', 'ਣਾਂ', 'audio/18m.mp3')">
-          ਣਾਂ</td>
+          <td class="entry" id="s18b">ਣ</td>
+          <td class="entry" id="s18c">ਣਾ</td>
+          <td class="entry" id="s18d">ਣਿ</td>
+          <td class="entry" id="s18e">ਣੀ</td>
+          <td class="entry" id="s18f">ਣੁ</td>
+          <td class="entry" id="s18g">ਣੂ</td>
+          <td class="entry" id="s18h">ਣੇ</td>
+          <td class="entry" id="s18i">ਣੈ</td>
+          <td class="entry" id="s18j">ਣੋ</td>
+          <td class="entry" id="s18k">ਣੌ</td>
+          <td class="entry" id="s18l">ਣੰ</td>
+          <td class="entry" id="s18m">ਣਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort18_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2710,42 +1347,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort19_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '58', '0', 'ਤ', 'audio/19b.mp3')">
-          ਤ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '1', 'ਤਾ', 'audio/19c.mp3')">
-          ਤਾ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '2', 'ਤਿ', 'audio/19d.mp3')">
-          ਤਿ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '3', 'ਤੀ', 'audio/19e.mp3')">
-          ਤੀ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '4', 'ਤੁ', 'audio/19f.mp3')">
-          ਤੁ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '5', 'ਤੂ', 'audio/19g.mp3')">
-          ਤੂ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '6', 'ਤੇ', 'audio/19h.mp3')">
-          ਤੇ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '7', 'ਤੈ', 'audio/19i.mp3')">
-          ਤੈ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '8', 'ਤੋ', 'audio/19j.mp3')">
-          ਤੋ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '9', 'ਤੌ', 'audio/19k.mp3')">
-          ਤੌ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '10', 'ਤੰ', 'audio/19l.mp3')">
-          ਤੰ</td>
-          <td class="entry"
-          onclick="showPopup( '58', '11', 'ਤਾਂ', 'audio/19m.mp3')">
-          ਤਾਂ</td>
+          <td class="entry" id="s19b">ਤ</td>
+          <td class="entry" id="s19c">ਤਾ</td>
+          <td class="entry" id="s19d">ਤਿ</td>
+          <td class="entry" id="s19e">ਤੀ</td>
+          <td class="entry" id="s19f">ਤੁ</td>
+          <td class="entry" id="s19g">ਤੂ</td>
+          <td class="entry" id="s19h">ਤੇ</td>
+          <td class="entry" id="s19i">ਤੈ</td>
+          <td class="entry" id="s19j">ਤੋ</td>
+          <td class="entry" id="s19k">ਤੌ</td>
+          <td class="entry" id="s19l">ਤੰ</td>
+          <td class="entry" id="s19m">ਤਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort19_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2754,42 +1367,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort20_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '59', '0', 'ਥ', 'audio/20b.mp3')">
-          ਥ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '1', 'ਥਾ', 'audio/20c.mp3')">
-          ਥਾ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '2', 'ਥਿ', 'audio/20d.mp3')">
-          ਥਿ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '3', 'ਥੀ', 'audio/20e.mp3')">
-          ਥੀ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '4', 'ਥੁ', 'audio/20f.mp3')">
-          ਥੁ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '5', 'ਥੂ', 'audio/20g.mp3')">
-          ਥੂ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '6', 'ਥੇ', 'audio/20h.mp3')">
-          ਥੇ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '7', 'ਥੈ', 'audio/20i.mp3')">
-          ਥੈ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '8', 'ਥੋ', 'audio/20j.mp3')">
-          ਥੋ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '9', 'ਥੌ', 'audio/20k.mp3')">
-          ਥੌ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '10', 'ਥੰ', 'audio/20l.mp3')">
-          ਥੰ</td>
-          <td class="entry"
-          onclick="showPopup( '59', '11', 'ਥਾਂ', 'audio/20m.mp3')">
-          ਥਾਂ</td>
+          <td class="entry" id="s20b">ਥ</td>
+          <td class="entry" id="s20c">ਥਾ</td>
+          <td class="entry" id="s20d">ਥਿ</td>
+          <td class="entry" id="s20e">ਥੀ</td>
+          <td class="entry" id="s20f">ਥੁ</td>
+          <td class="entry" id="s20g">ਥੂ</td>
+          <td class="entry" id="s20h">ਥੇ</td>
+          <td class="entry" id="s20i">ਥੈ</td>
+          <td class="entry" id="s20j">ਥੋ</td>
+          <td class="entry" id="s20k">ਥੌ</td>
+          <td class="entry" id="s20l">ਥੰ</td>
+          <td class="entry" id="s20m">ਥਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort20_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2798,42 +1387,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort21_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '60', '0', 'ਦ', 'audio/21b.mp3')">
-          ਦ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '1', 'ਦਾ', 'audio/21c.mp3')">
-          ਦਾ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '2', 'ਦਿ', 'audio/21d.mp3')">
-          ਦਿ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '3', 'ਦੀ', 'audio/21e.mp3')">
-          ਦੀ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '4', 'ਦੁ', 'audio/21f.mp3')">
-          ਦੁ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '5', 'ਦੂ', 'audio/21g.mp3')">
-          ਦੂ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '6', 'ਦੇ', 'audio/21h.mp3')">
-          ਦੇ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '7', 'ਦੈ', 'audio/21i.mp3')">
-          ਦੈ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '8', 'ਦੋ', 'audio/21j.mp3')">
-          ਦੋ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '9', 'ਦੌ', 'audio/21k.mp3')">
-          ਦੌ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '10', 'ਦੰ', 'audio/21l.mp3')">
-          ਦੰ</td>
-          <td class="entry"
-          onclick="showPopup( '60', '11', 'ਦਾਂ', 'audio/21m.mp3')">
-          ਦਾਂ</td>
+          <td class="entry" id="s21b">ਦ</td>
+          <td class="entry" id="s21c">ਦਾ</td>
+          <td class="entry" id="s21d">ਦਿ</td>
+          <td class="entry" id="s21e">ਦੀ</td>
+          <td class="entry" id="s21f">ਦੁ</td>
+          <td class="entry" id="s21g">ਦੂ</td>
+          <td class="entry" id="s21h">ਦੇ</td>
+          <td class="entry" id="s21i">ਦੈ</td>
+          <td class="entry" id="s21j">ਦੋ</td>
+          <td class="entry" id="s21k">ਦੌ</td>
+          <td class="entry" id="s21l">ਦੰ</td>
+          <td class="entry" id="s21m">ਦਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort21_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2842,42 +1407,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort22_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '61', '0', 'ਧ', 'audio/22b.mp3')">
-          ਧ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '1', 'ਧਾ', 'audio/22c.mp3')">
-          ਧਾ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '2', 'ਧਿ', 'audio/22d.mp3')">
-          ਧਿ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '3', 'ਧੀ', 'audio/22e.mp3')">
-          ਧੀ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '4', 'ਧੁ', 'audio/22f.mp3')">
-          ਧੁ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '5', 'ਧੂ', 'audio/22g.mp3')">
-          ਧੂ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '6', 'ਧੇ', 'audio/22h.mp3')">
-          ਧੇ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '7', 'ਧੈ', 'audio/22i.mp3')">
-          ਧੈ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '8', 'ਧੋ', 'audio/22j.mp3')">
-          ਧੋ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '9', 'ਧੌ', 'audio/22k.mp3')">
-          ਧੌ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '10', 'ਧੰ', 'audio/22l.mp3')">
-          ਧੰ</td>
-          <td class="entry"
-          onclick="showPopup( '61', '11', 'ਧਾਂ', 'audio/22m.mp3')">
-          ਧਾਂ</td>
+          <td class="entry" id="s22b">ਧ</td>
+          <td class="entry" id="s22c">ਧਾ</td>
+          <td class="entry" id="s22d">ਧਿ</td>
+          <td class="entry" id="s22e">ਧੀ</td>
+          <td class="entry" id="s22f">ਧੁ</td>
+          <td class="entry" id="s22g">ਧੂ</td>
+          <td class="entry" id="s22h">ਧੇ</td>
+          <td class="entry" id="s22i">ਧੈ</td>
+          <td class="entry" id="s22j">ਧੋ</td>
+          <td class="entry" id="s22k">ਧੌ</td>
+          <td class="entry" id="s22l">ਧੰ</td>
+          <td class="entry" id="s22m">ਧਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort22_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2886,42 +1427,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort23_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '62', '0', 'ਨ', 'audio/23b.mp3')">
-          ਨ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '1', 'ਨਾ', 'audio/23c.mp3')">
-          ਨਾ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '2', 'ਨਿ', 'audio/23d.mp3')">
-          ਨਿ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '3', 'ਨੀ', 'audio/23e.mp3')">
-          ਨੀ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '4', 'ਨੁ', 'audio/23f.mp3')">
-          ਨੁ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '5', 'ਨੂ', 'audio/23g.mp3')">
-          ਨੂ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '6', 'ਨੇ', 'audio/23h.mp3')">
-          ਨੇ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '7', 'ਨੈ', 'audio/23i.mp3')">
-          ਨੈ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '8', 'ਨੋ', 'audio/23j.mp3')">
-          ਨੋ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '9', 'ਨੌ', 'audio/23k.mp3')">
-          ਨੌ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '10', 'ਨੰ', 'audio/23l.mp3')">
-          ਨੰ</td>
-          <td class="entry"
-          onclick="showPopup( '62', '11', 'ਨਾਂ', 'audio/23m.mp3')">
-          ਨਾਂ</td>
+          <td class="entry" id="s23b">ਨ</td>
+          <td class="entry" id="s23c">ਨਾ</td>
+          <td class="entry" id="s23d">ਨਿ</td>
+          <td class="entry" id="s23e">ਨੀ</td>
+          <td class="entry" id="s23f">ਨੁ</td>
+          <td class="entry" id="s23g">ਨੂ</td>
+          <td class="entry" id="s23h">ਨੇ</td>
+          <td class="entry" id="s23i">ਨੈ</td>
+          <td class="entry" id="s23j">ਨੋ</td>
+          <td class="entry" id="s23k">ਨੌ</td>
+          <td class="entry" id="s23l">ਨੰ</td>
+          <td class="entry" id="s23m">ਨਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort23_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2930,42 +1447,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort24_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '63', '0', 'ਪ', 'audio/24b.mp3')">
-          ਪ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '1', 'ਪਾ', 'audio/24c.mp3')">
-          ਪਾ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '2', 'ਪਿ', 'audio/24d.mp3')">
-          ਪਿ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '3', 'ਪੀ', 'audio/24e.mp3')">
-          ਪੀ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '4', 'ਪੁ', 'audio/24f.mp3')">
-          ਪੁ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '5', 'ਪੂ', 'audio/24g.mp3')">
-          ਪੂ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '6', 'ਪੇ', 'audio/24h.mp3')">
-          ਪੇ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '7', 'ਪੈ', 'audio/24i.mp3')">
-          ਪੈ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '8', 'ਪੋ', 'audio/24j.mp3')">
-          ਪੋ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '9', 'ਪੌ', 'audio/24k.mp3')">
-          ਪੌ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '10', 'ਪੰ', 'audio/24l.mp3')">
-          ਪੰ</td>
-          <td class="entry"
-          onclick="showPopup( '63', '11', 'ਪਾਂ', 'audio/24m.mp3')">
-          ਪਾਂ</td>
+          <td class="entry" id="s24b">ਪ</td>
+          <td class="entry" id="s24c">ਪਾ</td>
+          <td class="entry" id="s24d">ਪਿ</td>
+          <td class="entry" id="s24e">ਪੀ</td>
+          <td class="entry" id="s24f">ਪੁ</td>
+          <td class="entry" id="s24g">ਪੂ</td>
+          <td class="entry" id="s24h">ਪੇ</td>
+          <td class="entry" id="s24i">ਪੈ</td>
+          <td class="entry" id="s24j">ਪੋ</td>
+          <td class="entry" id="s24k">ਪੌ</td>
+          <td class="entry" id="s24l">ਪੰ</td>
+          <td class="entry" id="s24m">ਪਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort24_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -2974,42 +1467,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort25_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '64', '0', 'ਫ', 'audio/25b.mp3')">
-          ਫ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '1', 'ਫਾ', 'audio/25c.mp3')">
-          ਫਾ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '2', 'ਫਿ', 'audio/25d.mp3')">
-          ਫਿ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '3', 'ਫੀ', 'audio/25e.mp3')">
-          ਫੀ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '4', 'ਫੁ', 'audio/25f.mp3')">
-          ਫੁ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '5', 'ਫੂ', 'audio/25g.mp3')">
-          ਫੂ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '6', 'ਫੇ', 'audio/25h.mp3')">
-          ਫੇ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '7', 'ਫੈ', 'audio/25i.mp3')">
-          ਫੈ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '8', 'ਫੋ', 'audio/25j.mp3')">
-          ਫੋ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '9', 'ਫੌ', 'audio/25k.mp3')">
-          ਫੌ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '10', 'ਫੰ', 'audio/25l.mp3')">
-          ਫੰ</td>
-          <td class="entry"
-          onclick="showPopup( '64', '11', 'ਫਾਂ', 'audio/25m.mp3')">
-          ਫਾਂ</td>
+          <td class="entry" id="s25b">ਫ</td>
+          <td class="entry" id="s25c">ਫਾ</td>
+          <td class="entry" id="s25d">ਫਿ</td>
+          <td class="entry" id="s25e">ਫੀ</td>
+          <td class="entry" id="s25f">ਫੁ</td>
+          <td class="entry" id="s25g">ਫੂ</td>
+          <td class="entry" id="s25h">ਫੇ</td>
+          <td class="entry" id="s25i">ਫੈ</td>
+          <td class="entry" id="s25j">ਫੋ</td>
+          <td class="entry" id="s25k">ਫੌ</td>
+          <td class="entry" id="s25l">ਫੰ</td>
+          <td class="entry" id="s25m">ਫਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort25_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3018,42 +1487,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort26_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '65', '0', 'ਬ', 'audio/26b.mp3')">
-          ਬ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '1', 'ਬਾ', 'audio/26c.mp3')">
-          ਬਾ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '2', 'ਬਿ', 'audio/26d.mp3')">
-          ਬਿ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '3', 'ਬੀ', 'audio/26e.mp3')">
-          ਬੀ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '4', 'ਬੁ', 'audio/26f.mp3')">
-          ਬੁ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '5', 'ਬੂ', 'audio/26g.mp3')">
-          ਬੂ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '6', 'ਬੇ', 'audio/26h.mp3')">
-          ਬੇ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '7', 'ਬੈ', 'audio/26i.mp3')">
-          ਬੈ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '8', 'ਬੋ', 'audio/26j.mp3')">
-          ਬੋ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '9', 'ਬੌ', 'audio/26k.mp3')">
-          ਬੌ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '10', 'ਬੰ', 'audio/26l.mp3')">
-          ਬੰ</td>
-          <td class="entry"
-          onclick="showPopup( '65', '11', 'ਬਾਂ', 'audio/26m.mp3')">
-          ਬਾਂ</td>
+          <td class="entry" id="s26b">ਬ</td>
+          <td class="entry" id="s26c">ਬਾ</td>
+          <td class="entry" id="s26d">ਬਿ</td>
+          <td class="entry" id="s26e">ਬੀ</td>
+          <td class="entry" id="s26f">ਬੁ</td>
+          <td class="entry" id="s26g">ਬੂ</td>
+          <td class="entry" id="s26h">ਬੇ</td>
+          <td class="entry" id="s26i">ਬੈ</td>
+          <td class="entry" id="s26j">ਬੋ</td>
+          <td class="entry" id="s26k">ਬੌ</td>
+          <td class="entry" id="s26l">ਬੰ</td>
+          <td class="entry" id="s26m">ਬਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort26_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3062,42 +1507,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort27_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '66', '0', 'ਭ', 'audio/27b.mp3')">
-          ਭ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '1', 'ਭਾ', 'audio/27c.mp3')">
-          ਭਾ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '2', 'ਭਿ', 'audio/27d.mp3')">
-          ਭਿ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '3', 'ਭੀ', 'audio/27e.mp3')">
-          ਭੀ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '4', 'ਭੁ', 'audio/27f.mp3')">
-          ਭੁ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '5', 'ਭੂ', 'audio/27g.mp3')">
-          ਭੂ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '6', 'ਭੇ', 'audio/27h.mp3')">
-          ਭੇ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '7', 'ਭੈ', 'audio/27i.mp3')">
-          ਭੈ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '8', 'ਭੋ', 'audio/27j.mp3')">
-          ਭੋ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '9', 'ਭੌ', 'audio/27k.mp3')">
-          ਭੌ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '10', 'ਭੰ', 'audio/27l.mp3')">
-          ਭੰ</td>
-          <td class="entry"
-          onclick="showPopup( '66', '11', 'ਭਾਂ', 'audio/27m.mp3')">
-          ਭਾਂ</td>
+          <td class="entry" id="s27b">ਭ</td>
+          <td class="entry" id="s27c">ਭਾ</td>
+          <td class="entry" id="s27d">ਭਿ</td>
+          <td class="entry" id="s27e">ਭੀ</td>
+          <td class="entry" id="s27f">ਭੁ</td>
+          <td class="entry" id="s27g">ਭੂ</td>
+          <td class="entry" id="s27h">ਭੇ</td>
+          <td class="entry" id="s27i">ਭੈ</td>
+          <td class="entry" id="s27j">ਭੋ</td>
+          <td class="entry" id="s27k">ਭੌ</td>
+          <td class="entry" id="s27l">ਭੰ</td>
+          <td class="entry" id="s27m">ਭਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort27_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3106,42 +1527,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort28_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '67', '0', 'ਮ', 'audio/28b.mp3')">
-          ਮ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '1', 'ਮਾ', 'audio/28c.mp3')">
-          ਮਾ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '2', 'ਮਿ', 'audio/28d.mp3')">
-          ਮਿ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '3', 'ਮੀ', 'audio/28e.mp3')">
-          ਮੀ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '4', 'ਮੁ', 'audio/28f.mp3')">
-          ਮੁ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '5', 'ਮੂ', 'audio/28g.mp3')">
-          ਮੂ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '6', 'ਮੇ', 'audio/28h.mp3')">
-          ਮੇ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '7', 'ਮੈ', 'audio/28i.mp3')">
-          ਮੈ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '8', 'ਮੋ', 'audio/28j.mp3')">
-          ਮੋ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '9', 'ਮੌ', 'audio/28k.mp3')">
-          ਮੌ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '10', 'ਮੰ', 'audio/28l.mp3')">
-          ਮੰ</td>
-          <td class="entry"
-          onclick="showPopup( '67', '11', 'ਮਾਂ', 'audio/28m.mp3')">
-          ਮਾਂ</td>
+          <td class="entry" id="s28b">ਮ</td>
+          <td class="entry" id="s28c">ਮਾ</td>
+          <td class="entry" id="s28d">ਮਿ</td>
+          <td class="entry" id="s28e">ਮੀ</td>
+          <td class="entry" id="s28f">ਮੁ</td>
+          <td class="entry" id="s28g">ਮੂ</td>
+          <td class="entry" id="s28h">ਮੇ</td>
+          <td class="entry" id="s28i">ਮੈ</td>
+          <td class="entry" id="s28j">ਮੋ</td>
+          <td class="entry" id="s28k">ਮੌ</td>
+          <td class="entry" id="s28l">ਮੰ</td>
+          <td class="entry" id="s28m">ਮਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort28_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3150,42 +1547,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort29_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '68', '0', 'ਯ', 'audio/29b.mp3')">
-          ਯ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '1', 'ਯਾ', 'audio/29c.mp3')">
-          ਯਾ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '2', 'ਯਿ', 'audio/29d.mp3')">
-          ਯਿ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '3', 'ਯੀ', 'audio/29e.mp3')">
-          ਯੀ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '4', 'ਯੁ', 'audio/29f.mp3')">
-          ਯੁ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '5', 'ਯੂ', 'audio/29g.mp3')">
-          ਯੂ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '6', 'ਯੇ', 'audio/29h.mp3')">
-          ਯੇ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '7', 'ਯੈ', 'audio/29i.mp3')">
-          ਯੈ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '8', 'ਯੋ', 'audio/29j.mp3')">
-          ਯੋ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '9', 'ਯੌ', 'audio/29k.mp3')">
-          ਯੌ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '10', 'ਯੰ', 'audio/29l.mp3')">
-          ਯੰ</td>
-          <td class="entry"
-          onclick="showPopup( '68', '11', 'ਯਾਂ', 'audio/29m.mp3')">
-          ਯਾਂ</td>
+          <td class="entry" id="s29b">ਯ</td>
+          <td class="entry" id="s29c">ਯਾ</td>
+          <td class="entry" id="s29d">ਯਿ</td>
+          <td class="entry" id="s29e">ਯੀ</td>
+          <td class="entry" id="s29f">ਯੁ</td>
+          <td class="entry" id="s29g">ਯੂ</td>
+          <td class="entry" id="s29h">ਯੇ</td>
+          <td class="entry" id="s29i">ਯੈ</td>
+          <td class="entry" id="s29j">ਯੋ</td>
+          <td class="entry" id="s29k">ਯੌ</td>
+          <td class="entry" id="s29l">ਯੰ</td>
+          <td class="entry" id="s29m">ਯਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort29_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3194,42 +1567,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort30_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '69', '0', 'ਰ', 'audio/30b.mp3')">
-          ਰ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '1', 'ਰਾ', 'audio/30c.mp3')">
-          ਰਾ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '2', 'ਰਿ', 'audio/30d.mp3')">
-          ਰਿ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '3', 'ਰੀ', 'audio/30e.mp3')">
-          ਰੀ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '4', 'ਰੁ', 'audio/30f.mp3')">
-          ਰੁ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '5', 'ਰੂ', 'audio/30g.mp3')">
-          ਰੂ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '6', 'ਰੇ', 'audio/30h.mp3')">
-          ਰੇ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '7', 'ਰੈ', 'audio/30i.mp3')">
-          ਰੈ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '8', 'ਰੋ', 'audio/30j.mp3')">
-          ਰੋ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '9', 'ਰੌ', 'audio/30k.mp3')">
-          ਰੌ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '10', 'ਰੰ', 'audio/30l.mp3')">
-          ਰੰ</td>
-          <td class="entry"
-          onclick="showPopup( '69', '11', 'ਰਾਂ', 'audio/30m.mp3')">
-          ਰਾਂ</td>
+          <td class="entry" id="s30b">ਰ</td>
+          <td class="entry" id="s30c">ਰਾ</td>
+          <td class="entry" id="s30d">ਰਿ</td>
+          <td class="entry" id="s30e">ਰੀ</td>
+          <td class="entry" id="s30f">ਰੁ</td>
+          <td class="entry" id="s30g">ਰੂ</td>
+          <td class="entry" id="s30h">ਰੇ</td>
+          <td class="entry" id="s30i">ਰੈ</td>
+          <td class="entry" id="s30j">ਰੋ</td>
+          <td class="entry" id="s30k">ਰੌ</td>
+          <td class="entry" id="s30l">ਰੰ</td>
+          <td class="entry" id="s30m">ਰਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort30_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3238,42 +1587,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort31_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '70', '0', 'ਲ', 'audio/31b.mp3')">
-          ਲ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '1', 'ਲਾ', 'audio/31c.mp3')">
-          ਲਾ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '2', 'ਲਿ', 'audio/31d.mp3')">
-          ਲਿ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '3', 'ਲੀ', 'audio/31e.mp3')">
-          ਲੀ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '4', 'ਲੁ', 'audio/31f.mp3')">
-          ਲੁ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '5', 'ਲੂ', 'audio/31g.mp3')">
-          ਲੂ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '6', 'ਲੇ', 'audio/31h.mp3')">
-          ਲੇ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '7', 'ਲੈ', 'audio/31i.mp3')">
-          ਲੈ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '8', 'ਲੋ', 'audio/31j.mp3')">
-          ਲੋ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '9', 'ਲੌ', 'audio/31k.mp3')">
-          ਲੌ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '10', 'ਲੰ', 'audio/31l.mp3')">
-          ਲੰ</td>
-          <td class="entry"
-          onclick="showPopup( '70', '11', 'ਲਾਂ', 'audio/31m.mp3')">
-          ਲਾਂ</td>
+          <td class="entry" id="s31b">ਲ</td>
+          <td class="entry" id="s31c">ਲਾ</td>
+          <td class="entry" id="s31d">ਲਿ</td>
+          <td class="entry" id="s31e">ਲੀ</td>
+          <td class="entry" id="s31f">ਲੁ</td>
+          <td class="entry" id="s31g">ਲੂ</td>
+          <td class="entry" id="s31h">ਲੇ</td>
+          <td class="entry" id="s31i">ਲੈ</td>
+          <td class="entry" id="s31j">ਲੋ</td>
+          <td class="entry" id="s31k">ਲੌ</td>
+          <td class="entry" id="s31l">ਲੰ</td>
+          <td class="entry" id="s31m">ਲਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort31_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3282,42 +1607,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort32_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '71', '0', 'ਵ', 'audio/32b.mp3')">
-          ਵ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '1', 'ਵਾ', 'audio/32c.mp3')">
-          ਵਾ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '2', 'ਵਿ', 'audio/32d.mp3')">
-          ਵਿ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '3', 'ਵੀ', 'audio/32e.mp3')">
-          ਵੀ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '4', 'ਵੁ', 'audio/32f.mp3')">
-          ਵੁ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '5', 'ਵੂ', 'audio/32g.mp3')">
-          ਵੂ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '6', 'ਵੇ', 'audio/32h.mp3')">
-          ਵੇ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '7', 'ਵੈ', 'audio/32i.mp3')">
-          ਵੈ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '8', 'ਵੋ', 'audio/32j.mp3')">
-          ਵੋ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '9', 'ਵੌ', 'audio/32k.mp3')">
-          ਵੌ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '10', 'ਵੰ', 'audio/32l.mp3')">
-          ਵੰ</td>
-          <td class="entry"
-          onclick="showPopup( '71', '11', 'ਵਾਂ', 'audio/32m.mp3')">
-          ਵਾਂ</td>
+          <td class="entry" id="s32b">ਵ</td>
+          <td class="entry" id="s32c">ਵਾ</td>
+          <td class="entry" id="s32d">ਵਿ</td>
+          <td class="entry" id="s32e">ਵੀ</td>
+          <td class="entry" id="s32f">ਵੁ</td>
+          <td class="entry" id="s32g">ਵੂ</td>
+          <td class="entry" id="s32h">ਵੇ</td>
+          <td class="entry" id="s32i">ਵੈ</td>
+          <td class="entry" id="s32j">ਵੋ</td>
+          <td class="entry" id="s32k">ਵੌ</td>
+          <td class="entry" id="s32l">ਵੰ</td>
+          <td class="entry" id="s32m">ਵਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort32_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3326,42 +1627,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort33_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '72', '0', 'ੜ', 'audio/33b.mp3')">
-          ੜ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '1', 'ੜਾ', 'audio/33c.mp3')">
-          ੜਾ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '2', 'ੜਿ', 'audio/33d.mp3')">
-          ੜਿ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '3', 'ੜੀ', 'audio/33e.mp3')">
-          ੜੀ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '4', 'ੜੁ', 'audio/33f.mp3')">
-          ੜੁ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '5', 'ੜੂ', 'audio/33g.mp3')">
-          ੜੂ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '6', 'ੜੇ', 'audio/33h.mp3')">
-          ੜੇ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '7', 'ੜੈ', 'audio/33i.mp3')">
-          ੜੈ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '8', 'ੜੋ', 'audio/33j.mp3')">
-          ੜੋ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '9', 'ੜੌ', 'audio/33k.mp3')">
-          ੜੌ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '10', 'ੜੰ', 'audio/33l.mp3')">
-          ੜੰ</td>
-          <td class="entry"
-          onclick="showPopup( '72', '11', 'ੜਾਂ', 'audio/33m.mp3')">
-          ੜਾਂ</td>
+          <td class="entry" id="s33b">ੜ</td>
+          <td class="entry" id="s33c">ੜਾ</td>
+          <td class="entry" id="s33d">ੜਿ</td>
+          <td class="entry" id="s33e">ੜੀ</td>
+          <td class="entry" id="s33f">ੜੁ</td>
+          <td class="entry" id="s33g">ੜੂ</td>
+          <td class="entry" id="s33h">ੜੇ</td>
+          <td class="entry" id="s33i">ੜੈ</td>
+          <td class="entry" id="s33j">ੜੋ</td>
+          <td class="entry" id="s33k">ੜੌ</td>
+          <td class="entry" id="s33l">ੜੰ</td>
+          <td class="entry" id="s33m">ੜਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort33_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3370,42 +1647,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort34_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '73', '0', 'ਸ਼', 'audio/34b.mp3')">
-          ਸ਼</td>
-          <td class="entry"
-          onclick="showPopup( '73', '1', 'ਸ਼ਾ', 'audio/34c.mp3')">
-          ਸ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '2', 'ਸ਼ਿ', 'audio/34d.mp3')">
-          ਸ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '3', 'ਸ਼ੀ', 'audio/34e.mp3')">
-          ਸ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '4', 'ਸ਼ੁ', 'audio/34f.mp3')">
-          ਸ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '5', 'ਸ਼ੂ', 'audio/34g.mp3')">
-          ਸ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '6', 'ਸ਼ੇ', 'audio/34h.mp3')">
-          ਸ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '7', 'ਸ਼ੈ', 'audio/34i.mp3')">
-          ਸ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '8', 'ਸ਼ੋ', 'audio/34j.mp3')">
-          ਸ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '9', 'ਸ਼ੌ', 'audio/34k.mp3')">
-          ਸ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '10', 'ਸ਼ੰ', 'audio/34l.mp3')">
-          ਸ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '73', '11', 'ਸ਼ਾਂ', 'audio/34m.mp3')">
-          ਸ਼ਾਂ</td>
+          <td class="entry" id="s34b">ਸ਼</td>
+          <td class="entry" id="s34c">ਸ਼ਾ</td>
+          <td class="entry" id="s34d">ਸ਼ਿ</td>
+          <td class="entry" id="s34e">ਸ਼ੀ</td>
+          <td class="entry" id="s34f">ਸ਼ੁ</td>
+          <td class="entry" id="s34g">ਸ਼ੂ</td>
+          <td class="entry" id="s34h">ਸ਼ੇ</td>
+          <td class="entry" id="s34i">ਸ਼ੈ</td>
+          <td class="entry" id="s34j">ਸ਼ੋ</td>
+          <td class="entry" id="s34k">ਸ਼ੌ</td>
+          <td class="entry" id="s34l">ਸ਼ੰ</td>
+          <td class="entry" id="s34m">ਸ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort34_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3414,41 +1667,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort35_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '74', '0', 'ਖ਼', 'audio/35b.mp3')">
-          ਖ਼</td>
-          <td class="entry"
-          onclick="showPopup( '74', '1', 'ਖ਼ਾ', 'audio/35c.mp3')">
-          ਖ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '2', 'ਖ਼ਿ', 'audio/35d.mp3')">
-          ਖ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '3', 'ਖ਼ੀ', 'audio/35e.mp3')">
-          ਖ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '4', 'ਖ਼ੁ', 'audio/35f.mp3')">
-          ਖ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '5', 'ਖ਼ੂ', 'audio/35g.mp3')">
-          ਖ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '6', 'ਖ਼ੇ', 'audio/35h.mp3')">
-          ਖ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '7', 'ਖ਼ੈ', 'audio/35i.mp3')">
-          ਖ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '8', 'ਖ਼ੋ', 'audio/35j.mp3')">
-          ਖ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '9', 'ਖ਼ੌ', 'audio/35k.mp3')">
-          ਖ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '10', 'ਖ਼ੰ', 'audio/35l.mp3')">
-          ਖ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '74', '11', 'ਖ਼ਾਂ', 'audio/35m.mp3')">ਖ਼ਾਂ</td>
+          <td class="entry" id="s35b">ਖ਼</td>
+          <td class="entry" id="s35c">ਖ਼ਾ</td>
+          <td class="entry" id="s35d">ਖ਼ਿ</td>
+          <td class="entry" id="s35e">ਖ਼ੀ</td>
+          <td class="entry" id="s35f">ਖ਼ੁ</td>
+          <td class="entry" id="s35g">ਖ਼ੂ</td>
+          <td class="entry" id="s35h">ਖ਼ੇ</td>
+          <td class="entry" id="s35i">ਖ਼ੈ</td>
+          <td class="entry" id="s35j">ਖ਼ੋ</td>
+          <td class="entry" id="s35k">ਖ਼ੌ</td>
+          <td class="entry" id="s35l">ਖ਼ੰ</td>
+          <td class="entry" id="s35m">ਖ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort35_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3457,41 +1687,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort36_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '75', '0', 'ਗ਼', 'audio/36b.mp3')">
-          ਗ਼</td>
-          <td class="entry"
-          onclick="showPopup( '75', '1', 'ਗ਼ਾ', 'audio/36c.mp3')">
-          ਗ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '2', 'ਗ਼ਿ', 'audio/36d.mp3')">
-          ਗ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '3', 'ਗ਼ੀ', 'audio/36e.mp3')">
-          ਗ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '4', 'ਗ਼ੁ', 'audio/36f.mp3')">
-          ਗ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '5', 'ਗ਼ੂ', 'audio/36g.mp3')">
-          ਗ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '6', 'ਗ਼ੇ', 'audio/36h.mp3')">
-          ਗ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '7', 'ਗ਼ੈ', 'audio/36i.mp3')">
-          ਗ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '8', 'ਗ਼ੋ', 'audio/36j.mp3')">
-          ਗ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '9', 'ਗ਼ੌ', 'audio/36k.mp3')">
-          ਗ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '10', 'ਗ਼ੰ', 'audio/36l.mp3')">
-          ਗ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '75', '11', 'ਗ਼ਾਂ', 'audio/36m.mp3')">ਗ਼ਾਂ</td>
+          <td class="entry" id="s36b">ਗ਼</td>
+          <td class="entry" id="s36c">ਗ਼ਾ</td>
+          <td class="entry" id="s36d">ਗ਼ਿ</td>
+          <td class="entry" id="s36e">ਗ਼ੀ</td>
+          <td class="entry" id="s36f">ਗ਼ੁ</td>
+          <td class="entry" id="s36g">ਗ਼ੂ</td>
+          <td class="entry" id="s36h">ਗ਼ੇ</td>
+          <td class="entry" id="s36i">ਗ਼ੈ</td>
+          <td class="entry" id="s36j">ਗ਼ੋ</td>
+          <td class="entry" id="s36k">ਗ਼ੌ</td>
+          <td class="entry" id="s36l">ਗ਼ੰ</td>
+          <td class="entry" id="s36m">ਗ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort36_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3500,42 +1707,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort37_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '76', '0', 'ਜ਼', 'audio/37b.mp3')">
-          ਜ਼</td>
-          <td class="entry"
-          onclick="showPopup( '76', '1', 'ਜ਼ਾ', 'audio/37c.mp3')">
-          ਜ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '2', 'ਜ਼ਿ', 'audio/37d.mp3')">
-          ਜ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '3', 'ਜ਼ੀ', 'audio/37e.mp3')">
-          ਜ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '4', 'ਜ਼ੁ', 'audio/37f.mp3')">
-          ਜ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '5', 'ਜ਼ੂ', 'audio/37g.mp3')">
-          ਜ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '6', 'ਜ਼ੇ', 'audio/37h.mp3')">
-          ਜ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '7', 'ਜ਼ੈ', 'audio/37i.mp3')">
-          ਜ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '8', 'ਜ਼ੋ', 'audio/37j.mp3')">
-          ਜ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '9', 'ਜ਼ੌ', 'audio/37k.mp3')">
-          ਜ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '10', 'ਜ਼ੰ', 'audio/37l.mp3')">
-          ਜ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '76', '11', 'ਜ਼ਾਂ', 'audio/37m.mp3')">
-          ਜ਼ਾਂ</td>
+          <td class="entry" id="s37b">ਜ਼</td>
+          <td class="entry" id="s37c">ਜ਼ਾ</td>
+          <td class="entry" id="s37d">ਜ਼ਿ</td>
+          <td class="entry" id="s37e">ਜ਼ੀ</td>
+          <td class="entry" id="s37f">ਜ਼ੁ</td>
+          <td class="entry" id="s37g">ਜ਼ੂ</td>
+          <td class="entry" id="s37h">ਜ਼ੇ</td>
+          <td class="entry" id="s37i">ਜ਼ੈ</td>
+          <td class="entry" id="s37j">ਜ਼ੋ</td>
+          <td class="entry" id="s37k">ਜ਼ੌ</td>
+          <td class="entry" id="s37l">ਜ਼ੰ</td>
+          <td class="entry" id="s37m">ਜ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort37_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3544,41 +1727,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort38_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '77', '0', 'ਫ਼', 'audio/38b.mp3')">
-          ਫ਼</td>
-          <td class="entry"
-          onclick="showPopup( '77', '1', 'ਫ਼ਾ', 'audio/38c.mp3')">
-          ਫ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '2', 'ਫ਼ਿ', 'audio/38d.mp3')">
-          ਫ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '3', 'ਫ਼ੀ', 'audio/38e.mp3')">
-          ਫ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '4', 'ਫ਼ੁ', 'audio/38f.mp3')">
-          ਫ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '5', 'ਫ਼ੂ', 'audio/38g.mp3')">
-          ਫ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '6', 'ਫ਼ੇ', 'audio/38h.mp3')">
-          ਫ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '7', 'ਫ਼ੈ', 'audio/38i.mp3')">
-          ਫ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '8', 'ਫ਼ੋ', 'audio/38j.mp3')">
-          ਫ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '9', 'ਫ਼ੌ', 'audio/38k.mp3')">
-          ਫ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '10', 'ਫ਼ੰ', 'audio/38l.mp3')">
-          ਫ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '77', '11', 'ਫ਼ਾਂ', 'audio/38m.mp3')">ਫ਼ਾਂ</td>
+          <td class="entry" id="s38b">ਫ਼</td>
+          <td class="entry" id="s38c">ਫ਼ਾ</td>
+          <td class="entry" id="s38d">ਫ਼ਿ</td>
+          <td class="entry" id="s38e">ਫ਼ੀ</td>
+          <td class="entry" id="s38f">ਫ਼ੁ</td>
+          <td class="entry" id="s38g">ਫ਼ੂ</td>
+          <td class="entry" id="s38h">ਫ਼ੇ</td>
+          <td class="entry" id="s38i">ਫ਼ੈ</td>
+          <td class="entry" id="s38j">ਫ਼ੋ</td>
+          <td class="entry" id="s38k">ਫ਼ੌ</td>
+          <td class="entry" id="s38l">ਫ਼ੰ</td>
+          <td class="entry" id="s38m">ਫ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort38_MP3WRAP.mp3').play();">Play
           RTL</td>
@@ -3587,41 +1747,18 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           <td class="play-row"
           onclick="new Audio('audio/ltrshort39_MP3WRAP.mp3').play();">Play
           LTR</td>
-          <td class="entry"
-          onclick="showPopup( '78', '0', 'ਲ਼', 'audio/39b.mp3')">
-          ਲ਼</td>
-          <td class="entry"
-          onclick="showPopup( '78', '1', 'ਲ਼ਾ', 'audio/39c.mp3')">
-          ਲ਼ਾ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '2', 'ਲ਼ਿ', 'audio/39d.mp3')">
-          ਲ਼ਿ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '3', 'ਲ਼ੀ', 'audio/39e.mp3')">
-          ਲ਼ੀ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '4', 'ਲ਼ੁ', 'audio/39f.mp3')">
-          ਲ਼ੁ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '5', 'ਲ਼ੂ', 'audio/39g.mp3')">
-          ਲ਼ੂ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '6', 'ਲ਼ੇ', 'audio/39h.mp3')">
-          ਲ਼ੇ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '7', 'ਲ਼ੈ', 'audio/39i.mp3')">
-          ਲ਼ੈ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '8', 'ਲ਼ੋ', 'audio/39j.mp3')">
-          ਲ਼ੋ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '9', 'ਲ਼ੌ', 'audio/39k.mp3')">
-          ਲ਼ੌ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '10', 'ਲ਼ੰ', 'audio/39l.mp3')">
-          ਲ਼ੰ</td>
-          <td class="entry"
-          onclick="showPopup( '78', '11', 'ਲ਼ਾਂ', 'audio/39m.mp3')">ਲ਼ਾਂ</td>
+          <td class="entry" id="s39b">ਲ਼</td>
+          <td class="entry" id="s39c">ਲ਼ਾ</td>
+          <td class="entry" id="s39d">ਲ਼ਿ</td>
+          <td class="entry" id="s39e">ਲ਼ੀ</td>
+          <td class="entry" id="s39f">ਲ਼ੁ</td>
+          <td class="entry" id="s39g">ਲ਼ੂ</td>
+          <td class="entry" id="s39h">ਲ਼ੇ</td>
+          <td class="entry" id="s39i">ਲ਼ੈ</td>
+          <td class="entry" id="s39j">ਲ਼ੋ</td>
+          <td class="entry" id="s39k">ਲ਼ੌ</td>
+          <td class="entry" id="s39l">ਲ਼ੰ</td>
+          <td class="entry" id="s39m">ਲ਼ਾਂ</td>
           <td class="play-row"
           onclick="new Audio('audio/rtlshort39_MP3WRAP.mp3').play();">Play
           RTL</td>

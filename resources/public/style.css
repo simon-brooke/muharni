@@ -50,4 +50,5 @@ th {
     position: absolute;
     display: none;
     background-color: whitesmoke;
+    z-index: 10;
 }
