@@ -22,6 +22,8 @@ At this prompt, invoke
 
 You'll see a series of messages which are in fact printed by [JTidy](https://github.com/jtidy/jtidy) and which you can safely ignore. As a side effect, the HTML page will be generated in `resources/public/index.html`.
 
+The sound recordings are not in fact ours but are taken from another website; we believe that we have permission to use them, but they may be replaced in this repository with other sound recordings where we are certain we have permission!
+
 ## License
 
 Copyright © 2022 Lucy Fyfe and Simon Brooke
