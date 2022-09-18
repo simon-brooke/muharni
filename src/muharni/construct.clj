@@ -87,17 +87,13 @@
         c ((columns col) (if long? :upper-latin :lower-latin))
         audio (format "audio/%02d%s.mp3" r c)
         char ((entries row) col)]
-    (vector :td {:class "entry"
-                 :id (format "%s%02d%s" (if long? "l" "s") r c)
-                ;;  :onclick (format
-                ;;            "showPopup( '%s', '%s', '%s', '%s')"
-                ;;            (if long? row (+ row 40))
-                ;;            col
-                ;;            char
-                ;;            audio)
-                 }
-          ;; (audio row col long?)
-            char)))
+    (vector :td {:class "entry"}
+            [:span {:class "entry-text"
+                    :id (format "%s%02d%s" (if long? "l" "s") r c)} char]
+            [:br]
+            [:button
+             {:onclick (str "new Audio('" audio "').play();")}
+             "&#9658;"])))
 
 ;; (entry-cell 3 4 true)
 
@@ -201,7 +197,7 @@
       [:tr
        [:th "Tutor"]
        [:td  [:button {:id "play-tutor"}
-                                "&#9658;"]]]
+              "&#9658;"]]]
       [:tr
        [:th "You"]
        [:td  [:button {:id "play-student"} "&#9658;"]]
