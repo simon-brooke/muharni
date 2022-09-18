@@ -16,61 +16,79 @@
  */
 const studentSounds = Array(80).fill(0).map(x => Array(13).fill(null));
 
-
-
 function recordStudentSound(r, c) {
     console.info("Entered recordStudentSound for row " + r + ", column " + c);
 
     if (Number.isInteger(r) && Number.isInteger(c)) {
         $('#record-student').css('color', 'green');
+
         try {
-        navigator.mediaDevices.getUserMedia({ audio: true })
-            .then(stream => {
-                const mediaRecorder = new MediaRecorder(stream);
-                mediaRecorder.start();
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    const mediaRecorder = new MediaRecorder(stream);
+                    const audioChunks = [];
 
-                const audioChunks = [];
+                    mediaRecorder.start();
+                    mediaRecorder.onerror = function (e) {
+                        console.log("An error has occurred: " + e.message);
+                    };
+                    mediaRecorder.addEventListener("dataavailable", event => {
+                        console.info("Audio recorded...")
+                        audioChunks.push(event.data);
+                    });
 
-                mediaRecorder.addEventListener("dataavailable", event => {
-                    audioChunks.push(event.data);
+                    mediaRecorder.onstop = function (e) {
+                        console.log("data available after MediaRecorder.stop() called.");
+
+                        if (audioChunks.length > 0) {
+                            studentSounds[r][c] = new Blob(audioChunks);
+                            
+                            $('#play-student').prop('disabled', false);
+                            $("#play-student").on("click", function (e) {
+                                console.log("Playing student sound for row " + r + ", column " + c);
+                                new Audio(URL.createObjectURL(studentSounds[r][c])).play();
+                            });            
+                            console.log("Successfully recorded student sound for row " + r + ", column " + c);
+                        } else {
+                            console.warn("Failed to record student sound for row " + r + ", column " + c);
+                            window.alert("No sound detected. Check your microphone?");
+                        }
+                        $('#record-student').css('color', 'red');
+                    };
+
+                    setTimeout(() => {
+                        mediaRecorder.requestData();
+                        mediaRecorder.stop();
+
+                    }, 5000);
                 });
-
-                setTimeout(() => {
-                    mediaRecorder.stop();
-                    if (audioChunks.length > 0) {
-                        studentSounds[r][c] = new Blob(audioChunks);
-                        $('#play-student').prop('disabled', false);
-                        console.log("Successfully recorded student sound for row " + r + ", column " + c);
-                    } else {
-                        console.warn("Failed to record student sound for row " + r + ", column " + c);
-                        window.alert("No sound detected. Check your microphone?");
-                    }
-                    $('#record-student').css('color', 'red');
-
-                }, 3000);
-            });
         } catch (error) {
-            console.error( error);
-            window.alert("Sound recording is only possible on secure connections.");
+            console.error(error);
+            if (error instanceof TypeError) {
+                window.alert("Sound recording is only possible on secure connections.");
+            }
+            else if (error instanceof DOMException) {
+                window.alert("No microphone detected? " + error.message);
+            }
         }
     }
 }
 
-$(document).ready(function() {
-    $(".entry-text").on("click", function(e) {
+
+$(document).ready(function () {
+    $(".entry-text").on("click", function (e) {
         let cellId = e.currentTarget ? e.currentTarget.id : null;
 
-        if (cellId)
-        {
+        if (cellId) {
             let row = parseInt(cellId.slice(1, 3));
-            let colChar = cellId.slice( 3);
+            let colChar = cellId.slice(3);
 
             if (colChar == colChar.toLowerCase()) {
                 row += 40; /* we're wrapping lower case into the bottom half of the array */
             }
 
             let col = cellId.charCodeAt(3) - 65;
-            if (col > 26 ) { 
+            if (col > 26) {
                 col -= 32; /* lower case */
             }
 
@@ -84,27 +102,27 @@ $(document).ready(function() {
             $("#character").text(e.currentTarget.innerText.substring(0, 1));
 
             $("#play-tutor").off("click"); /* trying to remove any previous click handler */
-            $("#play-tutor").on("click", function(e){
+            $("#play-tutor").on("click", function (e) {
                 let audioUrl = "audio/" + cellId.slice(1) + ".mp3";
-                console.log("Playing tutor audio " + audioUrl );
-                new Audio( audioUrl).play();
+                console.log("Playing tutor audio " + audioUrl);
+                new Audio(audioUrl).play();
             });
 
             $("#record-stop").off("click");
-            $("#record-stop").on("click", function(e) {
-                console.log( "Recording student sound for row " + row + ", column " + col);
+            $("#record-stop").on("click", function (e) {
+                console.log("Recording student sound for row " + row + ", column " + col);
                 recordStudentSound(row, col);
             });
 
             $("#play-student").off("click");
             if (studentAudio != null) {
-                $("#play-student").on( "click", function(e) {
-                    console.log( "Playing student sound for row " + row + ", column " + col);
+                $("#play-student").on("click", function (e) {
+                    console.log("Playing student sound for row " + row + ", column " + col);
                     new Audio(URL.createObjectURL(studentAudio)).play();
                 });
-            } 
+            }
             $("#play-student").prop("disabled", studentAudio == null);
-        
+
             $("#popup").show();
         }
     });
