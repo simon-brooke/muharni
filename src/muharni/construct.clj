@@ -4,7 +4,7 @@
   (:require [hiccup.core :refer [html]]
             [clojure.java.io :refer [input-stream]]
             [clojure.string :as s])
-  (:import [java.io StringWriter PrintWriter]
+  (:import [java.io StringWriter]
            [java.util Properties]
            [org.w3c.tidy Tidy]))
 
@@ -192,16 +192,20 @@
    [:body {:id "body"}
     [:div {:id "popup"
            :style "display: none; border: thin solid gray; width: 10%"}
+     [:div {:id "closebox"
+            :onclick "$('#popup').hide();"} "&#10006;"]
      [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
      [:table {:id "controls" :summary "Controls for audio playback and recording"}
       [:tr
        [:th "Tutor"]
-       [:td  [:button {:id "play-tutor"}
+       [:td  [:span {:id "play-tutor"}
               "&#9658;"]]]
       [:tr
        [:th "You"]
-       [:td  [:button {:id "play-student"} "&#9658;"]]
-       [:td  [:button {:id "record-stop"} "&#9210;"]]]]]
+       [:td  [:span {:id "play-student"} "&#9658;"]]
+       [:td  [:span {:id "record-stop"} "&#9210;"]]]
+      [:tr
+       [:td {:colspan 3 :id "progress"}]]]]
     [:h1 (str title)]
     [:button {:onclick "var l = document.getElementById('long');
                         var s = document.getElementById('short');
@@ -211,7 +215,8 @@
                         } else {
                         l.style.display = 'none';
                         s.style.display = 'block';
-                        }"} "Toggle short/long"]
+                        }
+                        $('#popup').hide();"} "Toggle short/long"]
     [:div {:id "long"
            :style "display: block;"}
      [:h2 "Long forms"]
