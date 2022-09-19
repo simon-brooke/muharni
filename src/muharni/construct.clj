@@ -58,18 +58,18 @@
 (def columns
   "This is essentially just Lucy's own encoding of the sound file names,
    I think, and has no further significance."
-  [{:name "Muktā", :lower-latin "b", :upper-latin "B"}
-   {:name "Kannā", :lower-latin "c", :upper-latin "C"}
-   {:name "Sihārī", :lower-latin "d", :upper-latin "D"}
-   {:name "Bihārī", :lower-latin "e", :upper-latin "E"}
-   {:name "Auṅkaṛ", :lower-latin "f", :upper-latin "F"}
-   {:name "Dulaiṅkaṛ", :lower-latin "g", :upper-latin "G"}
-   {:name "Lāvā", :lower-latin "h", :upper-latin "H"}
-   {:name "Dulāvā", :lower-latin "i", :upper-latin "I"}
-   {:name "Hōṛā", :lower-latin "j", :upper-latin "J"}
-   {:name "Kanauṛā", :lower-latin "k", :upper-latin "K"}
-   {:name "Ṭippī", :lower-latin "l", :upper-latin "L"}
-   {:name "Bindī", :lower-latin "m", :upper-latin "M"}])
+  [{:name "Muktā", :punjabi "ਮੁਕਤਾ", :lower-latin "b", :upper-latin "B"}
+   {:name "Kannā", :punjabi "ਕੰਨਾ", :lower-latin "c", :upper-latin "C"}
+   {:name "Sihārī", :punjabi "ਸਿਹਾਰੀ", :lower-latin "d", :upper-latin "D"}
+   {:name "Bihārī", :punjabi "ਬਿਹਾਰੀ", :lower-latin "e", :upper-latin "E"}
+   {:name "Auṅkaṛ", :punjabi "ਔਂਕੜ", :lower-latin "f", :upper-latin "F"}
+   {:name "Dulaiṅkaṛ", :punjabi "ਦੁਲੈਂਕੜ", :lower-latin "g", :upper-latin "G"}
+   {:name "Lāvā", :punjabi "ਲਾਂਵਾਂ", :lower-latin "h", :upper-latin "H"}
+   {:name "Dulāvā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "i", :upper-latin "I"}
+   {:name "Hōṛā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "j", :upper-latin "J"}
+   {:name "Kanauṛā", :punjabi "ਕਨੌੜਾ", :lower-latin "k", :upper-latin "K"}
+   {:name "Ṭippī", :punjabi "ਟਿੱਪੀ", :lower-latin "l", :upper-latin "L"}
+   {:name "Bindī", :punjabi "ਬਿੰਦੀ", :lower-latin "m", :upper-latin "M"}])
 
 ;; (defn audio
 ;;   [^Integer col ^Integer row ^Boolean long?]
@@ -124,15 +124,15 @@
 
 (defn col-header-cell
   "Return a header cell for the indicated `column`."
-  [^Integer column]
+  [^Integer column ^Boolean punjabi?]
   (vector :th
-          (:name (columns column))))
+          ((if punjabi? :punjabi :name) (columns column))))
 
 (defn col-headers-row
-  []
+  [^Boolean punjabi?]
   (apply vector (concat [:tr]
                         [[:th]]
-                        (map col-header-cell (range (count columns)))
+                        (map #(col-header-cell % punjabi?) (range (count columns)))
                         [[:th]])))
 
 ;; (col-headers-row)
@@ -167,7 +167,8 @@
    vector
    (concat [:table {:class "character-table"
                     :summary "Table of Punjabi characters from which to select sound recordings"}]
-           [(col-headers-row)
+           [(col-headers-row true)
+            (col-headers-row false)
             (play-column-row true long?)]
            (map #(entries-row % long?)
                 (range
