@@ -66,7 +66,7 @@
    {:name "Dulaiṅkaṛ", :punjabi "ਦੁਲੈਂਕੜ", :lower-latin "g", :upper-latin "G"}
    {:name "Lāvā", :punjabi "ਲਾਂਵਾਂ", :lower-latin "h", :upper-latin "H"}
    {:name "Dulāvā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "i", :upper-latin "I"}
-   {:name "Hōṛā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "j", :upper-latin "J"}
+   {:name "Hōṛā", :punjabi "ਹੋੜਾ", :lower-latin "j", :upper-latin "J"}
    {:name "Kanauṛā", :punjabi "ਕਨੌੜਾ", :lower-latin "k", :upper-latin "K"}
    {:name "Ṭippī", :punjabi "ਟਿੱਪੀ", :lower-latin "l", :upper-latin "L"}
    {:name "Bindī", :punjabi "ਬਿੰਦੀ", :lower-latin "m", :upper-latin "M"}])
