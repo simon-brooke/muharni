@@ -58,18 +58,18 @@
 (def columns
   "This is essentially just Lucy's own encoding of the sound file names,
    I think, and has no further significance."
-  [{:name "Muktā", :punjabi "ਮੁਕਤਾ", :lower-latin "b", :upper-latin "B"}
-   {:name "Kannā", :punjabi "ਕੰਨਾ", :lower-latin "c", :upper-latin "C"}
-   {:name "Sihārī", :punjabi "ਸਿਹਾਰੀ", :lower-latin "d", :upper-latin "D"}
-   {:name "Bihārī", :punjabi "ਬਿਹਾਰੀ", :lower-latin "e", :upper-latin "E"}
-   {:name "Auṅkaṛ", :punjabi "ਔਂਕੜ", :lower-latin "f", :upper-latin "F"}
-   {:name "Dulaiṅkaṛ", :punjabi "ਦੁਲੈਂਕੜ", :lower-latin "g", :upper-latin "G"}
-   {:name "Lāvā", :punjabi "ਲਾਂਵਾਂ", :lower-latin "h", :upper-latin "H"}
-   {:name "Dulāvā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "i", :upper-latin "I"}
-   {:name "Hōṛā", :punjabi "ਹੋੜਾ", :lower-latin "j", :upper-latin "J"}
-   {:name "Kanauṛā", :punjabi "ਕਨੌੜਾ", :lower-latin "k", :upper-latin "K"}
-   {:name "Ṭippī", :punjabi "ਟਿੱਪੀ", :lower-latin "l", :upper-latin "L"}
-   {:name "Bindī", :punjabi "ਬਿੰਦੀ", :lower-latin "m", :upper-latin "M"}])
+  [{:name "Muktā", :punjabi "ਮੁਕਤਾ", :lower-latin "b", :upper-latin "B", :audio "mukta.mp3"}
+   {:name "Kannā", :punjabi "ਕੰਨਾ", :lower-latin "c", :upper-latin "C" :audio "kanna.mp3"}
+   {:name "Sihārī", :punjabi "ਸਿਹਾਰੀ", :lower-latin "d", :upper-latin "D" :audio "siharee.mp3"}
+   {:name "Bihārī", :punjabi "ਬਿਹਾਰੀ", :lower-latin "e", :upper-latin "E" :audio "bihaaree.mp3"}
+   {:name "Auṅkaṛ", :punjabi "ਔਂਕੜ", :lower-latin "f", :upper-latin "F" :audio "ongkar.mp3"}
+   {:name "Dulaiṅkaṛ", :punjabi "ਦੁਲੈਂਕੜ", :lower-latin "g", :upper-latin "G" :audio "dulankar.mp3"}
+   {:name "Lāvā", :punjabi "ਲਾਂਵਾਂ", :lower-latin "h", :upper-latin "H" :audio "lava.mp3"}
+   {:name "Dulāvā", :punjabi "ਦੁਲਾਂਵਾਂ", :lower-latin "i", :upper-latin "I" :audio "dulavan.mp3"}
+   {:name "Hōṛā", :punjabi "ਹੋੜਾ", :lower-latin "j", :upper-latin "J" :audio "hora.mp3"}
+   {:name "Kanauṛā", :punjabi "ਕਨੌੜਾ", :lower-latin "k", :upper-latin "K" :audio "kanaura.mp3"}
+   {:name "Ṭippī", :punjabi "ਟਿੱਪੀ", :lower-latin "l", :upper-latin "L" :audio "tippi.mp3"}
+   {:name "Bindī", :punjabi "ਬਿੰਦੀ", :lower-latin "m", :upper-latin "M" :audio "kanna_ute_bindi.mp3"}])
 
 ;; (defn audio
 ;;   [^Integer col ^Integer row ^Boolean long?]
@@ -125,8 +125,11 @@
 (defn col-header-cell
   "Return a header cell for the indicated `column`."
   [^Integer column ^Boolean punjabi?]
-  (vector :th
-          ((if punjabi? :punjabi :name) (columns column))))
+  (let [col (columns column)](vector :th 
+                                     {:class (if punjabi? "punjabi" "english")
+                                      :onclick (format "new Audio('audio/%s').play();"
+                                (:audio col))}
+          ((if punjabi? :punjabi :name) col))))
 
 (defn col-headers-row
   [^Boolean punjabi?]
