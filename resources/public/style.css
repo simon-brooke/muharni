@@ -22,11 +22,35 @@ th {
 }
 
 .character-table {
-    position: relative
+    position: relative;
+    margin: 1em 0;
+    width: 100%;
 }
 
 .entry {
     font-size: 3em;
+}
+
+.entry button {
+    display: block;
+    width: 100%;
+}
+
+.firefox {
+    font-style: italic;
+    border: thin solid orangered;
+    padding: 0 1em;
+    margin: 1em 0;
+}
+
+.firefox img {
+    float: left; 
+    height: 2em; 
+    width: 2em;
+}
+
+.firefox p {
+    padding: 0 4em;
 }
 
 .progressbar {

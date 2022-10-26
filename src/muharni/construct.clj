@@ -90,9 +90,9 @@
     (vector :td {:class "entry"}
             [:span {:class "entry-text"
                     :id (format "%s%02d%s" (if long? "l" "s") r c)} char]
-            [:br]
             [:button
-             {:onclick (str "new Audio('" audio "').play();")}
+             {:title "Play tutor audio"
+              :onclick (str "new Audio('" audio "').play();")}
              "&#9658;"])))
 
 ;; (entry-cell 3 4 true)
@@ -125,11 +125,11 @@
 (defn col-header-cell
   "Return a header cell for the indicated `column`."
   [^Integer column ^Boolean punjabi?]
-  (let [col (columns column)](vector :th 
-                                     {:class (if punjabi? "punjabi" "english")
-                                      :onclick (format "new Audio('audio/%s').play();"
-                                (:audio col))}
-          ((if punjabi? :punjabi :name) col))))
+  (let [col (columns column)] (vector :th
+                                      {:class (if punjabi? "punjabi" "english")
+                                       :onclick (format "new Audio('audio/%s').play();"
+                                                        (:audio col))}
+                                      ((if punjabi? :punjabi :name) col))))
 
 (defn col-headers-row
   [^Boolean punjabi?]
@@ -197,20 +197,30 @@
     [:div {:id "popup"
            :style "display: none; border: thin solid gray; width: 10%"}
      [:div {:id "closebox"
-            :onclick "$('#popup').hide();"} "&#10006;"]
+            :onclick "$('#popup').hide();"
+            :title "Close popup"} "&#10006;"]
      [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
      [:table {:id "controls" :summary "Controls for audio playback and recording"}
       [:tr
        [:th "Tutor"]
-       [:td  [:span {:id "play-tutor"}
+       [:td  [:span {:id "play-tutor"
+                     :title "Play tutor audio"}
               "&#9658;"]]]
       [:tr
        [:th "You"]
-       [:td  [:span {:id "play-student"} "&#9658;"]]
-       [:td  [:span {:id "record-stop"} "&#9210;"]]]
+       [:td  [:span {:id "play-student"
+                     :title "Play student audio"} "&#9658;"]]
+       [:td  [:span {:id "record-stop"
+                     :title "Record student audio"} "&#9210;"]]]
       [:tr
        [:td {:colspan 3 :id "progress"}]]]]
     [:h1 (str title)]
+    [:div {:class "firefox"}
+     [:img {:src "img/firefox.jpeg"
+            :alt "Firefox logo"}]
+     [:p "Currently, recording user sounds on this page is only working on "
+      [:a {:href "https://www.mozilla.org/en-GB/firefox/new/"} "Firefox browser."]
+      " We're working on this and hope to fix it."]]
     [:button {:onclick "var l = document.getElementById('long');
                         var s = document.getElementById('short');
                         if (l.style.display == 'none') {
