@@ -16,7 +16,7 @@
     style="display: none; border: thin solid gray; width: 10%">
       <div id="closebox" onclick="$('#popup').hide();"
       title="Close popup">✖</div>
-      <p id="character"
+      <p class="punjabi" id="character"
       style="text-align: center; margin: 0; font-size: 4em;">?</p>
       <table id="controls"
       summary="Controls for audio playback and recording">
@@ -43,13 +43,6 @@
       </table>
     </div>
     <h1>Muharni table</h1>
-    <div class="firefox">
-      <img alt="Firefox logo" src="img/firefox.jpeg" />
-      <p>Currently, recording user sounds on this page is only
-      working on 
-      <a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox
-      browser.</a> We're working on this and hope to fix it.</p>
-    </div>
     <button
     onclick="var l = document.getElementById('long'); var s = document.getElementById('short'); if (l.style.display == 'none') { l.style.display = 'block'; s.style.display = 'none'; } else { l.style.display = 'none'; s.style.display = 'block'; } $('#popup').hide();">Toggle
     short/long</button>

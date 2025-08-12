@@ -199,7 +199,7 @@
      [:div {:id "closebox"
             :onclick "$('#popup').hide();"
             :title "Close popup"} "&#10006;"]
-     [:p {:id "character" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
+     [:p {:id "character" :class "punjabi" :style "text-align: center; margin: 0; font-size: 4em;"} "?"]
      [:table {:id "controls" :summary "Controls for audio playback and recording"}
       [:tr
        [:th "Tutor"]
@@ -214,13 +214,7 @@
                      :title "Record student audio"} "&#9210;"]]]
       [:tr
        [:td {:colspan 3 :id "progress"}]]]]
-    [:h1 (str title)]
-    [:div {:class "firefox"}
-     [:img {:src "img/firefox.jpeg"
-            :alt "Firefox logo"}]
-     [:p "Currently, recording user sounds on this page is only working on "
-      [:a {:href "https://www.mozilla.org/en-GB/firefox/new/"} "Firefox browser."]
-      " We're working on this and hope to fix it."]]
+    [:h1 (str title)] 
     [:button {:onclick "var l = document.getElementById('long');
                         var s = document.getElementById('short');
                         if (l.style.display == 'none') {
