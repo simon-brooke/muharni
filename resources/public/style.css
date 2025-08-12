@@ -1,4 +1,11 @@
+@font-face {
+    font-family: Bulara;
+    src: url(fonts/bulara_5.ttf);
+}
+
+
 body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     padding: 0 5%;
 }
 
@@ -44,8 +51,8 @@ th {
 }
 
 .firefox img {
-    float: left; 
-    height: 2em; 
+    float: left;
+    height: 2em;
     width: 2em;
 }
 
@@ -72,6 +79,10 @@ th {
     animation-play-state: paused;
     /* We want a linear animation, ease-out is standard */
     animation-timing-function: linear;
+}
+
+.punjabi {
+    font-family: Bulara;
 }
 
 @keyframes progressbar-countdown {

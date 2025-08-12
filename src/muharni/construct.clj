@@ -87,7 +87,7 @@
         c ((columns col) (if long? :upper-latin :lower-latin))
         audio (format "audio/%02d%s.mp3" r c)
         char ((entries row) col)]
-    (vector :td {:class "entry"}
+    (vector :td {:class "entry, punjabi"}
             [:span {:class "entry-text"
                     :id (format "%s%02d%s" (if long? "l" "s") r c)} char]
             [:button
@@ -189,7 +189,7 @@
     [:link {:rel "stylesheet" :type "text/css" :href "style.css"}]
     ;; pull jquery from Google rather than host locally.
     [:script {:type "text/javascript"
-              :src "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"}]
+              :src "scripts/jquery.min.js"}]
     [:script {:type "text/javascript"
               :src "scripts/muharni.js"}]
     [:title (str title)]]
