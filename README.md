@@ -4,6 +4,8 @@ A Clojure library designed to hack up a web page for studying the Punjabi
 script and the pronunciation thereof approved for the reading of Sikh
 sacred texts.
 
+The site generated using this project can be seen [here](https://www.journeyman.cc/muharni/)
+
 ## Usage
 
 In its present state of extreme hackiness, just loading the namespace `muharni.construct` will cause the web page to be generated.
